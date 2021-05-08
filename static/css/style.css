@@ -1,0 +1,6029 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+    /* STARTED TOPHEADER */
+    .topheader {
+        width: 100%;
+        float: left;
+        background: #000;
+        padding: 3px;
+    }
+
+.socialicon {
+    width: 100%;
+    float: left;
+    padding-top: 1px;
+}
+.socialicon ul{
+    list-style: none;
+    margin-bottom: 0rem;
+}
+.socialicon ul li{
+    display: inline-block;
+}
+.socialicon ul li a{
+    padding: 6px;
+    margin: 6px;
+    transition: .2s;
+}
+/* .socialicon ul li a:hover{
+    border-bottom: 2px solid #ffd102;
+   
+} */
+.resume{
+    width:100%;
+    float: left;
+}
+.resume a{
+    width: 100%;
+    float: left;
+    border: 2px solid #ffd102;
+    color: #ffd102;
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+    margin-top: 7px;
+    text-align: center;
+    position: relative;
+    transition: all .6s ease-in-out;
+    font-size: 12px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.resume a::before{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    top:0px;
+    background: #ffd102;
+    transition: all .6s ease-in-out;
+    height: 40px;
+    width:0%;
+    z-index: -1;
+}
+.resume a::after{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    bottom: 0px;
+    height: 40px;
+    transition: all .5s ease-in-out;
+    background: #ffd102;
+    width:0%;
+    z-index: -1;
+}
+.resume a:hover::after{
+    width: 100% ;
+/* transition: all .10s ease-in-out; */
+
+}
+.resume a:hover::before{
+    width: -100%;
+    /* transition: all .10s ease-in-out; */
+}
+.resume a:hover{
+    text-decoration: none;
+   color: #000;
+}
+ .logo img {
+    max-width: 53%;
+    padding-top: 5px;
+} 
+.login{
+    width: 100%;
+    float: left;
+}
+
+.login a{
+    width: 100%;
+    float: left;
+    border: 2px solid #ffd102;
+    color: #ffd102;
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+    margin-top: 1px;
+    text-align: center;
+    position: relative;
+    transition: all .6s ease-in-out;
+    font-size: 12px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.login a:hover{
+        text-decoration: none;
+       color: #000;
+  
+}
+.login a::before{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    top:0px;
+    background: #ffd102;
+    transition: all .6s ease-in-out;
+    height: 40px;
+    width:0%;
+    z-index: -1;
+}
+.login a::after{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    bottom: 0px;
+    height: 40px;
+    transition: all .5s ease-in-out;
+    background: #ffd102;
+    width:0%;
+    z-index: -1;
+}
+.login a:hover::after{
+    width: 100% ;
+/* transition: all .10s ease-in-out; */
+
+}
+.login a:hover::before{
+    width: -100%;
+    /* transition: all .10s ease-in-out; */
+}
+
+.Registred{
+    width: 90%;
+    float: left;
+
+}
+.Registred a{
+    width: 100%;
+    float: left;
+    border: 2px solid #ffd102;
+    color:#ffd102;
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+    margin-top: 1px;
+    text-align: center;
+    position: relative;
+    transition: .6s;
+    font-size: 12px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+
+}
+.Registred a:hover{
+        text-decoration: none;
+        color: #000;
+}   
+
+.Registred a::before{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    top:0px;
+    background: #ffd102;
+    transition: all .5s ease-in-out;
+    height: 40px;
+    width:0%;
+    z-index: -1;
+}
+.Registred a::after{
+    position: absolute;
+    content: '';
+    left:0%;
+    right: 0%;
+    bottom: 0px;
+    height: 40px;
+    transition: all .5s ease-in-out;
+    background: #ffd102;
+    width:0%;
+    z-index: -1;
+}
+.Registred a:hover::after{
+    width: 100% ;
+  
+
+}
+.Registred a:hover::before{
+    width: -100%;
+   
+    
+}
+          /* END TOPHEADER */
+    /* STRATED MENUBAR */
+.logo{
+    width:100%;
+    float: left;
+    margin-top: -4px;
+}
+.menu{
+    width:100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul {
+    list-style:none;
+    margin-bottom: 0rem;
+}
+.menu ul li{
+    display:inline-block;
+}
+.menu ul li a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 13px;
+    transition: .5s;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+}
+.menu ul li a:hover{
+    color: #fff;
+    background: #4b4a4c;
+}
+/* END MENUBAR */
+
+.banner{
+    width:100%;
+    float: left;
+    background: url(../images/fontbanner.png)no-repeat;
+    background-size: 100%;
+    height:500px;
+    margin-top: 0px;
+}
+.heading{
+    width: 100%;
+    float: left;
+    position: absolute;
+    left: -5%;
+    margin-left: 39%;
+    margin-top:24%;
+    background: rgba(10, 10, 10, 0.84);
+    border-radius: 41px 0px 41px 0px;
+
+}
+.heading h2{
+    color: #fff;
+    font-size: 27px;
+    text-align: center;
+    position: absolute;
+    left: 45px;
+    top: 33px;
+   
+}
+.box{
+    width: 100%;
+    float: left;
+    padding: 30px;
+    z-index: 9;
+}
+.box h4 {
+    color: #ffd102;
+    text-align: center;
+    line-height: 8px;
+    margin-top: 62px;
+}
+.box ul{
+    list-style: none;
+    /* background: url(../images/point.png)no-repeat; */
+}
+.box ul li{
+    padding: 7px 36px;
+    color: #fff;
+}
+.now a{
+    width: 200px;
+    float: left;
+    display: block;
+    background:#ffd102;
+    color: #000;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    left: 50%;
+    margin-left: -20%;
+    font-weight: 500;
+    margin-top: -39px;
+    padding: 5px;
+}
+.now a:hover{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.point{
+    width: 30px;
+    float: left;
+   
+}
+.tabbanner{
+    width:100%;
+    float:left;
+    background: url(../images/ba.png)no-repeat;
+    height: 55px;
+}
+.tab{
+    width:100%;
+    float: left;
+    display: flex;
+    position: absolute;
+}
+.tab ul{
+    list-style: none;
+    margin-bottom: 0rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.tab ul li{
+    display: inline-block;
+}
+.tab ul li a{
+    display: block;
+    color: #fff;
+    padding: 15px 27px;
+    text-align: center;
+    text-decoration: none;
+    font-weight:bold;
+    transition: .5s;
+}
+.tab ul li a:hover{
+    background: #ffd102;
+    color: #000;
+    font-weight: bold;
+} 
+/* END TAB */
+.aboutheading{
+    width:100%;
+    float: left;
+    background: url(../images/banner1.png)no-repeat;
+    height: 550px;
+}
+.about img{
+    max-width: 80%;
+
+
+
+}
+.about{
+    width: 100%;
+    float: left;
+    margin-top: 11%;
+    text-align: center;
+}
+.abouttext{
+    width: 100%;
+    float: left;
+    margin-top: 7%;
+    
+}
+.abouttext h2{
+    color: #fff;
+    font-size: 40px;
+}
+.abouttext p {
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    margin-top: 0px;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+.Categoriesheading{
+    width:100%;
+    float: left;
+    background: url(../images/banner2.png)no-repeat;
+    height: 550px;
+}
+.Categoriesheading h2{
+    color:#fff;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 17px;
+}
+.box1{
+    width: 100%;
+    float: left;
+    border: 2px solid #ffd102;
+    text-align: center;
+    padding: 12px;
+    margin-top: 34px;
+   transition: .5s;
+   position: relative;
+   overflow: hidden;
+}
+
+.box1 h3 {
+    color: #fff;
+    text-align: center;
+    line-height: 29px;
+    font-size: 17px;
+}
+.box1 p{
+    text-align: center;
+    color: #fff;
+    margin-top:9px;
+}
+.all{
+    width: 30%;
+    float: left;
+    position: absolute;
+    left: 50%;
+    margin-left: -9%;
+    margin-top: 30px;
+}
+.all a{
+    width: 241px;
+    float: left;
+    display: block;
+    border:2px solid #ffd102;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 5px;
+    color: #ffd102;
+    transition: .5s;
+}
+.all a:hover{
+    color: #ffd102;
+    text-decoration: none;
+}
+.all a:hover{
+    background: #fff;
+    color:#000;
+
+}
+.ourvisionheading{
+    width:100%;
+    float: left;
+    background: url(../images/banner3.png)no-repeat;
+    height: 550px;
+}
+.ourvision img{
+    max-width: 80%;
+
+
+
+}
+.ourvision{
+    width: 100%;
+    float: left;
+    margin-top: 11%;
+    text-align: center;
+}
+.ourvision h2{
+    color: #fff;
+    font-size: 40px;
+    margin-top: -6%;
+}
+.ourvision p {
+    color: #fff;
+    line-height: 30px;
+    margin-top: 43px;
+    font-size: 16px;
+    text-align: left;
+}
+.service{
+    width:100%;
+    float: left;
+    background: url(../images/banner4.png)no-repeat;
+    height: 470px;
+    /* background-size: 100%; */
+}
+.serviceheading{
+    width: 100%;
+    float: left;
+    margin-top: 60px;
+}
+.serviceheading h2{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+}
+.serviceheading p{
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+.testimonial{
+    width:100%;
+    float:left;
+    height:450px;
+
+    background: url(../images/testimonialbanner.png)no-repeat;
+}
+.testimonial h2{
+    color: #fff;
+    text-align: center;
+    font-size:40px;
+    margin-top: 20px;
+}
+.tespic{
+    width: 100%;
+    float: left;
+    /* height: 300px; */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tespic img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ffc107;
+
+}
+.tespic p{
+    color: #fff;
+    margin-top: 10px;
+    padding: 20px;
+    line-height: 24px;
+    font-size: 14px;
+
+}
+.testimonialslider{
+    width:100%;
+    float:left;
+    border-radius:10px;
+    background: rgba(238, 22, 227, 0.534);
+    margin-top: 48px;
+    height: 293px;
+    box-shadow: 1px 5px 8px 2px black;
+}
+.testipic {
+    width: 22%;
+    position: absolute;
+    left: 50%;
+    margin-left: -13%;
+    top: -1px;
+    background: #fefefe;
+    border-radius: 50%;
+    height: 113px;
+    border: 2px solid #ffd102;
+    background: url(../images/testimonialpic2.png)no-repeat;
+}
+
+.testitext{
+    width:100%;
+    float: left;
+}
+.text11{
+    width: 72%;
+    float: left;
+}
+.text11 p{
+    color: #000;
+    padding: 10px 5px 5px 54px;
+    line-height:44px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+   
+    width: -1%;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+.box3{
+        width: 98%;
+        float: left;
+        background: #f39950;
+        margin: 13px;
+        margin-top: 70px;
+        transition: .5s;
+}
+.box3:hover{
+    transform: scale(1.1);
+}
+.box31{
+    background: #a3f3f3;
+    width: 98%;
+    float: left;
+    margin: 13px;
+    margin-top: 70px;
+    transition: .5s;
+}
+.box31:hover{
+    transform: scale(1.5);
+}
+.box32:hover{
+        transform: scale(1.5);
+}
+.box32{
+    background: #faacf0;
+    width: 98%;
+    float: left;
+    margin: 13px;
+    margin-top: 70px;
+    transition: .5s;
+}
+.box3 p{
+    /* text-align: center; */
+    font-size: 18px;
+    padding: 10px;
+    line-height: 30px;
+}
+.box3 h6{
+    text-align: center;
+
+}
+.box31 p{
+    font-size: 18px;
+    padding: 13px;
+    line-height: 33px
+}
+.box31 h6{
+    text-align: center;
+}
+.box32 p{
+    font-size: 18px;
+    padding: 12px;
+    line-height: 35px;
+}
+.box32 h6{
+    text-align:center;
+}
+.pic{
+        width: 100%;
+        float: left;
+        position: relative;
+        left: 92px;
+        top: -50px;
+        margin-left: 0px;
+}
+
+.bo3 h6{
+    text-align: center;
+    line-height: 43px;
+}
+.ourclient{
+    width:100%;
+    float: left;
+    background: url(../images/banner11.png)no-repeat;
+    height: 800px;
+    
+}
+.price{
+    width: 90%;
+    float: left;
+    position: absolute;
+    z-index: 9;
+    top: 64px;
+    left: 50%;
+    margin-left: -25%;
+}
+.rate{
+    font-size: 30px;
+    font-weight: bold;
+}
+.rate img{
+    max-width: 62%;
+}
+.price ul{
+    list-style: none;
+}
+.price ul li{
+    display: inline-block;
+    font-size: 14px;
+}
+.client{
+    width:100%;
+    float:left;
+    margin-top: 70px
+}
+.client h2{
+    color: #fff;
+    text-align: center;
+    font-size:40px;
+}
+.box33{
+    width: 100%;
+    float: left;
+    margin-top: 60px;
+}
+.plan {
+    width: 74%;
+    float: left;
+    position: absolute;
+    background:#1e7e34;
+    left: 6%;
+    bottom:66px;
+}
+.plan a {
+    width: 400px;
+    color: #fff;
+    text-align: center;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+}
+.plan a:hover{
+    text-decoration: none;
+   color: #fff;
+}
+.term{
+    width: 74%;
+    float: left;
+    position: absolute;
+    left: 6%;
+    bottom:1px;
+}
+.term p{
+    text-align: center;
+    font-size: 12px;
+}
+.companybanne{
+    width:100%;
+    float: left;
+    margin-top: 60px;
+}
+.companybanne h2{
+    font-size: 42px;
+    text-align: center;
+}
+.company{
+    width:100%;
+    float:left;
+    margin-top: 70px;
+    height: 200px;
+}
+.company ul{
+    list-style: none;
+}
+.company ul li{
+    float: left;
+}
+.fotter{
+    width: 100%;
+    float: left;
+   
+    background: #262626;
+}
+.quick{
+    width:100%;
+    float: left;
+    margin-top: 20%;
+}
+.quick h4{
+    color: #fff;
+    font-size: 24px;
+}
+.quick ul{
+    list-style: none;
+}
+.quick ul li a{
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+.quick ul li a:hover{
+    color: yellow;
+    
+}
+/* JOBS PAGE STARTED */
+.bannerjob{
+    width:100%;
+    float: left;
+    background: url(../images/banner6.png)no-repeat;
+    height:200px;
+    margin-top: -5px; 
+    background-size: 100%;
+
+}
+.jobfill{
+    width:100%;
+    float: left;
+    
+}
+
+.jobfill p{
+    color: #bebebe;
+    border-bottom: 1px solid #cfcece;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.jobfill a{
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+
+}
+.jobfill a:hover{
+    text-decoration: none;
+    color: #262626;
+}
+.jobfill1{
+    width:100%;
+    float: left;
+    
+}
+.jobfill1 a{
+    display: block;
+    padding: 5px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+}
+.jobicon img {
+    max-width:45%;
+    filter: opacity(0.5);
+}
+.jobicon{
+    width: 100%;
+    float: left;
+    
+}
+.jobpic {
+    width: 5%;
+    float: left;
+    text-align: center;
+}
+.jobtext {
+    width: 17%;
+    float: left;
+    margin-top: 4px;
+}
+.jobtext h6 {
+    color: #000000;
+    font-size: 14px;
+}
+.jobtext1{
+    width:85%;
+    float: left;
+    margin-top: 4px;
+}
+.jobtext1 h6{
+   
+    font-size: 14px;
+    
+}
+.postn{
+    width:100%;
+    float:left;
+}
+.veiw1{
+    width: 20%;
+    float: left;
+}
+.veiw1 a{
+    display: block;
+   
+    color: #000;
+    border-radius: 4px;
+    margin: 5px;
+    
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+}
+.veiw{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.veiw a{
+    display: block;
+    
+    color: #000;
+    border-radius: 4px;
+    margin: 5px;
+   
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+}
+.jobtab{
+    width: 96%;
+    float: left;
+    background: #fff;
+    border: 1px solid #000;
+    margin-top: -30px;
+    border-radius: 34px;
+    margin-left: 2%;
+    overflow: hidden;
+}
+.jobtab ul{
+    list-style: none;
+    margin-bottom: 0rem;
+}
+.jobtab ul li{
+    display: inline-block;
+}
+.jobtab ul li a {
+    text-decoration: none;
+    padding: 12px 52px;
+    display: block;
+    color: #000;
+    font-weight: 600;
+}
+.jobtab ul li a:hover{
+    background: #4b4a4c;
+    color: #fff;
+}
+.searchbox1 {
+    width: 82%;
+    margin-top: 12%;
+    float: left;
+    position: absolute;
+    left: 119px;
+    top:40px;
+    padding: 20px;
+}
+.jobbutton:focus{
+    outline: none;
+} 
+.jobbutton {
+    width: 100%;
+    float: left;
+    background: #ffd102;
+    color: #000;
+    margin-left: 1px;
+    padding: 5px;
+    font-size: 18px;
+    border: oldlace;
+    margin-top: 1px;
+    font-weight: 600;
+    border-radius: 0px 4px 4px 0px;
+}
+.inputbox1{
+    width: 100%;
+    float: left;
+    padding: 6px;
+    margin: 1px;
+    color: #7575a0;
+}
+.inputbox1:focus{
+    outline: none;
+}
+.inputbox11 {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    margin: 1px;
+    margin-bottom: 0px;
+}
+.inputbox11:focus{
+    outline: none;
+}
+
+.check {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 6%;
+    margin-left: -14px;
+}
+.check h2{
+    color: #fff;
+    font-size: 23px;
+   
+    
+}
+.check11{
+    width:100%;
+    float: left;
+    display: flex;
+    justify-content:start;
+    margin-top: 20%
+}
+.check11 h2{
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+input[type="radio"]
+{
+    position: relative;
+    width: 34px;
+    height: 32px;
+    -webkit-appearance: none;
+    background: #fff;
+    outline: none;
+    border-radius: 20px;
+    transition: .1s;
+    box-shadow: inset 0px 0px 8px rgba(10, 10, 10, 0.84);
+    top: 3px;
+    border: 6px solid #000;
+}
+input:checked[type="radio"]
+{
+    background: #fff;
+    border: 10px solid #0033ff;
+    
+}
+.btn:hover{
+    background-color: white;
+}
+
+.fotterjob{
+    width: 100%;
+    float: left;
+    background: #262626;
+}
+/* end jobpage */
+/* started company page */
+.bannercompany{
+    width:100%;
+    float: left;
+    background: url(../images/banner6.png)no-repeat;
+    height:181px;
+    margin-top: -5px; 
+    background-size: 100%;
+}
+.cmh {
+    width: 99%;
+    float: left;
+    margin-top: 48px;
+    text-align: start;
+}
+.companybox input{
+    width:80%;
+
+}
+
+
+.testimonialname{
+    width:100%;
+    float: left;
+    margin-top: 10px;
+}
+.testimonialname ul{
+    list-style: none;
+}
+.testimonialname ul li a{
+    display: block;
+    color: #fff;
+    padding: 2px;
+}
+.cmh h2{
+    color: #fff;
+    font-size: 27px;
+}
+.searchcompany{
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    
+}
+.searchaz{
+    width: 100%;
+    float: left;
+    margin-top: -20px;
+}
+.top {
+    width: 100%;
+    float: left;
+    background: #cfcece;
+    padding: 10px;
+    margin-top: 20px;
+}
+.top a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+}
+.alfa{
+    width:100%;
+    float: left;
+    background: #cfcece;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.alfa ul{
+    list-style: none;
+    margin-bottom: 0rem;
+}
+.alfa ul li{
+    display: inline-block;
+}
+.alfa ul li a {
+    display: block;
+    padding: 10px 6px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+.alfa ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+.numberic{
+    width:100%;
+    float: left;
+}
+.numberic a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    background: #cfcece;
+    padding: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.companybox {
+    width: 83%;
+    float: left;
+    padding: 5px;
+}
+.companybox:focus{
+    outline: none;
+}
+.comp11 {
+    width: 16%;
+    float: left;
+    background: #ffd102;
+    color: #000;
+    font-size: 16px;
+    padding: 7px;
+    border: aliceblue;
+}
+.comp11:focus{
+    outline: none;
+}
+.companyheading{
+    width:100%;
+    float: left;
+    margin-top: 2%
+}
+.companyheading h2{
+    color: #6a6969;
+    font-size: 26px;
+    margin-top: 20px;
+}
+.ckeckcompany{
+    width: 86%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    margin: 2% 0%;
+    /* height: 385px; */
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+   
+}
+.companylist{
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.companylist ul{
+    list-style: none;
+}
+.companylist ul li {
+    display: inline;
+}
+.companylist ul li a{
+    display: block;
+    padding: 10px;
+    color: #4b4a4c;
+   
+    text-align: center;
+}
+/* UPLODERESUME PAGE */
+
+
+.uploderesumebanner{
+    width:100%;
+    float: left;
+    background:url(../images/uplode.png)no-repeat;
+    /* height: 700px; */
+    background-size: 100%;
+    margin-top: -6px;
+}
+.uploderesumebanner a{
+    width:100%;
+    float: left;
+    margin-top: -5px;
+    background-size: 100%;
+}
+.uplodeheading{
+    width:100%;
+    float: left;
+    margin-top: 5%;
+}
+.uplodeheading h2{
+    color: #fff;
+    text-align:center;
+    position: relative;
+}
+.uplodeheading h2::after{
+    width: 51%;
+    float: left;
+    background: #fff;
+    position: absolute;
+    content: '';
+    height:4px;
+    left: 280px;
+    margin-left: -1px;
+    top: 39px;
+}
+.step3 {
+    width: 100%;
+    float: left;
+    background: url(../images/step.png)no-repeat;
+    height: 308px;
+    background-size: 100%;
+    margin-top: 4%;
+}
+.choose {
+    width: 100%;
+    float: left;
+    background: #ffffff;
+    margin-top: 4%;
+    border: 2px solid #bebebe;
+    border-radius: 34px;
+}
+.choose h2{
+    color: #4d4d4d;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.uplodeicon{
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top:12%;
+}
+.uplodeicon img{
+    max-width: 15%;
+}
+.check1{
+    width: 90%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+.check1 h2{
+    color: #000;
+    font-size: 23px;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+.tempalate{
+    width:100%;
+    float: left;
+    margin-top: 5%;
+    border: 1px solid #bebebe;
+}
+.tempalate a{
+    width:100%;
+    float: left;
+    margin-top: 5%;
+}
+a img {
+    max-width: 85%;
+    margin: 10px;
+   
+}
+    /* COMPANYPROFILE */
+.bannerprofile{
+    width:100%;
+    float: left;
+    background:url(../images/uplode.png)no-repeat;
+    height: 350px; 
+    margin-top: -5px;
+}
+.head1{
+        width:100%;
+        float: left;
+        margin-top: 10%;
+}
+.head1 h2{
+    color: #fff;
+    text-align: center;
+}
+.companylogo{
+    width: 100%;
+    float: left;
+    border: 2px solid #0033ff;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    padding: 71px;
+    bottom: -84px;
+}
+.companylogo h4{
+    text-align: center;
+}
+.post{
+    width: 100%;
+    float: left;
+    position: absolute;
+    left: 10%;
+    bottom: 10px;
+    top: -20px;
+
+}
+.post ul{
+    list-style: none;
+  
+}
+.post ul li{
+    display: inline-block;
+}
+.post ul li a{
+    display: block;
+    padding: 10px;
+    border: 2px solid #0033ff;
+    width: 250px;
+    border-radius: 37px;
+    text-align: center;
+    text-decoration: none;
+    background: #fff;
+    transition: .4s;
+}
+.post ul li a:hover{
+    color:#0033ff;
+    font-weight: bold;
+}
+.edit{
+    width: 60%;
+    float: left;
+    position: absolute;
+    left: 30%;
+    bottom: 10px;
+    top: -20px;;
+}
+.sliderheading{
+    width: 100%;
+    float: left;
+    padding: 30px;
+    z-index: 9;
+}
+.sliderheading h2{
+    color: #fff;
+    font-size:27px;
+    text-align: center;
+}
+.edit a{
+    color: #000;
+    text-align: center;
+    width:100px;
+    display: block;
+    border: 1px solid #0033ff;
+    background: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: -20px 0 50px;
+}
+
+.tex11111{
+    width:100%;
+    float: left;
+}
+
+/* login page */
+.loginbackground{
+    width:100%;
+    float: left;
+    background: #fff;
+    height:100vh;
+}
+
+.loginform {
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 3px 7px 0px black;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.email{
+    width:100%;
+    float: left;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.email p{
+    color: #000;
+    margin-bottom: 2px;
+
+}
+.email input{
+    width:100%;
+    float: left;
+    padding: 5px;
+}
+.password{
+    width:100%;
+    float: left;
+    padding: 0px 40px;
+}
+.password p{
+    color: #000;
+    margin-bottom: 2px;
+
+}
+.password input{
+    width:100%;
+    float: left;
+    padding: 5px;
+}
+.loginname{
+    width:100%;
+    float: left;
+    margin-top: 40px;
+}
+.loname{
+    width: 40%;
+    float: left;
+    padding: 0px 40px;
+}
+.loname p{
+    color: #000;
+    margin-bottom: 2px;
+}
+.forget{
+    width:100%;
+    float: left;
+}
+.forget a {
+    display: block;
+    padding: 10px;
+    text-align: end;
+    width: 85%;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-top: 29px; */
+    text-decoration: none;
+}
+
+
+.logi{
+    width:100%;
+    float: left;
+    padding: 35px;
+}
+.logi p{
+    color: #007bff;
+    /* margin-bottom: 2px; */
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.logi a {
+    display: block;
+    padding: 10px;
+    width:100%;
+    background: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 29px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+ .loginbox{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.form-heading{
+  text-align: center;
+  width: 100%;
+  float: left;  
+}
+.form-heading h1{
+    color: #fff;
+    font-size: 37px;
+}
+.form-body{
+display: flex;
+flex-direction: column;
+width: 100%;
+float: left;
+}
+.form-body input:focus{
+    outline: none;
+}
+.form-body input{
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    width: 100%;
+    background-color:transparent ;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    margin-top:4px;
+}
+.form-body input::placeholder{
+    color: #fff;
+    
+}
+.form-fotter button:focus{
+    outline: none;
+}
+.form-fotter button{
+    height: 40px;
+    border-radius: 10px;
+    padding: 0px 50px;
+    color: #000;
+    background: #ffd102;
+    border: none;
+    font-weight: 500;
+}
+
+ .male{
+        width: 59%;
+        float: left;
+        height: 27px;
+        margin-bottom: 12px;
+        border: none;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        margin-top: 9px;
+}
+option{
+    color: black;
+}
+.feed{
+    width: 80%;
+    float: left;
+}
+
+.dashboardbutton{
+    width:100%;
+    float: left;
+    margin-top: 80px;
+}
+.dashboardbutton button{
+    font-size: 10px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.uplode1{
+    width: 100%;
+    position: absolute;
+    top: 62%;
+}
+.uplode1 button {
+    width: 33%;
+    float: left;
+    background: #000;
+    color: #fff;
+    margin: 3px;
+    border: aliceblue;
+    padding: 4px;
+}
+.uplode11 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.uplode11 button {
+    width: 33%;
+    float: left;
+    background: #000;
+    color: #fff;
+    margin: 3px;
+    border: aliceblue;
+    padding: 4px;
+}
+
+
+.dashboardheading {
+    width: 100%;
+    float: left;
+    background: #fff;
+    height: 801px;
+    box-shadow: 0px 3px 14px black;
+    margin: 5px;
+    margin-top: 38px;
+}
+.dashboardheading h2{
+    color: #000;
+    text-align: center;
+    
+}
+.dashboardheading p{
+    color: #000;
+    text-align: center;
+    margin-top: 20px;
+}
+.picboard {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+.picboard img{
+    max-width: 40%;
+}
+/* dashboard */
+.dashheading{
+    width:100%;
+    float:left;
+    text-align: center;
+}
+.dashheading h1{
+    font-size: 30px;
+    position: relative;
+}
+.dashheading h1:after {
+    position: absolute;
+    width: 45%;
+    content: '';
+    background: #000;
+    left: 53%;
+    height: 3px;
+    top: 36px;
+    margin-left: -25%;
+}
+.dashlogo{
+    width:100%;
+    float: left;
+}
+.dashlink {
+    width: 100%;
+    float: left;
+    border: 1px solid #000;
+    background: #fff;
+}
+.postapply{
+    width:100%;
+    float: left;
+}
+.postapply h2{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30%;
+    font-size: 20px;
+}
+.dashlink ul{
+    list-style: none;
+}
+/* .dashlink ul li{
+    border: 2px solid #000;
+    margin: 10px;
+} */
+.dashlink ul li a {
+    text-decoration: none;
+    color: #000;
+    /* text-align: center; */
+    width: 100%;
+    display: block;
+    padding: 20px;
+    font-size: 13px;
+    overflow: hidden;
+    font-weight: 600;
+    background: #fff;
+}
+.dashlink ul li a:hover{
+    /* color: #fff;
+    background: rgb(124, 123, 123); */
+    font-weight: bold;
+}
+.dashpic {
+    width: 100%;
+    float: left;
+    text-align: end;
+    margin-top: 22px;
+}
+.dabanner{
+    width: 100%;
+    float: left;
+    /* text-align: center; */
+    background: #fff;
+    box-shadow: 0px 3px 14px black;
+    padding: 15px;
+    margin-top: 40px;
+}
+.camera1 {
+    width: 78%;
+    position: absolute;
+    left: 128px;
+    margin-top: -26px;
+}
+.dashbanner{
+    width:100%;
+    float: left;
+    background: #dcdcdc;
+    margin-top: -5px;
+}
+.dashpic img{
+        max-width:20%;
+        /* height: 200px; */
+       
+    }
+.uplode{
+        width: 100%;
+       float: left;
+}
+.uplode button {
+    width: 40%;
+    float: left;
+    background: #000;
+    color: #fff;
+    margin: 3px;
+    border: aliceblue;
+    padding: 4px;
+    margin-top: 20px;
+}
+.postaa {
+    width: 62%;
+    float: left;
+    margin-top: -94px;
+
+}
+
+.postaa h2{
+    color: #000;
+    padding: 10px;
+}
+.postaa input:focus{
+    outline: none;
+}
+.postaa input{
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.postaa a {
+    display: block;
+    font-weight: bold;
+    margin-top: 18px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+.postaa a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.name{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.name input{
+    width: 44%;
+}
+
+.name input:focus{
+    outline: none;
+}
+.name p{
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.birth{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.birth input{
+    width: 90%;
+}
+.birth input:focus{
+    outline: none;
+}
+.birth p{
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+/* UPLODE RESUME */
+.uplodebanner{
+    width:100%;
+    float: left;
+    background:#f8f8f8;
+    /* height: 389px; */
+    margin-top: -6px;
+    position: relative;
+    z-index: -9999;
+}
+.white{
+    width: 100%;
+    float: left;
+    background: #4A90E2;
+   
+    margin-top: 2%;
+    border-radius: 5px;
+}
+.resumepic{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    padding: 10px;
+}
+.resumepic img{
+    max-width: 100%;
+}
+.camera {
+    width: 90%;
+    float: left;
+    position: absolute;
+    left: 156px;
+    top: 108px;
+}
+
+.resumepic img {
+    max-width: 100%;
+    border: 2px solid #fff;
+}
+.data{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.data a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -8px;
+}
+.data ul{
+    list-style:none;
+}
+.data ul li{
+    padding: 0px;
+    margin: 5px;
+    font-size: 14px;
+    color: #fff;
+}
+.panding {
+    width: 90%;
+    float: left;
+    height: 169px;
+    /* border: 2px solid #f8f9fa; */
+    background: #1a69c5;
+    margin: 21px;
+}
+.panding h2{
+    padding: 12px;
+    color:#fff;
+    font-size: 20px;
+}
+.action{
+    width: 90%;
+    float: left;
+    margin: 10px;
+}
+.action p{
+
+    color: #fff;
+    font-size: 14px;
+    margin-top: -19px;
+}
+.uplou{
+    width:99%;
+    float: left;
+    margin: 5px;
+    border:1px solid #bebebe;
+}
+.linkattach {
+    width: 50%;
+    float: left;
+    text-align: start;
+}
+.linkattach ul {
+    list-style: none;
+    margin-bottom: 0rem;
+    padding: 5px;
+}
+.linkattach ul li{
+    display: inline-block;
+}
+.linkattach ul li a{
+    display: block;
+    padding:3px;
+}
+
+.linkattach ul li a img{
+  
+        max-width: 59%;
+}
+.linkattach p{
+    font-size: 13px;
+    padding: 10px;
+}
+
+.uplodelink00 {
+    width: 100%;
+    float: left;
+    border: 1px solid #d6d4d4;
+    margin-top: 16px;
+    background: #fff;
+    border-radius: 5px;
+}
+.uplodelink00 ul{
+    list-style: none;
+}
+ .uplodelink00 ul li {
+    
+    margin: 5px;
+ }
+ 
+ .uplodelink00 ul li a {
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+}
+.uplodelink00 ul li a:hover {
+    /* background: #4b4a4c;
+    color: #fbf8f8; */
+    font-weight: bold;
+    text-decoration: none;
+}
+.latestupate{
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    padding: 15px;
+}
+.latestupate a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.edju {
+    width: 50%;
+    float: left;
+    text-align: start;
+}
+.edju a{
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    color: #6c757d;
+}
+.attach {
+    width: 99%;
+    float: left;
+    /* height: 266px; */
+    border: 1px solid #d6d4d4;
+    /* box-shadow: 0px 2px 3px black; */
+    margin: 5px;
+    background: #fff;
+    border-radius: 5px;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none
+}
+.btn:hover{
+    background-color: none;
+}
+.attach a {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+.attach a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.upres {
+    width: 100%;
+    float: left;
+    margin-top: 21px;
+}
+.upres p{
+    text-align: center;
+}
+.upres a {
+    width: 200px;
+    margin: auto;
+    display: block;
+    background: #0033ff;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.upres a:hover{
+    color: #fff;
+}
+.edit1 {
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: -45px; */
+}
+.edit1 ul{
+    list-style: none;
+
+}
+.edit1 ul li{
+    display: inline-block;
+}
+.edit1 ul li a{
+    display: block;
+   color: #0033ff;
+   font-size: 13px;
+}
+.opt{
+    width: 100%;
+    float: left;
+    margin: 10px;
+}
+.opt input {
+    width: 20%;
+    margin: 10px;
+}
+.education1 {
+    width: 99%;
+    float: left;
+    /* height: 220px; */
+    border: 1px solid #d6d4d4;
+    /* box-shadow: 0px 0px 4px black; */
+    margin-top: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    background: #fff;
+}
+.education1 a {
+    display: block;
+    font-size: 15px;
+    /* font-weight: bold; */
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+.education1 a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.fieldfill{
+    width:100%;
+    float: left;
+    padding: 10px;
+    margin: 3px;
+}
+.fieldfill ul{
+    list-style: none;
+    
+    margin-bottom: -8px;
+}
+.fieldfill ul li{
+    display: inline-block;
+}
+.fieldfill ul li a{
+    display: block;
+    padding: 5px;
+    background: #e1dfdf;
+    color: #000;
+    border-radius: 3px;
+    font-size: 12px;
+}
+table{
+    width: 806px;
+    text-align: center;
+    font-weight: 600;
+
+
+}
+.summ-p{
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+.summ-p p{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .name{
+    width: 100%;
+    float: left;
+}
+.name ul{
+    list-style: none;
+}
+.name ul li{
+    display: inline-block;
+} */
+
+/* ******************************jobprofile******************************************* */
+.searchjob{
+    width: 100%;
+    float: left;
+    background: #ffff;
+    background: #f8f8f8;
+    margin-top: 4%;
+}
+.searchjob p{
+    color:#000;
+    font-size:20px;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+.profilejobbanner{
+    width:100%;
+    float: left;
+   background: #f8f8f8;
+    margin-top: -5px;
+    position: relative;
+    z-index: -99999999;
+}
+.profiletext{
+  
+    float: left;
+}
+.modify{
+    width:30%;
+    float: left;
+    margin-top: 10px;
+}
+.modify a {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #03f;
+}
+.option{
+    width: 96%;
+    float: left;
+  
+    margin: 14px;
+}
+.option ul{
+    list-style: none;
+}
+.option ul li{
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 5px;
+}
+.option ul li a{
+    color: #000;
+    padding: 0px 24px;
+    display: block;
+
+}
+.option ul li a:hover{
+    background:#4b4a4c;
+    color: #fff;
+    border-radius:6px;
+}
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active1, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  /* .active:after {
+    content: "\2212";
+  } */
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .profilebanner1{
+    width: 100%;
+    float: left;
+    background: #fff;
+    margin-top: 2%;
+    border: 1px solid #bebaba;
+    border-radius: 5px;
+}
+.jobtext111 {
+    width: 22%;
+    float: left;
+    margin-top: 4px;
+}
+/* .jobtext111 h6{
+    color: #bebebe;
+} */
+
+
+
+
+.col-sm-3{
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+.filter{
+    width: 100%;
+    float: left;
+    margin-top: 20%;
+    background: #fff;
+    border: 1px solid #bebaba;
+    margin: 10px;
+    border-radius: 5px;
+}
+.filter ul{
+    list-style: none;
+    margin-bottom: 0rem;
+    border-bottom: 1px solid #000;
+    background: #e6f0fb;
+}
+
+.profilebanner1 {
+    width: 100%;
+    float: left;
+    background: #fff;
+    margin-top: 2%;
+    border: 1px solid #bebaba;
+    border-radius: 5px;
+    padding: 10px;
+}
+.filter ul li{
+    color: #000;
+    font-size: 19px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+.filter img{
+    max-width: 41%;
+}
+.fresher{
+    width:40%;
+    float: left;
+}
+.fresher p{
+    color: #000;
+    font-size: 14px;
+    border-bottom: none;
+    margin-bottom: 0rem;
+}
+.fresherselect{
+    width:100%;
+    float: left;
+}
+.op:focus{
+    outline: none;
+}
+.op{
+    width: 226px;
+    margin-top: 8px;
+    border: none;
+    background: none;
+
+}
+
+.filter1{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #000;
+}
+.fresherselect1 {
+    width: 31%;
+    float: left;
+    margin-top: 12px;
+}
+.profilebanner {
+    width: 100%;
+    float: left;
+    background: #eeeeee;
+    margin-top: 9%;
+}
+.jobfill1 {
+    width: 100%;
+    float: left;
+}
+.jobfill1 a {
+    display: block;
+    padding: 5px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+.jobpic1 {
+    width: 5%;
+    float: left;
+    margin-left: 10px;
+}
+.jobtext1 {
+    width: 82%;
+    float: left;
+    margin-top: 4px;
+}
+.jobtext11 {
+    width: 90%;
+    float: left;
+    margin-top: 4px;
+}
+.jobtext11 h6 {
+    font-size: 14px;
+}
+.profileupdate {
+    width: 100%;
+    float: left;
+    background:#fff;
+    margin: 9px;
+    border: 1px solid #bebaba;
+    border-radius: 5px;
+    padding: 5px;
+}
+.picupdate{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+.picupdate a{
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    width: 90%;
+    float: left;
+
+}
+.prog{
+    width:100%;
+    float: left;
+    padding: 10px;
+    margin-top: 20px;
+}
+.add{
+    width: 100%;
+    float: left;
+}
+.de{
+    width: 60%;
+    float: left;
+}
+.de p{
+    font-size: 14px;
+}
+.ad{
+    width: 30%;
+    float: left;
+}
+.ad a {
+    display: block;
+    color: #000;
+    font-size: 14px;
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+}
+.uplo {
+    width: 100%;
+    float: left;
+    background: #007bff;
+    color: #fff;
+    padding: 4px;
+}
+.uplo:focus{
+    outline: none;
+}
+.prof{
+    width: 100%;
+    float: left;
+}
+.prof a{
+    display: block;
+    padding: 10px;
+    font-size: 13px;
+    color: #000;
+}
+.twobt{
+    width:100%;
+    float: left;
+    text-align: center;
+}
+.twobt button {
+    width: 47%;
+    float: left;
+    margin: 3px;
+    text-align: center;
+    background: #fff;
+    font-size: 10px;
+}
+.prof1{
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+.prof1 a {
+    display: block;
+    padding: 10px;
+    font-size: 13px;
+    color: #fffbfb;
+    background: #007bff;
+    text-align: center;
+}
+.companylogo {
+    width: 80%;
+    float: left;
+    border: 1px solid #000;
+    margin-left: 60px;
+}
+.companycard{
+    width:100%;
+    float: left;
+    border: 1px solid #000;
+    margin-top: 60%;
+}
+.companycard a {
+    background: #bebebe;
+    color: #fff;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+/* **********************jobdetail******************** */
+.applybg{
+    width: 100%;
+    float: left;
+    background: #e9e8e8;
+    margin-top: -5px
+}
+.jobfilly{
+    width: 71%;
+    float: left;
+    margin: 1% 0%;
+    background: #fff;
+    box-shadow: 0px 3px 10px black;
+    padding: 10px;
+    border: 1px solid #c2c1c1;
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+
+}
+.day{
+    width:100%;
+    float: left;
+    border-top: 1px solid #c2c1c1;
+}
+.day ul{
+    list-style: none;
+    margin-bottom: 0rem
+}
+.day ul li{
+    display: inline-block;
+
+}
+.day ul li a{
+    display: block;
+    padding: 10px;
+    color: #bebebe;
+    font-size: 12px;
+}
+.send {
+    width: 25%;
+    float: right;
+    text-align: center;
+    margin-top: 9px;
+    font-weight: 700;
+}
+.appl{
+    width:100%;
+    float: left;
+   
+}
+.sa{
+    width: 40%;
+    float: left;
+    margin-left: 10px
+}
+.sa a{
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid #007bff;
+    width: 100px;
+    text-align: center;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+.sa1{
+    width: 52%;
+    float: left;
+    text-align: end;
+    margin: 5px;
+}
+.sa1 a{
+    background: #007bff;
+    display: inline-block;
+    padding: 3px;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+}
+.sa1 a:hover{
+    color: #fff;
+
+
+}
+.high{
+    width:100%;
+    float: left;
+}
+.high h5{
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+    border-left: 8px solid #007bff;
+    padding: 3px 13px;
+}
+.logo1 {
+    width: 100%;
+    float: left;
+    margin-top: -11px;
+}
+.high1{
+    width: 90%;
+    float: left;
+    margin-left: 38px;
+}
+ .high1 ul{
+   list-style-type: none;
+} 
+
+.high1 ul li{
+    font-size: 14px;
+    padding: 5px;
+}
+.high11{
+    width: 90%;
+    float: left;
+    margin-left: 38px;
+}
+ .high11 ul{
+   list-style-type: none;
+} 
+
+.high11 ul li{
+    display: inline-block;
+}
+.high11 ul li a{
+display: block;
+padding: 0px 10px;
+font-size: 14px;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+
+
+
+}
+.yor{
+    width: 90%;
+    float: left;
+    margin-left: 38px;
+   
+}
+.yor ul{
+   list-style-type: none;
+} 
+
+.yor ul li{
+    display: inline-block;
+}
+.yor ul li a{
+padding: 0px 5px;
+font-size: 14px;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+
+}
+.yor p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #c2c1c1;
+}
+.b1{
+    border: 1px solid #bebebe;
+    padding: 2px;
+    border-radius: 28px;
+    margin: 6px 10px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.description{
+    width: 90%;
+    float: left;
+    margin-left: 17px;
+    margin-top: 32px;
+}
+.description h4{
+    color: #000;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.description1{
+    width: 90%;
+    float: left;
+    margin-left: 17px;
+    margin-top: 10px;
+}
+.description1 h5{
+    color: #434343;
+    font-size: 16px;
+    font-weight: bold;
+}
+.description1 p{
+    font-size: 13px;
+    color: #434343;
+}
+.rol{
+    width: 90%;
+    float: left;
+    margin-left: 17px;
+    margin-top: 50px;
+}
+.rol p{
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+.rol1{
+    width:30%;
+    float: left;
+}
+.rol1 ul{
+    list-style: none;
+}
+.rol1 ul li{
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #6f6e6e
+}
+.high1 {
+    width: 90%;
+    float: left;
+    margin-left: 38px;
+    background: #fbfdfb
+}
+.roln{
+    width:60%;
+    float: left;
+}
+.roln ul{
+    list-style: none;
+}
+.roln ul li{
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #007bff;
+}
+.rol11{
+    width:70%;
+    float: left;
+}
+.rol11 ul{
+    list-style: none;
+}
+.rol11 ul li{
+    padding: 3px;
+   
+}
+.rol11 ul li a{
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+
+}
+.roledu{
+    width:25%;
+    float: left;
+}
+.roledu ul{
+    list-style: none;
+}
+.roledu ul li{
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.roledu1{
+    width:70%;
+    float: left;
+}
+.roledu1 ul{
+    list-style: none;
+}
+.roledu1 ul li{
+    padding: 3px;
+   
+}
+.roledu1 ul li a{
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+
+}
+.keyski{
+    width:100%;
+    float: left;
+    
+}
+.keyski ul{
+    list-style: none;
+}
+
+.keyski ul li{
+display: inline-block;
+margin: 5px
+}
+.keyski ul li a{
+padding: 0px 5px;
+font-size: 14px;
+font-weight: bold;
+color: #000;
+text-decoration: none;
+}
+.b11{
+    border: 1px solid #bebebe;
+    padding: 2px;
+    border-radius: 28px;
+    margin: 6px 10px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+.description p{
+    color: #000;
+    font-size: 14px;
+}
+.hed {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+.hed h2{
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.End{
+    width:100%;
+    float: left;
+}
+.End h2{
+    display: block;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+.simil1{
+    width:100%;
+    float: left;
+    margin-top:5px;
+}
+.End ul{
+    list-style: none;
+}
+.End ul li{
+    padding: 5px;
+    /* display: block; */
+}
+.End ul li a{
+    display: block;
+    color: #17a2b8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.End1{
+    width:100%;
+    float: left;
+    text-align: end;
+}
+.End1 a{
+    display: block;
+    color: #858585;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.savbt{
+    width: 100%;
+    float: left;
+    padding: 20px;
+    text-align: end;
+}
+.savbt button {
+    width: 100px;
+    padding: 5px;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.applyveiw a{
+    display: block;
+    font-size: 12px;
+}
+/* .jobfilly p {
+    color: #bebebe;
+    border-bottom: 1px solid #cfcece;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.jobfilly a{
+    display: block;
+    padding: 5px;
+    font-size: 30px;
+    color: #000;
+    font-weight: 400;
+    
+} */
+.jobseekerbanner{
+    width:100%;
+    height: 100vh;
+    background: #bebebe;
+}
+
+.seekerdash{
+width:100%;
+float: left;
+background: #fff;
+border: 1px solid #000;
+margin-top: 50px
+}
+.seekerpic{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.seekername{
+    width:100%;
+    float: left;
+    text-align: center;
+}
+.seekername a{
+    display :block;
+    font-size:20px;
+    color: #000;
+
+}
+.seekerbutton{
+    width:100%;
+    float: left;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.seekerbutto{
+    width:40%;
+    float: left;
+    padding: 5px;
+    background: #0eb5df;
+    color: #fff;
+    margin: 10px;
+}
+.seekernam{
+    width: 90%;
+    float: left;
+    margin-top: 5px;
+    margin-left: 11px;
+    margin:10px;
+}
+.seekernam ul{
+    list-style: none;
+    margin-bottom: 0rem;
+   
+    padding: 10px;
+}
+.seekernam ul li{
+    display: inline-block;
+}
+.seekernam ul li a{
+    display: block;
+    font-size: 13px;
+    color: #bebebe;
+    padding: 0px 10px;
+    font-weight: 500;
+}
+.feilds{
+    width:100%;
+    float: left;
+    margin-top: 50px;
+}
+.feilds input {
+    width: 48%;
+    padding: 7px;
+}
+
+
+
+.scro{
+    width: 100%;
+    height: 100vh;
+    overflow:scroll;
+}
+.ckeckcompany1 {
+    width: 100%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    margin: 2% 0%;
+    /* height: 385px; */
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+    overflow: hidden;
+    /* position: relative;
+    z-index: -999999; */
+}
+.advance{
+    width: 100%;
+    float: left;
+    margin: 20px;
+}
+.advance a{
+    display: block;
+    color: blue;
+    padding: 10px;
+}
+.filleducation {
+    width: 100%;
+    float: left;
+    text-align: start;
+}
+.im img{
+    max-width: 2%;
+    cursor: pointer;
+}
+.btn-primary1{
+    background: none;
+    
+}
+.btn-primary1 img{
+    max-width: 70%;
+    margin-top: -21px;
+
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-primary1{
+    width: 53px;
+    margin-left: -7px;
+}
+.btn-primary1 img{
+    max-width: 60%;
+    margin-top: -11px;
+   
+}
+/* .modal-dialog1 {
+    position: relative;
+    width: 700px;
+    margin: .5rem;
+    pointer-events: none;
+} */
+.Editedu{
+    width:100%;
+    float: left;
+    /* margin: 10px; */
+}
+.eduac{
+    width:100%;
+    float: left;
+    padding-top: 25px;
+}
+.eduac p{
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.eduac select{
+    width: 100%;
+    padding: 5px;
+    margin-top: -6px;
+
+}
+.editedu1{
+    width:100%;
+    float: left;
+}
+.editedu1 h2{
+    font-size: 22px;
+    color: #6a6969;
+    font-weight: 700;
+}
+.btn::focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%);
+}
+.editedukey {
+    width: 59%;
+    float: left;
+}
+.editedukey h2{
+    font-size: 22px;
+    color: #6a6969;
+    font-weight: 700;
+}
+.eduackey1{
+    width:100%;
+    float: left;
+}
+.eduackey1 p{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.eduackeys{
+    width: 100%;
+    float: left;
+}
+.keyskill{
+    width:100%;
+    float: left;
+    border: 1px solid #bebebe;
+    height: 150px;
+}
+.keyskill ul{
+    list-style:none;
+
+}
+.keyskill ul li{
+    display:inline-block;
+}
+.keyskill ul li a{
+    display:block;
+    padding: 5px;
+    background: #bebebe;
+    margin: 5px;
+    border-radius: 3px;
+    color: #000;
+}
+
+
+.eduackeys p{
+    color: #a3a3a3;
+    margin-top: 10px;
+}
+.areakey{
+    width:100%;
+    float: left;
+    margin-top: 10px;
+}
+.areakey input{
+    width:100%;
+    padding: 5px;
+    border: 1px solid #bebebe;
+}
+.areakey input:focus{
+    outline: none;
+}
+.keyskill1{
+    width:100%;
+    float: left;
+    margin-top: 10px;
+}
+.keyskill1 p{
+    color: #bebaba;
+    font-weight: 600;
+    font-size: 14px;
+}
+.keyskill1 ul{
+    list-style: none;
+}
+.keyskill1 ul li{
+    display: inline-block;
+}
+.keyskill1 ul li a{
+    display: block;
+    padding: 5px;
+    border: 1px solid #bebaba;
+    border-radius: 3px;
+    color: #a3a1a1;
+    font-size: 13px;
+    margin: 4px;
+}
+.employment{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+.employment p{
+    color: #000;
+    margin-bottom: 20px;
+}
+.employment input:focus{
+    outline: none;
+}
+.employment input{
+    width: 100%;
+    padding: 5px;
+}
+.empl{
+    width:100%;
+    float: left;
+}
+.empl ul{
+    list-style: none;
+}
+.empl ul li{
+    display: inline-block;
+}
+.empl ul li a{
+    display: block;
+}
+.optemployment{
+    width: 100%;
+    float: left;
+}
+.sp{
+    width: 100px;
+    float: left;
+    margin: 5px;
+}
+
+.certificatecourese{
+    width: 100%;
+    float: left;
+    margin-top:40px;
+}
+.certificatecourese p{
+    color: #000;
+    margin-bottom: 10px;
+}
+.certificatecourese input{
+    width: 100%;
+    padding: 5px;
+}
+.certificatecourese input:focus{
+    outline: none;
+}
+.certificatecourese1{
+    width: 100%;
+    float: left;
+    margin-top:20px;
+}
+.certificatecourese1 p{
+    color: #000;
+    margin-bottom: 10px;
+}
+.certificatecourese1 input{
+    width: 100%;
+    padding: 5px;
+}
+.certificatecourese1 input:focus{
+    outline: none;
+}
+
+.project {
+    width: 50%;
+    float: left;
+}
+.project ul{
+    list-style: none;
+}
+.project ul li{
+    display: inline-block;
+}
+.project ul li a{
+    display: block;
+}
+.gender{
+    width:100%;
+    float: left;
+}
+.gender1{
+    width: 8%;
+    float: left;
+}
+.gentext{
+    width:20%;
+    float: left;
+}
+.gender1 input[type="radio"] {
+        
+    width: 20px;
+    height: 20px;
+    
+   
+    
+  
+
+    
+
+}
+.employment h2{
+    font-size: 20px;
+}
+
+
+
+
+.fieldfillk{
+    width:100%;
+    float: left;
+    padding:5px;
+    margin: 3px;
+}
+.fieldfillk ul{
+    list-style: none;
+    
+    margin-bottom: -8px;
+}
+.fieldfillk ul li{
+    display: inline-block;
+}
+.fieldfillk ul li a {
+    display: block;
+    padding: 0px 28px;
+    color: #000;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.tempalateRusume{
+    width:100%;
+    float: left;
+    background: #ffff;
+    border-radius: 4px;
+    border:1px solid #bebebe;
+}
+.tempalateRusume h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+   
+
+}
+.tempalateRusume p{
+    font-size: 12px;
+    font-weight: 600;
+   
+    border: 1px solid #bebebe;
+    padding: 4px;
+    text-align: center;
+}
+.resumepersonal{
+    width:100%;
+    float: left;
+    padding: 5px;
+}
+.resumepersonal h2{
+    color: #0033ff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: start;
+    border-bottom: 2px solid #0033ff;
+}
+.prosonalname{
+    width:100%;
+    float: left;
+}
+.pname{
+    width:40%;
+    float: left;
+    padding: 5px;
+}
+.pname p{
+    font-size: 11px;
+    font-weight: 800;
+    border: none;
+    text-align: start;
+    margin-bottom: 0px;
+}
+.pname ul{
+    list-style: none;
+}
+.pname ul li{
+    padding: 5px;
+}
+.pname ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 800;
+    color: #bebebe;
+}
+.pname1{
+    width:60%;
+    float: left;
+    padding: 5px;
+}
+.pname1 p{
+    font-size: 11px;
+    font-weight: 800;
+    border: none;
+    text-align: start;
+    margin-bottom: 0px;
+}
+.pname1 ul{
+    list-style: none;
+}
+.pname1 ul li{
+    padding: 5px;
+}
+.pname1 ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 7px;
+    font-weight: 800;
+    color: #000;
+    padding: 1px;
+}
+
+.pabout{
+    width:100%;
+    float: left;
+}
+.pabout p{
+    color: #000;
+}
+.pabout1 span{
+    width:100%;
+    float: left;
+}
+ .btn-primary11 {
+    /* color: #fff; */
+    /* background-color: #007bff; */
+     border-color: none;
+}
+
+
+    .btn:focus{
+        outline: none;
+        box-shadow: none;
+    } 
+    /* .show{
+        width: 100%;
+        display: none;
+    } */
+
+.resumebanner{
+    width: 100%;
+    float: left;
+    background: #e8e8e8;
+    text-align: center;
+    position: relative;
+    z-index: -9999;
+}
+.r1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.r1 a{
+    width: 200px;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background: #6a6969;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: .3s;
+}
+.r1 a:hover{
+   text-decoration: none;
+   background: #fff;
+   color: #000;
+    transform: scale(1.1);
+    border: 1px solid #000;
+}
+.resumeheading {
+    width: 90%;
+    float: left;
+    margin: 20px;
+}  
+.resumeheading h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #6a6969;
+}
+.resumeheading p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #6a6969;
+}
+.resumepic{
+    width:100%;
+    float: left;
+}
+.resumepic img{
+    max-width: 100%;
+}
+.dashresume {
+    width: 100%;
+    float: left;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.userid{
+    width:100px;
+    height: 100px;
+    border:1px solid #000;
+    border-radius: 60%;
+}
+.userid img{
+    max-width: 100%;
+    margin: 0px;
+}
+.userid a{
+    display: block;
+    padding: 3px;
+}
+.inforesume {
+    width: 99%;
+    float: left;
+    background: #000000;
+    margin: 5px;
+}
+.nameresume {
+    width: 98%;
+    float: left;
+    padding: 10px;
+}
+.nameresume ul{
+    list-style: none;
+}
+.nameresume ul li {
+    padding: 3px;
+}
+.nameresume ul li a{
+    display: block;
+    padding: 3px;
+    text-align: start;
+    color: #6a6969;
+    font-size: 16px;
+    font-weight: 600;
+}
+.v1 {
+    width: 20%;
+    padding: 0px 10px;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.probanner{
+    width:100%;
+    float: left;
+    position: relative;
+}
+.probanner a{
+    display: block;
+}
+.probanner img {
+    max-width: 100%;
+    margin: 0px;
+   
+}
+.in1 {
+    width: 49%;
+    float: left;
+    text-align: start;
+}
+.bannedit {
+    width: 11%;
+    float: left;
+    position: absolute;
+    bottom: 21px;
+    display: flex;
+    justify-content: flex-end;
+    right: 19px;
+   
+    color: #fff;
+}
+.bannedit a{
+    display: block;
+    background: #d2d2d2;
+    color: #000;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+}
+.pen {
+    position: absolute;
+    width: 100px;
+    float: left;
+    right: -40px;
+    top: 0px;
+    cursor: pointer;
+}
+.filed1{
+    width:100%;
+    float:left;
+    background: #fff;
+
+}
+.n1 {
+    width: 70%;
+    float: left;
+    padding: 0px 10px;
+    margin-top: 25px;
+}
+.n1 h6{
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: start;
+}
+.n1 p{
+    color: rgb(19, 132, 167);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: start;
+}
+.n2{
+    width: 20%;
+    float: left;
+    
+        margin-top: 46px;
+    
+}
+.aboutname{
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+.abn{
+    width: 32%;
+    float: left;
+}
+.abn1 input{
+    width: 98%;
+    float: left;
+}
+.abn1 {
+    width: 98%;
+    float: left;
+}
+.abn11 {
+    width: 100%;
+    float: left;
+}
+.ft {
+    width: 100%;
+    float: left;
+    margin: 10px 0px;
+    text-align: start
+}
+.ft p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.yntext p{
+    font-size: 23px;
+}
+.yntext {
+    width: 40%;
+    float: left;
+}
+.yn1 {
+    width: 18%;
+    float: left;
+}
+.yn {
+    width: 98%;
+    float: left;
+    margin: 10px;
+}
+.ft input{
+    width: 98%;
+    float: left;
+}
+.addrress{
+    width: 65%;
+    float: left;
+}
+.dateof{
+    width:98%;
+    float: left;
+}
+
+.gender{
+    width:100%;
+    float: left;
+}
+.gender1{
+    width: 8%;
+    float: left;
+}
+.gentext{
+    width:20%;
+    float: left;
+}
+.gender1 input[type="radio"] {
+        
+    width: 20px;
+    height: 20px;
+
+}
+input:focus{
+    outline: none;
+}
+.savbt{
+    width: 100%;
+    float: left;
+    padding: 20px;
+    text-align: end;
+}
+.savbt button {
+    width: 100px;
+    padding: 5px;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 3px;
+    margin: 5px;
+}
+button:focus{
+    outline: none;    
+}
+
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
+  .downresume{
+      width:100%;
+      float: left;
+     
+  }
+  .downresume img{
+      max-width: 100%;
+  }
+  .company1 img{
+      max-width: 100%;
+  }
+  .company1{
+      width:100%;
+      float: left;
+  }
+  .company1 ul{
+      list-style: none;
+  }
+  .company1 ul li{
+      display: inline-block;
+  }
+  .love {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 31px;
+    background: #fff;
+}
+  .love h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #6a6969;
+
+
+
+  }
+  .feedback{
+      width:100%;
+      float: left;
+  }
+  .u1{
+      width: 100%;
+      float: left;
+      padding: 5px;
+  }
+  .p1 {
+    width: 12%;
+    float: left;
+}
+  .p1 img{
+      max-width: 100%;
+  }
+  .p2q{
+      width: 60%;
+      float: left;
+  }
+  .p2q a{
+    text-align: start;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    padding: 0px 10px;
+  }
+  
+  .tabcontent h3 {
+    padding: 15px;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    background: #212529;
+}
+.tabcontent p{
+    padding: 5px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.tem2 {
+    width: 100%;
+    float: left;
+    /* display: flex;
+    justify-content: center; */
+}
+.tre {
+    width: 23%;
+    float: left;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.black a:hover{
+    color: #fff;
+    text-decoration: none;
+    
+}
+.black a{
+    display:block ;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 4px;
+    text-decoration: none;
+    background: #000;
+}
+.black{
+    position: absolute;
+    background: #000;
+    left: 0px;
+    right: 0px;
+    height: 340px;
+    bottom: -340px;
+    opacity: .5;
+    z-index: 9;
+    
+}
+.tre:hover .black{
+    bottom: 0px;
+    transition: .5s;
+}
+  .tre img{
+      max-width: 100%;
+  }
+  .dex {
+    width: 20%;
+    float: left;
+    background: #212529;
+    margin: 0px;
+    border: 1px solid #bebebe;
+   
+}
+  .dex img {
+    max-width: 25%;
+    padding: 0px 20px;
+}
+.dex p {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding: 13px;
+}
+.borderdax{
+    width:100%;
+    float: left;
+    background: #444;
+    height: 4px;
+}
+
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 0px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-left: none;
+}
+  .tablinks {
+    width: 93%;
+    margin: 9px;
+    padding: 5px;
+    border: none;
+    text-align: start;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    float: left;
+    cursor: pointer;
+}
+  .tablinks:focus{
+      outline: 0px;
+  }
+  .ws{
+      width:80%;
+      float: left;
+  }
+ .menu ul li ul li{
+    display: block;
+    text-align: start;
+ }
+ .menu ul ul {
+    width: 250px;
+    position: absolute;
+    background: #ffffff;
+    color: #000;
+    border: 2px solid #bebebe;
+    right: 0px;
+    z-index: 9999;
+    display: none;
+    text-align: start;
+    border-radius: 5px;
+}
+  .menu ul li:hover > ul{
+      display: block;
+  }
+
+  /* *************************recriuter********************* */
+
+  .recriuterbanner{
+      width: 100%;
+      float: left;
+      background: #fff;
+  }
+  .tabre {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 97%;
+    padding: 5px;
+    margin: 10px;
+    /* height: 500px; */
+    overflow: scroll;
+    overflow-x: hidden;
+}
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    /* padding: 0px 12px; */
+    border: 1px solid #ccc;
+    width: 100%;
+    border-left: none;
+    /* margin-top: 10px; */
+}
+  .recriuterbanner{
+      width:100%;
+      float: left;
+      background: #dcdcdc;
+      position: relative;
+    z-index: -999999999;
+  }
+  .rc{
+      width: 100%;
+      float: left;
+  }
+  
+  .rc1 {
+    width: 14%;
+    float: left;
+    border: 1px solid #bebebe;
+    border-radius: 60%;
+    height: 41px;
+    text-align: center;
+}
+  .rc1 img{
+      max-width: 100%;
+  }
+  .rc3 {
+    width: 75%;
+    float: left;
+    padding: 0px 20px;
+}
+.rc3 h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: #087cef;
+}
+.rc3 p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    
+}
+.rc3 ul{
+    list-style: none;
+    margin-bottom: 0px;
+}
+.rc3 ul li{
+    display: inline-block;
+
+}
+.rc3 ul li a{
+    display: block;
+    padding: 5px;
+    color: #a3a1a1;
+    font-size: 13px;
+    font-weight: 600;
+}
+.tops{
+    width: 100%;
+    float: left;
+}
+.to1 {
+    width: 95%;
+    float: left;
+}
+.to1 h2{
+    font-size: 17px;
+    font-weight: 700;
+    color:#666;
+
+}
+.to1 ul{
+    list-style: none;
+    margin-bottom: 0px;
+}
+.to1 ul li{
+    display: inline-block;
+}
+.to1 ul li a{
+    display: block;
+    padding: 5px;
+    color: #6a6969;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.to1 p{
+font-size: 12px;
+font-weight: 500;
+color: #a3a3a3;
+margin-bottom: 0px;
+
+}
+.Recruiterww h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #777;
+
+
+}
+
+.Recruiterww{
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+.rg1{
+    width: 60%;
+    float: left;
+}
+.rg1 ul{
+    list-style: none;
+}
+.rg1 ul li{
+    padding: 2px;
+}
+.rg1 ul li a{
+    display: block;
+    padding: 1px;
+    color: #a3a3a3;
+    font-size: 14px;
+    font-weight: 600;
+}
+.rg11{
+    width: 33%;
+    float: left;
+}
+.rg11 ul{
+    list-style: none;
+}
+.rg11 ul li{
+    padding: 2px;
+}
+.rg11 ul li a{
+    display: block;
+    padding: 1px;
+    color: #4A90E2;
+    font-size: 14px;
+    font-weight: 600;
+}
+.greet{
+    width:100%;
+    float: left;
+}
+pre {
+    display: block;
+    font-size: 14px;
+    color: #8d8d8e;
+    font-weight: 700;
+}
+.bannedit1 {
+    width: 6%;
+    float: left;
+    position: absolute;
+    bottom: -180px;
+    display: flex;
+    justify-content: flex-end;
+    right: 0px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.logocom {
+    width: 200px;
+    height: 190px;
+    border: 1px solid #000;
+    background: #ffffff;
+    border-radius: 60%;
+    margin-top: 73px;
+    overflow: hidden;
+}
+.logoc1{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.companytab22 {
+    width: 100%;
+    float: left;
+    margin-top: 100px;
+    border: 1px solid #bebebe;
+    padding: 10px;
+}
+.nav.nav-pills.w{
+    width: 100%;
+    background: #000;
+    float: left;
+    padding: 5px;
+}
+.nav-pills .nav-link {
+    border-radius: 2px;
+}
+.nav-item a{
+    color: #fff;
+}
+.nav-item a:hover{
+    color:#fff;
+}
+.tablinks img {
+    max-width: 12%;
+    padding: 0px 0px;
+}
+.settinghead{
+    width:100%;
+    float: left;
+}
+.settinghead h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #4d4d4d;
+    margin-bottom: 0px;
+}
+.settinghead p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #bebebe;
+}
+.primaryemail{
+    width:100%;
+    float: left;
+    margin-top: 25px;
+}
+.primaryemail h3{
+    font-size: 17px;
+    font-weight: 700;
+    color: #444;
+}
+.primaryemail p{
+    font-size: 14px;
+    color: #bebebe;
+    margin-bottom: 0px;
+}
+.primaryemail a{
+    display: block;
+    padding: 3px;
+    color: #444;
+    font-weight: 700;
+    font-size: 14px;
+}
+.cel{
+    
+        width: 100%;
+        float: left;
+        
+    
+}
+.chr{
+    width: 70%;
+    float: left;
+}
+.chr input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #bebebe;
+}
+.chnum{
+    width: 100%;
+    float: left;
+    margin-top:  20px;
+}
+.chnum h3{
+    font-size: 17px;
+    font-weight: 700;
+    color: #444;
+}
+.cel1 {
+    width: 30%;
+    float: left;
+}
+.n{
+    width: 70%;
+    float: left;
+}
+.cp{
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+}
+.cp1{
+    width: 70%;
+    float: left;
+}
+.cel1{
+    width: 30%;
+    float: left;
+}
+.chw{
+    width: 98%;
+    float: left;
+    margin: 10px;
+}
+.chw input{
+    width: 60%;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #bebebe;
+}
+.blockcompany{
+    width:100%;
+    float:left;
+    padding: 20px;
+}
+.blockcompany h3{
+    font-size: 17px;
+    font-weight: 700;
+    color: #444;
+}
+.blockcompany p{
+    font-size: 14px;
+    color: #bebebe;
+    margin-bottom: 0px;
+}
+.bcs{
+    width: 100%;
+    float: left;
+
+}
+.bcs input{
+    width: 80%;
+    padding: 4px;
+}
+.jd {
+    width: 100%;
+    float: left;
+    padding: 24px;
+    background: #f3f3f3be;
+    border-radius: 5px;
+    margin-top: 10px;
+    /* height: 500px;
+    overflow: scroll;
+    overflow-x: hidden; */
+}
+.jd h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #444;
+}
+.jd p{
+    font-size: 19px;
+    color: #636363;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+.highpost{
+    width:100%;
+    float: left;
+    padding: 10px;
+}
+ 
+ 
+.hp1 {
+    float: left;
+    padding: 0px 0px;
+    width: 25%;
+}
+.hp1 p{
+  
+    font-size: 14px;
+    font-weight: 700;
+    color: #4A90E2;
+    margin: 5px 0px;
+}
+.hp2{
+    width:70%;
+    float: left;
+}
+.hp2 input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.hp2 textarea {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.hp2 textarea:focus{
+    outline: none;
+}
+
+
+
+
+/* *************************next step************************* */
+#msform {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    }
+    #msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+    }
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+    display: none;
+    }
+    /*inputs*/
+    #msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+    }
+    /*buttons*/
+    #msform .action-button {
+    width: 100px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    }
+    #msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+    /*headings*/
+    .fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    }
+    .fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    }
+    /*progressbar*/
+    #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+    }
+    #progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    }
+    #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+    }
+    /*progressbar connectors*/
+    #progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+    }
+    #progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:before, #progressbar li.active:after {
+    background: #27AE60;
+    color: white;
+    }
+    .y {
+        width: 20%;
+        float: left;
+    }
+    .resumepic1 img{
+        max-width: 100%;
+    }
+    img{
+        max-width: 100%;
+    }
+    .companyA1{
+        width:100%;
+        float: left;
+    }
+    /* Style the tab */
+    .cmp444 {
+        float: left;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 100%;
+       
+    }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    
+  }
+  .companyA2{
+      width: 30%;
+      float: left;
+      margin: 5px;
+      position: relative;
+  }
+  .companyA3 {
+    width: 68%;
+    float: left;
+    margin: 5px;
+}
+  .penb {
+    position: absolute;
+    width: 100px;
+    float: left;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+  .penqa {
+    position: absolute;
+    width: 100px;
+    float: left;
+    right: -49px;
+    top: 70px;
+    cursor: pointer;
+}
+.combtn {
+    width: 51%;
+    float: left;
+    border: none;
+    outline: none;
+    margin-top: 35px;
+    text-align: start;
+    padding: 10px 6px;
+    background: #fff;
+    border-radius: 4px;
+    margin-left: 16px;
+    font-size: 14px;
+    /* text-align: center; */
+}
+
+.combtn:focus{
+    outline: none;
+}
+.combtn:hover{
+    background: #fff;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+  .cpmbanner {
+    width: 100%;
+    float: left;
+   background: #4d4d4d;
+    height: 170px;
+    position: relative;
+    background-size: 100%;
+}
+.logcomp3 {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #000;
+    position: absolute;
+    bottom: 0px;
+    top: 93px;
+    left: 20px;
+}
+.bannedit1c {
+    width: 17%;
+    float: left;
+    position: absolute;
+    bottom: 3px;
+    display: flex;
+    justify-content: flex-end;
+    right: 12px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.cmpsearch{
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+.cm{
+    width: 90%;
+    float: left;
+}
+
+.cm input {
+    width: 271px;
+    padding: 4px;
+}
+.tcopm:focus{
+    outline: none;
+}
+.tcopm {
+    width: 9%;
+    float: left;
+    padding: 4px;
+    background: #000;
+    color: #ffff;
+    border: none;
+    font-size: 19px;
+}
+.ckeckcompanyq {
+    width: 100%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    margin: 2% 0%;
+    /* height: 385px; */
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+}
+.fa, .fas {
+    font-weight: 900;
+    padding: 0px 6px;
+}
+.tabcontentcompany {
+    float: left;
+    padding: 0px 0px;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-left: none;
+    background: #f9f9f9;
+}
+.jobpic img{
+    max-width: 40%;
+}
+.rt {
+    width: 74%;
+    float: left;
+    border-right: 1px solid #bebebe;
+    margin: 10px;
+}
+.coprofile {
+    width: 20%;
+    float: left;
+    margin-left: 24px;
+}
+.propi {
+    width: 100%;
+    float: left;
+    padding: 4px;
+    border: 1px solid #000;
+    
+    margin-top: 20px;
+    overflow: hidden;
+}
+.nm{
+    width:100%;
+    float: left;
+
+}
+.nm a{
+    display: block;
+    padding: 5px;
+    color: #444;
+}
+.shortlist{
+    width: 40%;
+    float: left;
+    margin: 5px;
+}
+.shortlist a{
+    display: block;
+    padding: 5px;
+    border: 1px solid #bebebe;
+    color: #444;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+.shortlist a:hover{
+
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+}
+.penq {
+    position: absolute;
+    width: 14px;
+    float: left;
+    right: 0px;
+    top: 70px;
+    cursor: pointer;
+}
+.viewbanner{
+    width: 100%;
+    float: left;
+    background: #fff;
+    border:1px solid #bebebe;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.companyviewdetail{
+    width: 100%;
+    float: left;
+}
+.companyviewdetail h5{
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+    border-left: 4px solid #007bff;
+    padding: 3px 13px
+}
+.companybg{
+    width:100%;
+    float: left;
+    background: #e2e2e2;
+}
+.Eduationdetail {
+    width: 96%;
+    float: left;
+    padding: 5px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin: 12px;
+}
+.Eduationdetail p{
+    color: #6c757d;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+.Eduationdetail ul{
+    list-style: none;
+    margin-bottom: 0px;
+}
+.Eduationdetail ul li {
+    padding: 2px;
+}
+.Eduationdetail ul li a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.combtn1:focus{
+    outline: none;
+}
+.combtn1 {
+    width: 51%;
+    float: left;
+    /* border: none; */
+    outline: none;
+    margin-top: 55px;
+    text-align: start;
+    padding: 10px 1px;
+    background: #007bff;
+    border-radius: 4px;
+    margin-left: 16px;
+    border: 1px solid #dee2e6;
+    color: #ffff;
+    box-shadow: 1px 4px 11px -6px black;
+}
+.cmpname {
+    width: 100%;
+    float: left;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cmpname a{
+    display: block;
+    padding: 3px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .5s;
+    text-align: center;
+}
+.cmpname a:hover{
+    text-decoration: none;
+    transform: scale(1.1);
+    color: #fff;
+}
+.chooseheading{
+    width:100%;
+    float: left;
+}
+.chooseheading h3{
+    color: #fff;
+    font-size: 20px;
+    background: #262626;
+    font-weight: 600;
+}
+.chooseheading p{
+    color: #fff;
+    font-size: 16px;
+}
+.bannerjob {
+    width: 100%;
+    float: left;
+    background: url(../images/banner6.png)no-repeat;
+    height: 200px;
+    margin-top: 0px;
+    background-size: 100%;
+    
+}
+.profiletext1 {
+    float: left;
+    width: 90%;
+    margin-top: 10%;
+}
+.profiletext1 input{
+    width:950px;
+    padding: 4px;
+    border: 1px solid #bebebe;
+}
+.fitterbtn{
+    width: 100%;
+    float: left;
+    margin-top: 57%;
+}
+.fitterbtn button{
+    width: 100px;
+    padding: 4px;
+    background: #ffd102;
+    color: #000;
+    
+}
+.dps{
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #868686;
+}
+.hp23 input {
+    width: 34%;
+    padding: 9px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    font-size: 14px;
+    float: left;
+    margin: 0px 5px;
+}
+.English {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.eng {
+    width: 10%;
+    float: left;
+    margin-top: 6px;
+}
+
+.eng1 {
+    width: 20%;
+    float: left;
+    margin-top: 5px;
+}
+.lag1{
+    width: 34%;
+    padding: 9px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    font-size: 14px;
+    float: left;
+    margin: 0px 5px;
+}
+.eng11 {
+    width: 23%;
+    float: left;
+}
+.ownerprofile{
+    width: 99%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    margin: 2% 0%;
+    
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+}
+.owner1{
+    width: 70%;
+    float: left;
+}
+.owner p{
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+.owner {
+    width: 70%;
+    padding: 10px;
+}
+.ownerin input {
+    width: 100%;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #bebebe;
+}
+.ownerin textarea{
+    width: 100%;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #bebebe;
+}
+.ownerpic{
+    width: 20%;
+    float: left;;
+}
+.addressfotter{
+    width: 15%;
+    float: left;
+
+}
+.addressfotter ul{
+    list-style: none;
+}
+.addressfotter ul li{
+    padding: 4px;
+}
+.addressfotter ul li a{
+    display: block;
+    font-size: 14px;
+    padding: 0px;
+}
+.addressfotter1{
+    width: 60%;
+    float: left;
+
+}
+.addressfotter1 ul{
+    list-style: none;
+}
+.addressfotter1 ul li {
+    padding: 6px 17px;
+    margin-top: 17px;
+}
+.addressfotter1 ul li a{
+    display: block;
+    font-size: 14px;
+    padding: 0px;
+}
+
+.editedukey1 {
+    width: 41%;
+    float: left;
+    text-align: center;
+}
+.editedukey1 img{
+    
+    max-width:44%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.adtext{
+    width: 100%;
+    float: left;
+}
+.adtext h4{
+    color: #777;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+.iphone{
+    width:100%;
+    float: left;
+   
+}
+.takebanner{
+    width:100%;
+    float: left;
+    background: #8FB163;
+}
+.adcom{
+    width:100%;
+    float: left;
+}
+.adcom img{
+    max-width: 100%;
+}
+.adcom a{
+    display: block;
+    padding: 5px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+.fa, .fas {
+    font-weight: 900;
+    font-size: 14px;
+}
+.adcom1{
+    width:100%;
+    float: left;
+}
+.adcom1 img{
+    max-width: 100%;
+}
+.adcom1 a{
+   
+        display: block;
+        padding: 5px 155px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+}
+.full{
+    width:100%;
+    float: left;
+}
+.full img{
+    max-width: 100%;
+}
+.full1{
+    width:100%;
+    float: left;
+}
+.full1 h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+.full1 p{
+    color: #fff;
+    font-size: 14px;
+}
+.full1 a{
+   
+    display: block;
+    padding: 5px 155px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.copyright{
+    width: 100%;
+    float: left;
+    text-align: center;
+    background: #6a6969;
+}
+.copyright p{
+    color:#fff;
+    font-weight: 600;
+    margin-bottom: 0px;
+    padding: 10px;
+}
+
+
+
+.aboutfooter{
+    width: 100%;
+    float: left;
+    position: fixed;
+}
+.aboutfooterbanner {
+    width: 100%;
+    float: left;
+    background: #f3f1f1;
+}
+.aboutfooterbanner h2{
+    color: #4d4d4d;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+.headingabf {
+    width: 98%;
+    float: left;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #bebebe;
+    margin: 10px;
+}
+.headingabf h6{
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+}
+.boxabf1{
+    width: 98%;
+    float: left;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #bebebe;
+    margin: 10px;
+}
+.contactus{
+    width:100%;
+    float: left;
+    background: #fff;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+}
+.contactus h2 {
+    color: #1d7662;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: start;
+    padding: 0px 20px;
+}
+.contactus p{
+    color: #868686;
+    padding: 0px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.f1 {
+    width: 55%;
+    float: left;
+    margin-top: 20px;
+}
+.f1 h4{
+    color: #000;
+    font-size: 16px;
+    padding: 0px 20px;
+}
+.pf{
+    width:100%;
+    float: left;
+    margin-top: 10px;
+}
+.pfname{
+    width: 14%;
+    float: left;
+}
+.pfname h5{
+    color: #000;
+    font-size: 15px;
+    padding: 5px 20px;
+}
+.pfinput{
+    width: 80%;
+    float: left;
+}
+.pfinput input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #bebebe;
+}
+.mpf {
+    width: 70%;
+    float: left;
+    padding: 5px 0px;
+    margin-left: 20px;
+}
+.pfinput p{
+    color: #9f9f9f;
+    font-size: 13px;
+}
+.pfb {
+    width: 56%;
+    float: left;
+    background: #1d7662;
+    color: #fff;
+    margin: 5px;
+    margin-left: 107px;
+    
+    padding: 5px;
+    font-weight: 700;
+}
+.circleot{
+    width:100%;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
+}
+.coursestype{
+    width:100%;
+    float:left;
+
+}
+.cour {
+    width: 45%;
+    float: left;
+}
+.cour1{
+    width:24%;
+    float: left;
+}
+.cour11{
+    width:70%;
+    float: left;
+}
+.cour1 [type=radio]{
+    width: 20px;
+    height: 20px;
+    outline: none;
+    border-radius: 17px;
+    transition: .1s;
+    box-shadow: inset 0px 0px 8px #f8f9fa;
+    border: 3px solid rgb(4, 156, 226);
+}
+.desiredcarr{
+    width: 48%;
+    float: left;
+}
+.desiredcarr p{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding: 0px 10px;
+}
+.desiredcarr1{
+    width: 48%;
+    float: left;
+}
+.desiredcarr1 p{
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding: 0px 10px;
+}
+.perdetail{
+    width:100%;
+    float: left;
+}
+.lagu{
+    width:100%;
+    float: left;
+    padding: 10px;
+   
+}
+.fieldfillwe{
+    width: 100%;
+    float:left;
+    padding: 0px 10px;
+}
+.fieldfillwe ul{
+    list-style: none;
+    margin-bottom: 5px;
+}
+.fieldfillwe ul li{
+    display: inline-block;
+    width: 130px;
+}
+.fieldfillwe ul li a{
+    display: block;
+    padding: 5px;
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+}
+.r{
+    width: 95%;
+    float: left;
+    border: 1px solid #fff;
+    background:none;
+    color: #fff;
+    transition: .3s;
+}
+.r:hover{
+    background:#087cef;
+    color: #fff;
+    border: none;
+    transform: scale(1.1);
+}
+.resumeheading {
+    width: 100%;
+    float: left;
+    background: #fff;
+    margin: 4px;
+    padding: 10px;
+}
+.resumeheading h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+}
+.resumeheading p{
+    color: #000;
+    font-size: 14px;
+}
+.eduac select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+.resumename{
+    width: 100%;
+    float: left;
+    margin: 5px;
+}
+.resumename input{
+    width: 100%;
+    padding: 5px;
+}
+.Married{
+    width: 100%;
+    float: left;
+}
+.Married input{
+    width: 98%;
+    padding: 5px;
+    margin: 5px;
+}
+.w{
+    width: 98%;
+    padding: 5px;
+    margin: 5px;
+}
+.resumetempalte {
+    width: 30%;
+    float: left;
+    border-radius: 2px;
+    margin: 4px;
+    background: #fff;
+    height: 211px; 
+}
+.cv{
+    width:90%;
+    float: left;
+}
+.cv p{
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+}
+.cvpic{
+    width:100%;
+    float: left;
+   
+}
+.picresume img{
+    max-width: 30%;
+}
+.cvname{
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.cvname ul{
+    list-style: none;
+}
+.cvname ul li{
+    padding: 2px;
+}
+.cvname ul li a{
+    display: block;
+    color: #007bff;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: start
+}
+.resumeimage{
+    width:50%;
+    float: left;
+    background: #1d7662;
+    padding: 10px;
+}
+.resumepics{
+    width: 60px;
+    height: 60px;
+    border-radius: 60%;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+.resumecontact{
+    width: 100%;
+    float: left;
+
+}
+.resumecontact p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: start;
+}
+.phone{
+    
+        width: 100%;
+        float: left;
+        text-align: start;
+        color: #ffff;
+        font-size: 12px;
+        padding: 6px 1px;
+        letter-spacing: 2px;
+    }
+    .Itresume{
+        width:40%;
+        float: left;
+    }
+    .Itresume p{
+        color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: start;
+    }
+    .bar{
+        width:60%;
+        float: left;
+    }
+    .border.d{
+        border: 1px solid #dee2e6!important;
+        height: 7px;
+        margin-top: 14px;
+    }
+    .passing{
+        width:70%;
+        float: left;
+    }
+    .passing p{
+        font-size: 11px;
+    }
+    .passingyear{
+        width:30%;
+        float: left;
+    }
+    .passingyear p{
+        font-size: 11px;
+       
+    }
+    .resumebaner {
+        width: 50%;
+        float: left;
+        background: #212529;
+       padding:5px
+    }
+    .resumebaner h4{
+        font-size:18px;
+        font-weight: 600;
+        text-align: start;
+        padding: 10px;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+
+.info{
+    width:100%;
+    float: left;
+}
+
+.dob{
+    width:50%;
+    float: left;
+    padding: 4px;
+}
+.dob p{
+    color: #fff;
+    font-size: 12px;
+    text-align: start;
+    position: relative;
+    margin-bottom: 1px;
+}
+.dob span p:after{
+    content: '';
+    position: absolute;
+    width: 31px;
+    height: 1px;
+    background: #fff;
+    left: -36px;
+    top: 9px;
+}
+
+
+.Templatebanner{
+    width:99%;
+    float: left;
+    margin: 10px;
+    background: #fff;
+    border: 1px solid #bebebe;
+    text-align: center;
+}
+.Templatebanner h2{
+    font-size: 30px;
+    color:#000;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}    
+.Templatebanner p{
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.Templatebanner span{
+   
+    padding: 5px;
+    text-align: center;
+}
+.Templateparsonal{
+    width:99%;
+    float: left;
+    margin-top: 10px;
+    text-align: start;
+    padding: 5px;
+}
+.temicon{
+    width:5%;
+    float: left;
+    font-size:14px;
+}
+.tpresonal{
+    width:95%;
+    float: left;
+}
+.fa, .fas {
+    font-weight: 900;
+    font-size: 22px;
+}
+.tpresonal h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.templatename{
+    width:30%;
+    float: left;
+}
+.templatename h5 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(84 84 84);
+}
+.templatename h5 span::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 1px;
+    left: 0px;
+    color: #000;
+}
+.Templatefield{
+    width:69%;
+    float: left;
+}
+.Miss{
+    width: 100px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+.mr{
+    width: 60%;
+}
+.mr select{
+    width: 60%;
+    padding: 5px;
+
+}
+.mr select:focus{
+outline: 0px;
+
+}
+
+
+.mr input {
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #bebebe;
+    width: 39%;
+}
+
+.sub{
+    width:100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.subtext{
+    width:11%;
+    float: left;
+}
+.subtext p{
+    font-size: 17px;
+    font-weight: 600;
+}
+.subjectinput{
+    width:14%;
+    float: left;
+}
+.subjectinput input{
+    padding: 5px;
+    font-size: 12px;
+    border: none;
+    border-bottom: 2px solid #bebebe;
+    width: 100%;
+}
+.Templateparsonal1 {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    text-align: start;
+    padding: 5px;
+}
+.userpic {
+    width: 20%;
+    float: left;
+    padding: 20px;
+}
+.tm{
+    width:80%;
+    float:left;
+}
+.tempalatere{
+    width:100%;
+    float: left;
+}
+.tempalatere textarea{
+    width:98%;
+    padding: 10px;
+    margin: 10px;
+}
+.keyskill11{
+    width:50%;
+    float: left;
+    padding: 10px;
+}
+.keyskill11 ul{
+    font-size: 20px;
+    list-style: none;
+}
+.keyskill11 ul li{
+    padding: 0px 4px;
+
+}
+.workhistory{
+    width:100%;
+    float: left;
+    padding: 5px;
+    border: 1px solid #bebebe;
+}
+.wh{
+    width: 12%;
+    float: left;
+}
+.wh p{
+    color: #000;
+    font-size: 17px;
+    text-align: start;
+}
+.wh1{
+    width:40%;
+    float: left;
+}
+.wh1 input{
+    width:100%;
+    padding: 5px;
+}
+.collapsejob{
+    width: 20%;
+    float: left;
+}
+.dob1 p{
+    text-align: start;
+    font-size: 16px;
+    font-weight: 500;
+    color: #03f;
+}
+.dob1 {
+    width: 24%;
+    float: left;
+    padding: 4px;
+}
+.phone1 {
+    width: 52%;
+    float: left;
+    text-align: start;
+    color: #ffff;
+    font-size: 12px;
+    padding: 6px 1px;
+    letter-spacing: 2px;
+}
+.passing p{
+    text-align: start;
+    font-size: 16px;
+    font-weight: 500;
+    color: #03f;
+
+
+}
+.resumecontact1{
+    width: 100%;
+    float: left;
+}
+.resumecontact1 p{
+    text-align: start;
+    font-size: 16px;
+    font-weight: 500;
+    color: #03f;
+}
+.compaddress{
+    width: 50%;
+    float:left
+}
+.temicon img{
+    max-width: 40%;
+}
+.cv{
+    width:100% ;
+    float:left;
+    padding: 5px;
+}
+.cv h2{
+    font-size: 20px;
+    color:#000;
+    font-size:27px;
+    font-weight:700;
+    padding: 5px;
+}
+.subject1{
+    font-size: 18px;
+    border:1px solid #1e7e34
+}
+.subborder{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background: #000;
+
+}
+.subjectname{
+    width:35%;
+    float: left;
+    padding:0px 10px;
+}
+.subjectname h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: start;
+    padding: 5px;
+
+}
+.subjectname ul{
+    list-style: none;
+}
+.subjectname ul li{
+    font-size: 15px;
+    color: #000;
+    padding: 3px;
+}
+.point{
+    width: 5%;
+    float: left;
+}
+.point ul{
+    list-style: none;
+}
+.point ul li{
+    color: #000;
+}
+.subjectname1{
+    width:30%;
+    float: left;
+   text-align: end;
+}
+.subjectname1 img{
+    margin: 10px;
+}
+.employ{
+    width:200px;
+    padding: 5px;
+    background: #087cef;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.selectstep {
+    width: 64%;
+    float: left;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.selectstep1 {
+    width: 93%;
+    float: left;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.dt {
+    width: 100%;
+    float: left;
+    justify-content: center;
+    display: flex;
+
+}
+.dt1 {
+    width: 25%;
+    float: left;
+    justify-content: center;
+    display: flex;
+}
+.dt a {
+    width: 52px;
+    height: 52px;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 60%;
+    line-height: 48px;
+    background: #888888;
+    color: #fff;
+    text-align: center;
+}
+.selectthree{
+    width:100%;
+    float:left;
+}
+.sel1{
+    width:15%;
+    float:left;
+}
+.sel1 h3{
+    color:#000;
+    font-size: 20px;
+    background: none;
+}
+.logo1{
+    width:100%;
+    float:left;
+}
+.pr {
+    background: #d7faff;
+    width: 95%;
+    float: left;
+    text-align: start;
+    padding: 10px;
+    margin: 10px;
+}
+.pr ul{
+    list-style: none;
+    margin-bottom: 0px;
+}
+.pr ul li{
+    display:inline-block;
+    padding:2px;
+}
+.oldjob{
+    width:100%;
+    float: left;
+    margin: 0px 10px;
+}
+.blockcompany1{
+        width: 10%;
+        position: absolute;
+        right: 39px;
+        top: 69px;
+    }
+
+.blockcompany1 img{
+    max-width: 60%;
+    padding: 0px;
+}

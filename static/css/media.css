@@ -1,0 +1,3753 @@
+
+
+@media only screen and (max-width:1400px){
+    .tp{
+        display: none;
+    }
+}
+@media only screen and (max-width:1170px){
+    .container{
+        width: 100%;
+    }
+    .jobtext h6 {
+       
+        font-size: 12px;
+    }
+    .resume a{
+        font-size: 9px;
+       
+    }
+    .Registred a{
+        font-size: 9px;
+       
+    }
+    .profiletext1 input {
+        width: 800px;
+        padding: 3px;
+        border: 1px solid #bebebe;
+    }
+    .fitterbtn {
+        width: 100%;
+        float: left;
+        margin-top: 58%;
+    }
+    .login a{
+        font-size: 9px;
+    }
+    .heading h2 {
+
+        color: #fff;
+        font-size: 22px;
+        text-align: center;
+        position: absolute;
+        left: 42px;
+        top: 33px;
+
+    }
+    .rt {
+        width: 68%;
+        float: left;
+        border-right: 1px solid #bebebe;
+        margin: 10px;
+    }
+    .combtn1 {
+        width:88%;
+        float: left;
+        border: none;
+        outline: none;
+        margin-top: 100px;
+        text-align: start;
+        padding: 3px 10px;
+        /* background: #fff; */
+        border-radius: 4px;
+        margin-left: 16px;
+        border: 1px solid #000;
+    }
+    .combtn {
+        width: 85%;
+        float: left;
+        border: none;
+        outline: none;
+        margin-top: 35px;
+        text-align: start;
+        padding: 10px 1px;
+        background: #fff;
+        border-radius: 4px;
+        margin-left: 16px;
+        font-size: 11px;
+        text-align: start;
+    }
+    .box h4{
+        text-align: center;
+        line-height: 17px;
+        margin-top: 49px;}
+    .banner {
+        height: 450px;
+}
+
+.about img{
+    max-width: 100%;
+}
+.abouttext p {
+    line-height: 32px;
+    font-size: 14px;
+}
+.aboutheading {
+    height: 600px;
+}
+.ourvision img{
+    max-width: 100%;
+}
+.ourvision h2{
+margin-top: 0%;
+
+}
+.ourvision p {
+    line-height: 33px;
+    font-size: 14px;
+}
+.serviceheading p {
+    line-height: 48px;
+    font-size: 15px;
+}
+.pic {
+    width:96%;
+    float: left;
+    position: relative;
+    left: 66px;
+    top: -39px;
+    margin-left: 0px;
+}
+.box3 p {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 29px;
+}
+.box31 p{
+    font-size: 16px;
+    padding: 10px;
+    line-height:33px;
+
+}
+.box32 p{
+    font-size: 16px;
+    padding: 10px;
+    line-height: 33px;
+}
+.heading {
+    margin-top: 18%;
+}
+
+
+
+
+
+ 
+}
+@media only  screen and (max-width:1125px){
+    .abouttext p {
+        line-height: 27px;
+        font-size: 16px;
+    }
+    .ourvision p {
+        line-height: 27px;
+        font-size: 16px;
+    }
+    .ourvisionheading {
+        height: 600px;
+    }
+    .serviceheading p {
+        line-height: 33px;
+        font-size: 15px;
+    }
+    .tre {
+        width: 20%;
+        float: left;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+    .tablinks img {
+        max-width: 18%;
+        padding: 0px 10px;
+    }
+    .box31 p{
+        font-size: 16px;
+        padding: 10px;
+        line-height:31px;
+    
+    }
+    .cm input {
+        width: 216px;
+        padding: 4px;
+    }
+    .veiw1 {
+        width: 38%;
+        float: left;
+    }
+    .jobfilly {
+        width: 100%;
+        float: left;}
+        .jobfilly a{
+            font-size: 20px;
+        }
+       
+        .camera1{
+            display: none;
+        }
+
+        .jobtext1 h6 {
+           
+            font-size: 14px;
+        }
+    
+    .text11 {
+        width: 67%;
+        float: left;
+    }
+    .text11 p {
+        line-height: 39px;
+    }
+    .testipic {
+        margin-top: 30px;
+
+    }
+    .service {
+        height: 390px;
+    }
+    .box1 h3 {
+        color: #fff;
+        text-align: center;
+        line-height: 16px;
+        font-size: 14px;
+    }
+    .plan {
+        width: 89%;
+        float: left;
+        position: absolute;
+        left: 7%;
+        bottom: 66px;
+    }
+    .price {
+        width: 77%}
+
+        .choose {
+            width: 100%;
+            float: left;
+            background: #ffffff;
+            margin-top: -3%;
+            border: 2px solid #bebebe;
+            border-radius: 34px;
+        }
+
+        .testimonial {
+           
+            height: 412px;
+           
+        }
+
+        .check {
+           
+            margin-top: 3%;
+            
+        }
+        .check h2 {
+            color: #fff;
+            font-size: 20px;
+        }
+        .alfa ul li a {
+            display: block;
+            padding: 14px 6px;
+            
+            font-size: 11px;
+        }
+
+        .upres {
+            width: 100%;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .camera{
+            display: none;
+        }
+        .uplodeheading h2:after{
+            display: none;
+        }
+
+        .post ul li a {
+            display: block;
+            padding: 3px;
+            border: 2px solid #0033ff;
+            width: 180px;
+            border-radius: 37px;
+            text-align: center;
+            text-decoration: none;
+            background: #fff;
+            transition: .4s;
+        }
+        .companyA2 {
+            width: 25%;
+            float: left;
+            margin: 5px;
+            position: relative;
+        }
+        .cpmbanner {
+            width: 100%;
+            float: left;
+           
+            height: 121px;
+            position: relative;
+            background-size: 100%;
+        }
+        .pen {
+            position: absolute;
+            width: 100px;
+            float: left;
+            right: -66px;
+            top: 0px;
+            cursor: pointer;
+        }
+        .logcomp3 {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid #000;
+            position: absolute;
+            bottom: 0px;
+            top: 52px;
+            left: 7px;
+        }
+
+}
+@media only screen and (max-width:1090px){
+    .banner {
+        height: 400px;
+    }
+    .step3 {
+        width: 100%;
+        float: left;
+        background: url(../images/step.png)no-repeat;
+        height: 279px;
+        background-size: 100%;
+        margin-top: 4%;
+    }
+}
+
+
+
+@media only screen and (max-width:1070px)
+{
+    .banner {
+        height: 399px;
+    }
+    .resume a{
+        font-size: 8px;
+       
+    }
+    .price {
+        width: 76%}
+}
+@media only screen and (max-width:992px){
+
+    .resume a{
+        font-size: 8px;
+       
+    }
+    .logo img {
+        max-width: 100%;
+        padding-top: 5px;
+    }
+    .pfname {
+        width: 20%;
+        float: left;
+    }
+    .cm input {
+        width:167px;
+        padding: 4px;
+    }
+    .profiletext1 input {
+        width: 600px;
+        padding: 3px;
+        border: 1px solid #bebebe;
+    }
+    .fitterbtn {
+        width: 100%;
+        float: left;
+        margin-top: 61%;
+    }
+    .companyA2 {
+        width: 25%;
+        float: left;
+        margin: 5px;
+        position: relative;
+    }
+    .postaa {
+        width: 62%;
+        float: left;
+        margin-top: 0px;
+    }
+    .fieldfillwe ul li a {
+        display: block;
+        padding: 5px;
+        background: #fff;
+        color: #000;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        margin: 5px;
+    }
+    .jobtext {
+        width: 21%;
+        float: left;
+        margin-top: 4px;
+    }
+    .veiw1 {
+        width: 40%;
+        float: left;
+    }
+    .shortlist {
+        width: 100%;
+        float: left;
+        margin: 5px;
+    }
+    
+    .fieldfillwe {
+        width: 66%;
+        float: left;
+        padding: 0px 10px;
+    }
+    .Registred a{
+        font-size: 8px;
+       
+    }
+    .login a{
+        font-size: 8px;
+    }
+    .heading {
+        margin-top: 22%;
+    }
+    .heading h2 {
+        font-size: 16px;
+        left: 34px;
+       
+    }
+    .text11 p {
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .tablinks img {
+        max-width: 26%;
+        padding: 0px 10px;
+    }
+    .tablinks {
+        width: 93%;
+        margin: 9px;
+        padding: 5px;
+        border: none;
+        text-align: start;
+        background: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 4px;
+        float: left;
+        cursor: pointer;
+    
+    }.r{
+        color:#000
+    }
+
+    .text11 {
+        width: 57%;
+        float: left;
+    }
+    .plan {
+        width: 93%;
+    }
+    .uplou {
+        width: 99%;
+        float: left;
+        margin: 3px;
+        border: 1px solid #bebebe;
+    }
+    /* .linkattach {
+        width: 99%;
+        float: left;
+    } */
+    .profileupdate {
+
+        display: none;
+    }
+    .price{
+    width: 80%;
+    float: left;
+    position: absolute;
+    z-index: 9;
+    top:60px;
+    left: 50%;
+    margin-left: -25%;
+    }
+    .plan a {
+        width: 276px;}
+        .box h4 {
+            line-height: 0px;
+            margin-top: 38px;
+            font-size: 18px;
+        }
+    .box ul li {
+        font-size: 10px;
+    }
+    .banner {
+        height: 370px;
+}
+
+.abouttext p {
+    font-size: 14px;
+    line-height: 17px;
+}
+    .aboutheading {
+        height: 436px;
+    }
+    .box1 h3 {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+    .box1 p {
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    .Categoriesheading{
+        height: 629px;
+    }
+
+    .all {
+        left: 41%;
+        margin-left: -9%;
+        margin-top: 43px;
+    }
+    .ourvision h2 {
+        font-size: 29px;
+    }
+    .ourvision p {
+        line-height: 17px;
+        font-size: 14px;
+    }
+    .ourvisionheading {
+        height: 460px;
+    }
+    .service {
+        height: 344px;
+    }
+    .serviceheading p {
+        line-height: 25px;
+        font-size: 11px;
+    }
+    .pic img{
+        max-width: 100%;
+    }
+    .pic {
+       
+        left: 16px;
+
+        top: -39px;
+        margin-left: 0px;
+    
+    }
+    .box32 p {
+        font-size: 14px;
+        padding: 11px;
+        line-height:34px;
+    }
+    .box31 p{
+        font-size: 14px;
+        padding: 11px;
+        line-height: 31px;
+    }
+    .tab ul li a {
+        display: block;
+        color: #fff;
+        padding: 19px 27px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .5s;
+        font-size: 12px;
+    }
+    .box3 p {
+        font-size: 14px;
+        padding: 11px;
+        line-height: 28px;
+    }
+.box33 img{
+max-width: 100%;
+}
+.ourclient {
+    height: 700px;
+}
+.quick h4 {
+    color: #fff;
+    font-size: 19px;
+}
+.quick ul li a {
+    padding: 10px;
+    font-size: 11px;
+
+}
+.testimonial {
+    height: 484px;
+}
+.bannerjob {
+    
+    height: 202px;
+}
+.ckeckcompany {
+    width: 100%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    margin: 2% 0%;
+    /* height: 385px; */
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+}
+.companybox {
+    width: 100%;
+    float: left;
+    padding: 5px;
+}
+.comp11 {
+    width: 29%;
+    float: left;
+    background: #ffd102;
+    color: #000;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 6px;
+    border: aliceblue;
+    margin: 5px 1px 2px 1px;
+}
+.top a {
+    
+    font-size: 9px;
+}
+.numberic a {
+   
+    font-size: 9px;
+}
+.alfa ul li a {
+    display: block;
+    padding: 8px 3px;
+    font-size: 11px;
+}
+.step3 {
+    width: 100%;
+    float: left;
+    background: url(../images/step.png)no-repeat;
+    height: 259px;
+    background-size: 100%;
+    margin-top: 2%;
+}
+
+.check1 h2 {
+    color: #000;
+    font-size: 15px;
+    margin-left: 3%;
+    margin-top: 10px;
+}
+.companylogo {
+    width: 100%;
+    float: left;
+    border: 1px solid #000;
+    margin-left: 30px;
+}
+.post ul li a {
+    display: block;
+    padding: 3px;
+    border: 2px solid #0033ff;
+    width: 158px;
+    border-radius: 37px;
+    text-align: center;
+    text-decoration: none;
+    background: #fff;
+    transition: .4s;
+    font-size: 14px;
+}
+.companylogo h4 {
+    text-align: center;
+    font-size: 9px;
+}
+
+
+}
+@media only screen and (max-width:909px){
+    .resume a{
+        font-size: 10px;
+       
+    }
+    .Registred a{
+        font-size: 11px;
+        padding: 2px;
+    }
+    .login a {
+        font-size: 11px;
+        padding: 9px;
+    }
+  
+    .now a{
+        left: 36%;
+        margin-top: -42px;
+    }
+    .banner {
+        height: 335px;
+    }
+    .company {
+        
+        height: 100px;
+    }
+   
+    .check h2 {
+        color: #fff;
+        font-size: 18px;
+    }
+    .inputbox11 {
+      
+        padding: 5px;
+        
+        font-size: 10px;
+    }
+    .inputbox1 {
+       
+        padding: 5px;
+        margin: 1px;
+        color: #7575a0;
+        font-size: 11px;
+    }
+    .jobbutton {
+        width: 100%;
+        float: left;
+        background: #ffd102;
+        color: #000;
+        margin-left: 1px;
+        padding: 4px;
+        font-size: 13px;
+        border: oldlace;
+        margin-top: 2px;
+        font-weight: 600;
+        border-radius: 0px 4px 4px 0px;
+    }
+}
+@media only screen and (max-width:810px){
+    .login a {
+        font-size: 11px;
+        padding: 8px;
+    }
+    .Registred a {
+        font-size: 9px;
+        padding: 3px;
+    }
+}
+    @media only screen and (max-width:860px)
+    {
+        .ourvision img {
+            max-width: 100%;
+        }
+        .banner {
+            height: 374px;
+        }
+        .serviceheading {
+            margin-top: 15px;
+        }
+        .uplodeheading h2 {
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 22px;
+        }
+        .step3 {
+            width: 100%;
+            float: left;
+            background: url(../images/step.png)no-repeat;
+            height: 219px;
+            background-size: 100%;
+            margin-top: 2%;
+        }
+        .pic img {
+            max-width: 59%;
+        }
+        .banner {
+            height: 320px;
+        }
+
+.heading {
+    margin-top: 22%;
+}
+.tab ul li a {
+    display: block;
+    color: #fff;
+    padding: 9px 15px;
+    }
+
+
+    .tabbanner {
+        width: 100%;
+        float: left;
+        background: url(../images/ba.png)no-repeat;
+        height: 36px;
+    }
+    }
+
+    @media only screen and (max-width:770px){
+        .heading {
+            left: 5%;
+            margin-left: 10%;
+            margin-top: 17%;
+           display: none;
+        }
+        .heading h2 {
+            font-size: 10px;
+            left: 53px;
+        }
+        .profiletext1 input {
+            width: 451px;
+            padding: 3px;
+            border: 1px solid #bebebe;
+        }
+        .fitterbtn {
+            width: 100%;
+            float: left;
+            margin-top: 65%;
+        }
+        .mean-bar {
+            top: -5px;
+        }
+        .send {
+            width: 47%;
+            float: none;
+            text-align: center;
+            margin-top: 9px;
+            font-weight: 700;
+        }
+        .f1 {
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+        }
+        .contactus {
+            width: 97%;
+            float: left;
+            background: #fff;
+            border: 1px solid #bebebe;
+            border-radius: 4px;
+            margin: 10px;
+        }
+        .pfname h5 {
+            color: #000;
+            font-size: 15px;
+            padding: 5px 6px;
+        }
+        .pfname {
+            width: 36%;
+            float: left;
+        }
+        .pfb {
+            width: 56%;
+            float: left;
+            background: #1d7662;
+            color: #fff;
+            margin: 5px;
+            margin-left: 19px;
+            padding: 5px;
+            font-weight: 700;
+        }
+        .day ul li a {
+            display: block;
+            padding: 3px;
+            color: #bebebe;
+            font-size: 10px;
+        }
+.point img{
+    max-width: 27%;
+}
+.box ul li {
+    font-size: 7px;
+}
+.now a {
+    width: 134px;
+    font-size: 10px;
+    margin-left: -10%;
+    margin-top: -39px;
+ }
+ .banner {
+    height: 292px;
+}
+.tab ul li a {
+    font-size: 8px;
+    display: block;
+    color: #fff;
+    padding: 12px 18px;
+
+}
+.dex {
+    width: 100%;
+    float: left;
+  
+}
+.ws {
+    width: 100%;
+    float: left;
+}
+.tablinks img {
+    max-width: 8%;
+    padding: 0px 10px;
+}
+.aboutheading {
+    height: 336px;
+}
+.black {
+    position: absolute;
+    background: #000;
+    left: 0px;
+    right: 0px;
+    height: 200px;
+    bottom: -340px;
+    opacity: .5;
+    z-index: 9;
+}
+.box1 h3 {
+    font-size: 6px;
+    margin-top: 0px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+.box1 p {
+    margin-top: 0px;
+    font-size: 9px;
+}
+.Categoriesheading {
+    height: 600px;
+}
+.ourvision h2 {
+    font-size: 21px;
+}
+.ourvision p {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 5px;
+}
+.ourvisionheading {
+    height:544px;
+}
+.serviceheading h2 {
+    font-size: 42px;
+}
+.serviceheading p {
+        line-height: 21px;
+        font-size:10px;
+    
+}
+.about img {
+    max-width: 100%;
+}
+.box33 img {
+    max-width:100%;
+}
+.pic {
+    left: 30px;
+    top: -39px;
+    margin-left: 0px;
+}
+.box32 p {
+    font-size: 10px;
+    padding: 11px;
+    line-height: 16px;
+}
+.box31 p {
+    font-size: 10px;
+    padding: 11px;
+    line-height: 15px;
+}
+.box3 p {
+    font-size: 10px;
+    padding: 12px;
+    line-height: 13px;
+}
+.service {
+    height: 275px;
+}
+.testimonial h2 {
+    font-size: 22px;
+}
+.client h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+}
+.client {
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+}
+.plan {
+    width: 79%;
+    bottom: 45px;
+}
+.ourclient {
+    height: 600px;
+}
+.quick h4 {
+    color: #fff;
+    font-size: 12px;
+}
+.quick ul li a {
+    font-size: 9px;
+}
+.text11 p {
+    line-height: 19px;
+    font-size: 12px;
+}
+
+.jobtext h6 {
+    
+    font-size: 12px;
+}
+}
+
+    @media only screen and (max-width:770px){
+        .y {
+            width: 95%;
+            float: left;
+            margin: 20px;
+        }
+        .abouttext p {
+            font-size: 13px;
+            line-height: 25px;
+            margin-top: 0px;
+        }
+        .rc3 {
+            width: 100%;
+            float: left;
+            padding: 0px 0px;
+        }
+        .rc1 {
+            width: 45%;
+            float: left;
+            border: 1px solid #bebebe;
+            border-radius: 60%;
+            height: 41px;
+            text-align: center;
+        }
+        .tabcontent {
+            float: left;
+            padding: 0px 0px;
+            border: 1px solid #ccc;
+            width: 100%;
+            border-left: none;
+        }
+        .abouttext h2 {
+            font-size: 25px;
+            text-align: center;
+            margin-top: -10px;
+        }
+        .ourvision p {
+            display: block;
+        }
+        ourvision h2 {
+            font-size: 21px;
+        }
+        .plan {
+            width: 93%;
+            bottom: 27px;
+        }
+        .ourclient {
+            height: 620px;
+        }
+        .plan a {
+            width: 232px;
+            font-size: 23px;
+        }
+        .term {
+            width: 92%;
+            float: left;
+            position: absolute;
+            left: 6%;
+            bottom: -10px;
+        }
+        .price {
+            width: 80%;
+            float: left;
+            position: absolute;
+            z-index: 9;
+            top: 60px;
+            left: 50%;
+            margin-left: -25%;
+        }
+        rate {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .ourvision p {
+            font-size: 12px;
+            line-height: 30px;
+            margin-top: 5px;
+        }
+    }
+    @media only screen and (max-width:769px){
+
+        .ourvision p {
+            font-size: 12px;
+            line-height: 27px;
+            margin-top: 5px;
+        }
+        .ourvisionheading {
+            height: 323px;
+        }
+        .bannerjob {
+            height: 158px;
+        }
+        .tp {
+            display: inline-flex;
+        }
+.tp2{
+    display: none;
+}
+.companyA2 {
+    width: 99%;
+    float: left;
+    margin: 5px;
+    position: relative;
+}
+.companyA3 {
+    width: 99%;
+    float: left;
+    margin: 5px;
+}
+.combtn1 {
+    width: 60%;
+    float: left;
+    border: none;
+    outline: none;
+    margin-top: 100px;
+    text-align: start;
+   
+    /* background: #fff; */
+    border-radius: 4px;
+    margin-left: 16px;
+    border: 1px solid #000;
+}
+.combtn {
+    width: 60%;
+    float: left;
+    border: none;
+    outline: none;
+    margin-top: 35px;
+    text-align: start;
+    padding: 10px 10px;
+    background: #fff;
+    border-radius: 4px;
+    margin-left: 16px;
+    font-size: 11px;
+    text-align: start;
+}
+.pen {
+    position: absolute;
+    width: 100px;
+    float: left;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+.userid {
+    width: 100px;
+    height: 72px;
+    border: 1px solid #000;
+    border-radius: 60%;
+}
+
+.cmh {
+    width: 99%;
+    float: left;
+    margin-top: 12px;
+    text-align: start;
+}
+.cmh h2 {
+    color: #fff;
+    font-size: 18px;
+}
+.alfa ul li a {
+    display: block;
+    padding: 9px 1px;
+    font-size: 10px;
+}
+.uplodelink00 ul li a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 15px;
+}
+.linkattach {
+    width: 100%;
+    float: left;
+}
+.fieldfillk ul li a {
+    display: block;
+    padding: 0px 4px;
+    color: #000;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+    }
+
+   
+
+    @media only screen and (max-width:760px){  
+
+        .price {
+            width: 80%;
+            float: left;
+            position: absolute;
+            z-index: 9;
+            top: 60px;
+            left: 50%;
+            margin-left: -25%;
+        }
+        .bannerjob {
+            width: 100%;
+            float: left;
+            background: url(../images/banner6.png)no-repeat;
+           
+            margin-top: -5px;
+        }
+        .rate {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .rate img {
+            max-width: 60%;
+        }
+        .abouttext h2 {
+            font-size: 33px;
+            text-align: center;
+        }
+        .about {
+            width: 100%;
+            float: left;
+            margin-top: 20%;
+            text-align: center;
+        }
+        .abouttext p {
+            font-size: 13px;
+            line-height: 26px;
+            margin-top: 5px;
+        }
+        .aboutheading {
+            height: 369px;
+        }
+
+        .jobtext111 h6 {
+            
+            font-size: 12px;
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+@media only screen and (max-width:720px){
+  
+    .banner {
+        height: 273px;
+    }
+}
+
+    
+
+@media only screen and (max-width:657px){
+
+    .banner {
+        height: 215px;
+    }
+    .heading {
+        margin-top: 6%;
+    }
+    .tab ul li a {
+        padding: 12px 12px;
+    }
+    .tabbanner {
+
+        height: 37px;
+    }
+    .choose{
+        display: none;
+    }
+
+    input[type="radio"] {
+        position: relative;
+        width: 22px;
+        height: 22px;}
+
+
+        .check1 h2 {
+            color: #000;
+            font-size: 11px;
+            margin-left: 3%;
+            margin-top: 8px;
+        }
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:630px){
+    .resume a {
+        font-size: 8px;
+        padding: 3px;
+    }
+    .companybox {
+        width: 100%;
+        float: left;
+        padding: 2px;
+    }
+    .comp11 {
+        width: 29%;
+        float: left;
+        background: #ffd102;
+        color: #000;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 4px;
+        border: aliceblue;
+        margin: 5px 1px 2px 1px;
+    }
+
+
+}
+@media only screen and (max-width:576px){
+    .resume a{
+        font-size:11px;
+        padding: 7px;
+
+    }
+    .resume a {
+        width: 57%;
+    }
+
+        .login a {
+            font-size: 11px;
+            padding: 7px;
+        }
+.login a {
+    width: 57%;
+}
+.Registred {
+    width: 57%;
+}
+.Registred a {
+    font-size: 11px;
+    padding: 7px;
+}
+.heading{
+        margin-left: 5%;
+        width: 64%;
+   
+}
+.fitterbtn {
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+}
+.rc1 {
+    width: 13%;
+    float: left;
+    border: 1px solid #bebebe;
+    border-radius: 60%;
+    height: 41px;
+    text-align: center;
+}
+.boxabf1 {
+    width: 98%;
+    float: left;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #bebebe;
+    margin: 10px 0px;
+}
+.price {
+    width: 60%;
+    float: left;
+    position: absolute;
+    z-index: 9;
+    top: 30px;
+    left: 60%;
+    margin-left: -25%;
+}
+.text11 {
+    width: 100%;
+    float: left;
+}
+.text11 p {
+    line-height: 19px;
+    font-size: 14px;
+}
+.testipic {
+    margin-top: -5px;
+}
+
+.testipic {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+   
+    text-align: center;
+}.companybox {
+    width: 100%;
+    float: left;
+    padding: 1px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.searchcompany {
+    width: 100%;
+    float: left;
+    margin-top: 8%;
+    position: absolute;
+    left: 45px;
+}
+.top a {
+    font-size: 14px;
+}
+.alfa ul li a {
+    display: block;
+    padding: 9px 2px;
+    font-size: 14px;
+}
+.alfa {
+    width: 100%;
+    float: left;
+    background: #cfcece;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.numberic a {
+    font-size: 14px;
+}
+.companylist ul li a {
+    display: block;
+    padding: 10px;
+    color: #4b4a4c;
+    font-weight: bold;
+    text-align: start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.testimonialslider {
+    width: 100%;
+    float: left;
+    border-radius: 20px;
+    background: #fff;
+    margin-top: 48px;
+    height: 442px;
+}
+.heading {
+    display: none;
+}
+.abouttext p{
+    display: inline-block;
+}
+.heading h2 {
+    font-size: 16px;
+    left: 34px;
+    top: 27px;
+}
+.box ul li{
+    font-size: 10px;
+}
+.box h4 {
+    line-height: 28px;
+    margin-top: 19px;
+    font-size: 18px;
+}
+.aboutheading {
+    height: 890px;
+}
+.abouttext h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 4px;
+}
+.about {
+    width: 100%;
+    float: left;
+    
+    text-align: center;
+}
+.abouttext {
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+}
+.about img {
+    max-width:66%;
+}
+.filter {
+    width: 95%;
+}
+
+.profilebanner1 {
+    width: 97%;
+    margin: 7px;
+}
+.cmh {
+    width: 99%;
+    float: left;
+    margin-top: 12px;
+    text-align: center;
+}
+.searchcompany {
+    width: 100%;
+    float: left;
+    margin-top: 6%;
+    position: absolute;
+    left: 51px;
+}
+
+
+
+
+
+.ourvision p{
+    display:inline-block;
+}
+.ourvision h2 {
+    margin-top: 0%;
+}
+.abouttext p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 3px;
+}
+ 
+
+.Categoriesheading h2 {
+    font-size: 42px;
+    margin-top: 26px;
+}
+.box1 h3 {
+    font-size: 28px;
+    margin-top: 0px;
+}
+.box1 p {
+    margin-top: 0px;
+    font-size: 16px;
+}
+.Categoriesheading {
+    height: 710px;
+}
+.ourclient {
+    height: 900px;
+}
+.box33 {
+    text-align: center;
+}
+.box33 img {
+    max-width: 28%;
+}
+.box1 {
+    margin-top: 6px;
+    padding: 4px;
+}
+.box1 h3 {
+    font-size: 14px;
+    margin-top: 1px;
+    line-height: 33px;
+}
+.box1 p {
+    margin-top: -16px;
+    font-size: 12px;
+}
+.ourvision h2 {
+    font-size: 42px;
+    text-align: center;
+}
+.ourvision p {
+    line-height: 22px;
+    font-size: 14px;
+    text-align: start;
+}
+.ourvisionheading {
+    height: 898px;
+}
+.ourvision {
+    width: 100%;
+    float: left;
+    margin-top: 4%;
+}
+.ourvision img {
+    max-width: 66%;
+}
+.ourvision {
+    text-align: center;
+}
+.serviceheading p {
+    line-height: 18px;
+    font-size: 14px;
+}
+.service {
+    height: 361px;
+    background-size: cover;
+}
+.testimonial h2 {
+    font-size: 42px;
+}
+.pic{
+    text-align: center;
+}
+.box3 p {
+    font-size: 16px;
+    padding: 32px;
+    line-height: 38px;
+}
+.box31 p{
+    font-size: 16px;
+    padding: 32px;
+    line-height: 38px;
+}
+.box32 p{
+    font-size: 16px;
+    padding: 32px;
+    line-height: 38px;
+}
+
+.quick h4 {
+    color: #fff;
+    font-size: 20px;
+    text-align: start;
+}
+.quick ul li a {
+    font-size: 15px;
+    text-align: start;
+}
+.quick {
+    width: 100%;
+    float: left;
+    margin-top: 6%;
+    text-align: start;
+}
+.box33 {
+
+    margin-top: 23px;
+}
+.box33 img {
+    max-width:50%;
+}
+.all {
+    left: 25%;
+    margin-left: -8%;
+    margin-top: 43px;
+}
+.plan {
+    width: 46%;
+    left: 29%;
+}
+.companyheading {
+    width: 93%;
+    float: left;
+    margin-top: -2%;
+    margin-left: 3px;
+    margin: 10px;
+}
+.jobfill a {
+    display: block;
+    padding: 5px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 400;
+}
+.ckeckcompany {
+    
+    padding: 7px;
+}
+.ckeckcompany img {
+    max-width: 70%;
+}
+.jobtext {
+    width: 20%;
+    float: left;
+    margin-top: 4px;
+    text-align: center;
+}
+.companyheading h2 {
+    color: #6a6969;
+    font-size: 19px;
+    margin-top: 20px;
+}
+.ckeckcompany {
+    width: 99%;
+    float: left;
+    border: 1px solid #c2c1c1;
+    /* margin: 2% 0%; */
+    /* height: 385px; */
+    box-shadow: 0px 6px 5px #a3a3a3;
+    border-radius: 5px;
+    margin: 10px;
+}
+.tp{
+    display: none;
+}
+.tp2{
+    display: block;
+}
+
+.abouttext p {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: -16px;
+}
+.abouttext h2 {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 6px;
+    line-height: 72px;
+}
+.abouttext p {
+    font-size: 14px;
+    line-height: 21px;
+}
+.tre {
+    width: 57%;
+    float: left;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.black {
+    position: absolute;
+    background: #000;
+    left: 0px;
+    right: 0px;
+    height: 340px;
+    bottom: -340px;
+    opacity: .5;
+    z-index: 9;
+    width: 100%;
+}
+
+.about {
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+}
+@media only screen and (max-width: 560px){
+    .heading{
+        display: none;
+    }
+    .banner {
+        height: 195px;
+    }
+}
+@media only screen and (max-width: 540px){
+
+    .tab ul li a {
+        padding: 12px 4px;
+    }
+    .abouttext h2 {
+        font-size: 30px;
+    }
+    /* .abouttext p {
+        font-size: 13px;
+        line-height: 18px;
+    } */
+    .ourvision img {
+        max-width: 70%;
+    }
+    .about img {
+        max-width: 70%;
+    }
+    .aboutheading {
+       
+            height: 890px;
+        }
+    .ourvision h2 {
+        font-size: 30px;}
+        /* .ourvision p {
+            line-height: 17px;
+            font-size: 10px;
+           
+        } */
+        .ourvisionheading {
+            height: 888px;
+        }
+        .testimonial h2 {
+            font-size: 30px;
+        }
+        .box3 p {
+            font-size: 14px;
+            padding: 17px;
+            line-height: 28px;
+        }
+        .box31 p{
+            font-size: 14px;
+            padding: 17px;
+            line-height: 28px;
+        }
+        .box32 p{
+            font-size: 14px;
+            padding: 17px;
+            line-height: 28px;
+        }
+        .serviceheading p {
+            line-height: 19px;
+            font-size: 13px;
+        }
+        .box33 img {
+            max-width:50%;
+        }
+        .banner {
+            height: 206Spx;
+        }
+        .plan a {
+            width: 185px;}
+}
+@media only screen and (max-width:520px){
+    
+    .nbs-flexisel-inner{
+        margin-top:-40px;
+    }
+    .jobfill p {
+       
+        padding: 0px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .jobfill a {
+        display: block;
+        padding: 2px;
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+    }
+    .jobtext h6 {
+       
+        font-size: 11px;
+    }
+    .jobtext1 h6 {
+        
+        font-size: 9px;
+    }
+    .veiw1 a {
+        display: block;
+        padding: 5px;
+        font-size: 11px;
+        color: #007bff;
+        font-weight: 500;
+    }
+    .veiw a {
+        display: block;
+        padding: 5px;
+        font-size: 11px;
+        color: #007bff;
+        font-weight: 500;
+    }
+    .bannercompany {
+        width: 100%;
+        float: left;
+        background: url(../images/banner6.png)no-repeat;
+        height: 181px;
+        margin-top: -5px;
+        background-size: cover;
+    
+    }
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:500px){
+    .box33 img {
+        max-width: 62%;
+    }
+    .plan {
+        width: 57%;
+        left: 24%;
+    }
+    .testipic {
+        width: 100%;
+        float: left;
+        margin-top: -3px}
+        .testimonialslider {
+            height: 457px;
+        }
+        .high1 {
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+        }
+        .high11 {
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+        }
+        .yor {
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+        }
+        .yor p {
+            margin-bottom: 10px;
+            font-size: 12px;
+            
+        }
+        .yor ul li {
+            display: inline-block;
+            margin: 5px;
+        }
+        /* .description {
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+            margin-top: 10px;
+            padding: 10px;
+        } */
+        .description1 {
+            width: 100%;
+            float: left;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+        .jobfilly {
+            width: 100%;
+            float: left;
+            padding: 8px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:480px){
+
+    .banner {
+        height: 180px;
+    }
+    .aboutheading {
+        height: 895px;
+    }
+    /* .abouttext p {
+        font-size: 14px;
+        line-height: 18px;
+    } */
+    .ourvisionheading {
+        height: 864px;
+    }
+    .bannedit1c {
+        width: 23%;
+        float: left;
+        position: absolute;
+        bottom: 3px;
+        display: flex;
+        justify-content: flex-end;
+        right: 40px;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    .rt {
+        width: 95%;
+        float: left;
+        border-right: none;
+        margin: 10px;
+    }
+    .profiletext1 input {
+        width: 270px;
+        padding: 3px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:443px){
+    .box33 img {
+        max-width: 71%;
+    }
+    .plan {
+        width: 65%;
+        left: 20%;
+    }
+    .testimonial {
+        height: 500px;
+    } 
+    .jobtext {
+        width: 26%;
+        float: left;
+        margin-top: 4px;
+        text-align: center;
+    }
+    .option {
+        width: 96%;
+        float: left;
+        /* margin: 14px; */
+    }
+
+
+
+
+
+
+
+}
+@media only screen and (max-width: 457px){
+    
+    .banner {
+        height: 168px;
+    }
+    .box1 h3 {
+        font-size: 9px;
+        margin-top: 1px;
+        line-height: 18px;
+    }
+
+    .testimonial {
+        height: 566px;
+    }
+    .testimonialslider {
+        height: 500px;
+    }
+    .text11 p {
+        
+        padding: 10px 5px 5px 37px;}
+        .serviceheading p {
+            line-height: 17px;
+            font-size: 12px;
+        }
+        .rol1 {
+            width: 100%;
+            float: left;
+        }
+        .roln ul li {
+            padding: 5px;
+            font-size: 10px;
+            font-weight: 600;
+            color: #007bff;
+        }
+        .rol1 ul li {
+            padding: 5px;
+            font-size: 10px;
+            font-weight: 600;
+            color: #bebebe;
+        }
+
+
+
+
+}
+@media only screen and (max-width: 431px){
+    .banner {
+        height: 148px;
+    }
+    .tre {
+        width: 61%;
+        float: left;
+    }
+    .tablinks img {
+        max-width: 14%;
+        padding: 0px 10px;
+    }
+
+    .jobpic {
+        width: 7%;
+        float: left;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:415px){   
+  
+   
+    .box33 img {
+        max-width:70%;
+    }
+    .ourvisionheading {
+        height: 883px;
+    }
+}
+@media only screen and (max-width: 390px){
+    .banner {
+        height: 130px;
+    }
+    .all {
+        left: 21%;
+        margin-left: -8%;
+        margin-top: 20px;
+    }
+    .box33 img {
+        max-width:80%;
+    }
+    .p1 {
+        width: 97%;
+        float: left;
+    } 
+    .p2q {
+        width: 99%;
+        float: left;
+    }
+       
+        .plan {
+            width: 74%;
+            left: 16%;
+        }
+        .text11 p {
+            padding: 10px 5px 5px 19px;
+        }
+
+        .testimonialslider {
+            height: 552px;
+        }
+        .tab ul li a {
+            padding: 5px 0px;
+        }
+        .tabbanner {
+            height: 28px;
+        }
+        .ourvisionheading {
+            height: 865px;
+        }
+        .serviceheading p {
+            line-height: 16px;
+            font-size: 12px;
+            text-align: start;
+        }  
+        .option {
+            width: 96%;
+            float: left;
+             margin: 0px;
+        }
+}
+ @media only screen and (max-width:360px){
+    .ourvisionheading {
+        height: 896px;
+    }
+    /* .ourvision p {
+        line-height: 19px;
+        font-size: 13px;
+    } */
+    .ourvision h2 {
+        font-size: 27px;
+    }
+    .jobfill a {
+        display: block;
+        padding: 2px;
+        font-size: 11px;
+        color: #000;
+        font-weight: 400;
+    }
+    .jobfill1 a {
+        display: block;
+        padding: 5px;
+        font-size: 11px;
+        color: #000;
+        font-weight: 400;
+    }
+    .jobtext {
+        width: 40%;
+        float: left;
+        margin-top: 4px;
+        text-align: center;
+    }
+    .jobtext1 h6 {
+        
+        font-size: 10px;
+        margin-top: 3px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ }  
+@media only screen and (max-width: 352px){
+    .tab ul li a {
+        padding: 6px 1px;
+        font-size: 7px;
+    }
+
+    .socialicon ul li a {
+        padding: 3px;
+    }
+    .box1 h3 {
+        font-size: 8px;
+        margin-top: 3px;
+        line-height: 26px;
+    }
+    .box1 p {
+        margin-top: -16px;
+        font-size: 10px;
+    }
+    .ourvision h2 {
+        font-size: 23px;
+    }
+    
+    .box3 p {
+        font-size: 11px;
+        padding: 18px;
+        line-height: 28px;
+    }
+    .box31 p{
+        font-size: 11px;
+        padding: 18px;
+        line-height: 28px;
+    }
+.box32 p{
+    font-size: 11px;
+    padding: 18px;
+    line-height: 28px;
+}
+.box33 img {
+    max-width:80%;
+}
+.logo img{
+    max-width:100%;
+}
+.quick h4 {
+    color: #fff;
+    font-size: 22px;
+}
+.quick ul li a {
+    font-size: 11px;
+}
+.abouttext p {
+    font-size: 14px;
+    line-height: 20px;
+}
+.price {
+    width: 64%;
+    float: left;
+    position: absolute;
+    z-index: 9;
+    top: 30px;
+    left: 54%;
+    margin-left: -25%;
+}
+.testimonial {
+    height: 641px;
+}
+
+/* .jobtext h6 {
+    color: #bebebe;
+    font-size: 9px;
+} */
+
+
+
+.adcom1 a {
+    display: block;
+    padding: 5px 7px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.full1 a {
+    display: block;
+    padding: 5px 7px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+.logo {
+    width: 100%;
+    float: left;
+    margin-top: -4px;
+    text-align: start;
+}
+.addressfotter1 ul li {
+    padding: 6px 7px;
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (max-width:330px){
+
+    .banner {
+        height: 118px;
+    }
+    .option {
+        width: 96%;
+        float: left;
+        margin: 0px;
+    }
+    .jobtext1 {
+        width: 71%;
+        float: left;
+        margin-top: 4px;
+    }
+   
+}
+@media only screen and (max-width:320px){
+    .service{
+        display: none;
+    }
+    .about {
+        width: 83%;
+        float: left;
+        margin-top: 6%;
+    }
+    
+    .abouttext p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .jobtext1 {
+        width: 71%;
+        float: left;
+        margin-top: 4px;
+    }
+    .jobpic {
+        width: 16%;
+        float: left;
+        text-align: center;
+        margin-top: -5px;
+    }
+    .price {
+        width: 64%;
+        float: left;
+        position: absolute;
+        z-index: 9;
+        top: 18px;
+        left: 54%;
+        margin-left: -25%;
+    }
+    .jobtext h6 {
+     
+        font-size: 14px;
+        text-align: start;
+    }
+    .jobtext1 {
+        width: 83%;
+        float: left;
+        margin-top: 4px;
+    }
+    .jobtext1 h6 {
+       
+        font-size: 14px;
+        margin-top: -7px;
+        font-weight: 500;
+    }
+    .rol1 ul li {
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #bebebe;
+    }
+    .roln ul li {
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #007bff;
+    }
+    .jobtext {
+        width: 70%;
+        float: left;
+        margin-top: 4px;
+        /* text-align: center; */
+    }
+    .ourvision {
+        width: 85%;
+        float: left;
+        margin-top: 4%;
+    }
+    .ourvision p {
+        line-height: 19px;
+        font-size: 14px;
+    }
+    .serviceheading p {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .box33 {
+        width: 100%;
+        float: left;
+        margin-top: 9px;
+    }
+    .socialicon ul li a {
+            padding: 4px;
+            margin: 6px;
+            transition: .2s;
+        }
+    .tab ul li a {
+      
+        font-size: 7px;
+
+    }
+    .socialicon {
+        width: 100%;
+        float: left;
+        padding: 2px;
+    }
+    .about img {
+        max-width: 100%;
+    }
+    .abouttext h2 {
+        font-size: 30px;
+        margin-top: 0px;
+    }
+    .banner {
+        height: 122px;
+    }
+    .ourvision h2 {
+        font-size: 20px;
+    }
+    .ourvision img {
+        max-width: 86%;
+    }
+    .box33 img {
+        max-width:100%;
+    }
+    .plan {
+        width: 92%;
+        left: 8%;
+    }
+    .plan a {
+        width: 230px;
+    }
+    .all {
+        left: 21%;
+        margin-left: -19%;
+        margin-top: 20px;
+    }
+    .nbs-flexisel-inner{
+        margin-top:-32px;
+    }
+    .box1 h3 {
+        font-size: 8px;
+        margin-top: 3px;
+        line-height: 26px;
+    }
+    .pic {
+        left: 14px;
+        top: -39px;
+        margin-left: 0px;
+    }
+     .resume a {
+        font-size: 11px;
+    }
+    .quick h4 {
+        color: #fff;
+        font-size:20px;
+        text-align: start;
+        margin-top: 33px;
+    }
+    .quick {
+        width: 100%;
+        float: left;
+        margin-top: -9%;
+        text-align: center;
+    }
+    .quick ul li a {
+        font-size: 10px;
+        text-align: start;
+    }
+    .all{
+        left: 20%;
+        margin-left: -13%;
+        margin-top: 21px;
+    }
+    .testimonial {
+        height: 600px;
+    } 
+    .logo {
+        width: 100%;
+        float: left;
+        margin-top: -4px;
+        margin-left: -30px;
+        padding: 6px;
+    }
+    .logo img {
+        max-width: 100%;
+    }
+    .tabbanner {
+        height: 27px;
+    }
+
+    .ourvisionheading {
+        height: 881px;
+    }
+}
+    /* END HOME */
+
+
+
+
+
+
+    @media only screen and (max-width:1123px){
+        .jobbutton {
+            margin-left: 1px;
+            padding: 12px;
+            font-size: 7px;
+            margin-top: 1px;
+        }
+       
+        
+        .jobbutton {
+            width: 101%;
+            float: left;
+            margin-left: 1px;
+            padding: 11px;
+            font-size: 9px;
+            border: oldlace;
+        }
+        .searchbox1 {
+            width: 85%;
+            margin-top: 15%;
+            float: left;
+            position: absolute;
+            left: 89px;
+            top: 170px;
+        }
+    }
+    @media only screen and (max-width:1023px){
+        .jobbutton {
+            width: 101%;
+            float: left;
+           
+            margin-left: 1px;
+            padding: 10px;
+            font-size: 9px;
+            border: oldlace;
+        }
+
+    }
+    @media only screen and (max-width:992px){
+
+        .jobbutton {
+            width: 100%;
+            float: left;
+           
+            margin-left: 1px;
+            padding: 9px;
+            font-size: 9px;
+            border: oldlace;
+        }
+        
+    }
+    @media only screen and (max-width:768px){
+        .jobbutton {
+            width: 100%;
+            float: left;
+           
+            margin-left: 1px;
+            padding: 8px;
+            font-size: 7px;
+            border: oldlace;
+        }
+        .logo {
+            width: 100%;
+            float: left;
+            margin-top: 2px;
+        }
+
+        .selectstep {
+            width: 100%;
+            float: left;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .dt1 {
+            width: 40%;
+            float: left;
+            justify-content: center;
+            display: flex;
+        }
+    }
+        @media only screen and (max-width:630px){
+
+            .searchbox1 {
+                width: 85%;
+                margin-top: 15%;
+                float: left;
+                position: absolute;
+                left: 52px;
+                top: 170px;
+            }
+            
+            .jobbutton {
+                margin-left: 1px;
+                padding: 7px;
+                font-size: 7px;
+                margin-top: 1px;
+            }
+           
+
+
+        }
+        @media only screen and (max-width:576px){
+           
+            .searchbox1 {
+                width: 85%;
+                margin-top: 15%;
+                float: left;
+                position: absolute;
+                left: 28px;
+                top: 170px;
+            }
+
+            .searchbox1 {
+                width: 85%;
+                margin-top: 26%;
+                float: left;
+                position: absolute;
+                left: 47px;
+                top: 187px;
+            }
+            .check h2 {
+                color: #fff;
+                font-size: 10px;
+                margin-left: 10px;
+                font-family: sans-serif;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            .check h2 {
+                color: #fff;
+                font-size: 15px;
+                margin-left: 17px;
+                margin-top: 3px;
+            }
+
+            .inputbox1{
+                display: none;
+            }
+            .inputbox11 {
+                width: 84%;
+                float: left;
+                padding: 4.5px;
+                margin: 1px;
+                margin-bottom: 7px;
+                margin-left: 20px;
+                border-radius: 3px;
+                outline: none;
+                border: none;
+            }
+
+            .jobbutton {
+                margin-left: 22px;
+                padding: 7px;
+                font-size: 7px;
+                margin-top: 1px;
+            }
+
+            .jobbutton {
+                width: 17%;
+                float: left;
+
+
+
+
+
+
+
+
+
+    }
+    @media only screen and (max-width:440px){
+        
+        .searchbox1 {
+            width: 85%;
+            margin-top: 40%;
+            float: left;
+            position: absolute;
+            left: 30px;
+            top: 187px;
+        }
+        .check h2 {
+            color: #fff;
+            font-size: 12px;
+            margin-left: 17px;
+            margin-top: 3px;
+        }
+
+
+
+
+    }
+    @media only screen and (max-width:340px){
+        .check h2 {
+            color: #fff;
+            font-size: 11px;
+            margin-left: 17px;
+            margin-top: 15px;
+        }
+        .jobbutton {
+            width: 30%;
+            float: left;
+        }
+        .sa1 {
+            width: 52%;
+            float: left;
+        text-align: start;
+            margin: 9px;
+        }
+        .rol1 {
+            width: 100%;
+            float: left;
+        }
+
+
+
+
+    }
+        @media only screen and (max-width:320px){
+            .in1 {
+                width: 100%;
+                float: left;
+                text-align: start;
+                padding: 0px 21px;
+            }
+            
+            .searchbox1 {
+                width: 85%;
+                margin-top:31%;
+                float: left;
+                position: absolute;
+                left: 28px;
+                top: 195px;
+            }
+            .fieldfillk ul li a {
+                display: block;
+                padding: 0px 0px;
+                color: #000;
+                border-radius: 3px;
+                font-size: 12px;
+            }
+            .logo1 {
+                width: 100%;
+                float: left;
+                margin-top: 50px;
+                text-align: start;
+            }
+        }
+
+
+        /* STARTED COMPANY PAGE */
+        @media only screen and (max-width:1125px){
+           
+            .comp11 {
+                width: 14%;
+                float: left;
+                font-size: 10px;
+                padding: 11px;
+                border: aliceblue;
+            }
+            .searchcompany {
+                width: 90%;
+                float: left;
+                margin-top: 26%;
+                position: absolute;
+                left: 67px;
+            }
+
+            
+
+        }
+        
+        @media only screen and (max-width:1000px){
+            /* .companybox {
+                width: 76%;
+                float: left;
+                padding: 5px;
+            } */
+            .comp11 {
+                width: 15%;
+                float: left;
+               
+                font-size: 10px;
+                padding: 11px;
+                border: aliceblue;
+            }
+            .searchcompany {
+                width: 90%;
+                float: left;
+                margin-top: 26%;
+                position: absolute;
+                left: 92px;
+            }
+            /* .resume a {
+                font-size: 8px;
+            } */
+
+        }
+        @media only screen and (max-width:991px){
+            .comp11 {
+                width: 18%;
+                float: left;
+                
+                font-size: 10px;
+                padding: 11px;
+                border: aliceblue;
+            }
+        }
+       
+        @media only screen and (max-width:774px){
+            .searchcompany {
+                width: 90%;
+                float: left;
+                margin-top: 7%;
+                position: absolute;
+                left: 32px;
+            }
+            .comp11 {
+                width: 24%;
+            }
+
+        }
+        @media only screen and (max-width:632px){
+            /* .searchcompany {
+                width: 79%;
+                float: left;
+                margin-top: 26%;
+                position: absolute;
+                left: 51px;
+            } */
+            .comp11 {
+                width: 24%;
+                float: left;
+                
+                font-size: 9px;
+                padding: 12px;
+                border: aliceblue;
+            }
+            .comp11 {
+                width: 24%;
+                float: left;
+                font-size: 11px;
+                padding: 6px;
+                border: aliceblue;
+            }
+            
+
+
+        }
+        @media only screen and (max-width:530px){
+            .searchcompany {
+                width: 79%;
+                float: left;
+                margin-top: 19%;
+                position: absolute;
+                left: 51px;
+            }
+            .comp11 {
+                width: 24%;
+                float: left;
+               
+                font-size: 9px;
+                padding: 11px;
+                border: aliceblue;
+                margin-top: 1px;
+            }
+            .bannercompany {
+                width: 100%;
+                float: left;
+                background: url(../images/banner6.png)no-repeat;
+                height: 181px;
+                margin-top: -5px;
+                background-size: cover;
+            
+            }
+
+            .searchcompany {
+                width: 79%;
+                float: left;
+                margin-top: 11%;
+                position: absolute;
+                left: 51px;
+            }
+            .companybox {
+                width: 100%;
+                float: left;
+                padding: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                margin: 3px;
+            }
+
+
+        }
+        @media only screen and (max-width:519px){
+            .comp11 {
+                width: 24%;
+                float: left;
+                
+                font-size: 8px;
+                padding: 10px;
+                border: aliceblue;
+                margin-top: 1px;
+            }
+
+            .companybox {
+                width: 76%;
+                float: left;
+                padding: 3px;
+            }
+
+            .companybox {
+                width: 100%;
+                float: left;
+                padding: 4px;
+            }
+            .comp11 {
+                width: 37%;
+                float: left;
+                font-size: 12px;
+                padding: 5px;
+                border: aliceblue;
+                margin-top: 1px;
+            
+            }
+        }
+        @media only screen and (max-width:464px){
+            .companybox {
+                width: 100%;
+                float: left;
+                padding: 5px;
+            
+        }
+        .comp11 {
+            width: 37%;
+            float: left;
+            font-size: 12px;
+            padding: 5px;
+            border: aliceblue;
+          
+            margin: 4px;
+        }
+    
+    
+    }
+        @media only screen and (max-width:375px){
+        
+            .comp11 {
+                width: 24%;
+                float: left;
+               
+                font-size: 8px;
+                padding: 7px;
+                border: aliceblue;}
+
+              
+                
+                .companybox {
+                    width: 100%;
+                    float: left;
+                    padding: 4px;
+                }
+                .comp11 {
+                    width: 48%;
+                    float: left;
+                    font-size: 10px;
+                    padding: 7px;
+                    border: aliceblue;
+                }
+
+                .searchcompany {
+                    width: 90%;
+                    float: left;
+                    margin-top: 16%;
+                    position: absolute;
+                    left: 15px;
+                }
+
+
+
+
+
+
+
+    }
+
+        /* build resume */
+        @media only screen and (max-width:1170px){
+            .choose {
+                width: 100%;
+                float: left;
+                background: #8e2aa0;
+                margin-top: 0%;
+            }
+            .step3 {
+                width: 100%;
+                float: left;
+                background: url(../images/step.png)no-repeat;
+                height: 308px;
+                background-size: 100%;
+                margin-top: 4%;
+            }
+        }
+
+
+
+        @media only screen and (max-width:1125px){
+           
+            .uplodeheading h2::after{
+                display: none;
+            }
+            .step3 {
+                width: 100%;
+                float: left;
+                background: url(../images/step.png)no-repeat;
+                height: 250px;
+                background-size: 100%;
+                margin-top: 0%;
+            }
+            .choose {
+                width: 100%;
+                float: left;
+                background: #8e2aa0;
+                margin-top: 12%;
+            }
+        }
+        @media only screen and (max-width:992px){
+            .uplodeheading h2{
+                font-size: 25px;
+            }
+            .choose {
+                width: 100%;
+                float: left;
+                background: #8e2aa0;
+                margin-top: 9%;
+            
+            }
+            .check1 h2 {
+                color: #000;
+                font-size: 14px;
+                margin-left: 4%;
+                margin-top: 10px;
+            }
+            .tempalate {
+                width: 100%;
+                float: left;
+                
+            }
+
+        }
+        @media only screen and (max-width: 600px){
+
+            .step3 {
+                width: 100%;
+                float: left;
+                background: url(../images/step.png)no-repeat;
+                height: 154px;
+                background-size: 100%;
+                margin-top: 0%;
+            }
+
+        }
+        @media only screen and (max-width: 567px){
+
+            .tempalate {
+                width: 100%;
+                float: left;
+                background-size: 100%;
+            }
+            a img {
+                max-width: 100%;
+                margin: 4px;
+            }
+            
+            .check1 h2 {
+                color: #000;
+                font-size: 21px;
+                margin-left: 4%;
+                margin-top: 4px;
+            }
+
+
+        }
+        @media only screen and (max-width: 500px){
+
+            .step3 img{
+                max-width: 100%;
+            }
+            .uplodeheading h2 {
+                font-size: 18px;
+            }
+            .step3 {
+                width: 100%;
+                float: left;
+                background: url(../images/step.png)no-repeat;
+                height: 120px;
+                background-size: 100%;
+                margin-top: 0%;
+            }
+
+
+        }
+            @media only screen and (max-width: 380px){
+                .uplodeheading h2 {
+                    font-size: 14px;
+                }
+                .step3 {
+                    width: 100%;
+                    float: left;
+                    background: url(../images/step.png)no-repeat;
+                    height: 90px;
+                    background-size: 100%;
+                    margin-top: 0%;
+                }
+                .tempalate {
+                    height: 465px;
+                }
+
+            }
+        /* UPLODE RESUME */
+
+        @media only screen and (max-width:1125px){
+            .camera {
+                width: 49%;
+                float: left;
+                position: absolute;
+                left: 122px;
+                top: 20px;
+            }
+
+
+        }
+
+@media only screen and (max-width:992px){
+    .camera {
+        width: 49%;
+        float: left;
+        position: absolute;
+        left: 81px;
+        top: 20px;
+    }
+    .attach p {
+        font-size: 10px;
+        padding: 10px;
+    }
+    .opt {
+        margin: 0px;
+    }
+    .uplodelink00 ul li a {
+        font-size: 14px;
+    }
+    .panding {
+        width: 86%;
+        
+        margin: 8px;
+    }
+
+
+}
+@media only screen and (max-width:768px){
+    .opt input {
+        width: 24%;
+        margin: 8px;
+    }
+    .uplodelink00 ul li a {
+        font-size: 12px;
+    }
+    .upres {
+        width: 100%;
+        float: left;
+        margin-top: 12px;
+    }
+    .resumepic img {
+        max-width: 180%;
+    }
+}
+@media only screen and (max-width:576px){
+    .camera {
+        width: 30%;
+        float: left;
+        position: absolute;
+        left: 272px;
+        top: 38px;
+    }
+    .data {
+        width: 86%;
+        float: left;
+        margin-top: 4px;
+        margin: 20px;
+    }
+    .uplodelink00 {
+        width: 100%;
+        float: left;
+       
+       
+    }
+    .linkattach {
+        width: 50%;
+        float: left;
+    }
+
+    .uplodelink00 ul li a {
+        font-size: 15px;
+    }
+
+    .attach {
+        width: 94%;
+        float: left;
+        height: 266px;
+        border: 1px solid #d6d4d4;
+        box-shadow: none;
+        margin: 6px;
+        background: #fff;
+        border-radius: 5px;
+        margin-left: -1px;
+    }
+    .education1 {
+        width: 95%;
+        float: left;
+        /* height: 220px; */
+        border: 1px solid #d6d4d4;
+         /* box-shadow: 0px 0px 4px black; */ 
+        margin-top: 20px;
+        margin: 15px;
+        border-radius: 5px;
+        background: #fff;
+        margin-left: -1px;
+    }
+
+    .panding {
+        width: 80%;
+        float: left;
+        height: 130px;
+        /* border: 2px solid #f8f9fa; */
+        background: #1a69c5;
+        margin: 21px;
+    }
+    .data ul li {
+        padding: 3px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    .uplodelink00 {
+        width: 94%;
+        float: left;
+      
+      
+    }
+    /* .uplodebanner {
+        width: 100%;
+        float: left;
+        background: url(../images/banner1.png)no-repeat;
+        height: 907px;
+        margin-top: -6px;
+    } */
+}
+@media only screen and (max-width:504px){
+    .uplodelink00 {
+        width: 54%;
+        float: left;
+       
+       
+    }
+    .education1 {
+        width: 100%;
+        float: left;
+        
+       
+        box-shadow: none;
+        margin: 6px;
+        margin-left: 1px;
+        border: 1px solid #d6d4d4;
+    }
+    .attach {
+        width: 100%;
+        float: left;
+        height: 252px;
+       
+        box-shadow: none;
+        margin: 6px;
+        margin-left: 1px;
+        border: 1px solid #d6d4d4;
+    }
+    .camera {
+        width: 16%;
+        float: left;
+        position: absolute;
+        left: 272px;
+        top: 38px;
+    }
+    .uplodelink00 {
+        width: 100%;
+        float: left;
+       
+    }
+    .dashheading h1 {
+        font-size: 20px;
+        position: relative;
+    } 
+
+}
+@media only screen and (max-width:330px){
+    .resumepic img {
+        max-width: 90%;
+    }
+    .camera {
+        width: 15%;
+        float: left;
+        position: absolute;
+        left: 236px;
+        top: 38px;
+    }
+    /* .uplodelink00 {
+        width: 100%;
+        float: left;
+        background: rgb(73, 73, 73);
+    } */
+    .education1 a {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+    }
+    .edit1 ul li a {
+        display: block;
+        color: #0033ff;
+        font-size: 10px;
+    }
+    .edit1 {
+        /* width: 100%; */
+        float: left;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+/* dashbord */
+@media only screen and (max-width:1125px){
+    .postapply h2 {
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 16%;
+        font-size: 26px;
+    }
+
+    .dashboardheading {
+        width: 100%;
+        float: left;
+        background: none;
+        height: 187vh;
+    }
+    .dashlogo img{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width:726px){
+    .dashlink ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 5px;
+        font-size: 11px;
+    }
+
+}
+@media only screen and (max-width:567px){
+    .name input {
+        width: 44%;
+    }
+    .uplode button {
+        width: 40%;
+        float: left;
+        background: #000;
+        color: #fff;
+        margin: 3px;
+        border: aliceblue;
+        padding: 4px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .dashlink ul li a {
+        text-decoration: none;
+        color: #000;
+        text-align: start;
+        width: 100%;
+        display: block;
+        padding: 15px;
+        font-size: 14px;
+    }
+    .postaa {
+        width: 100%;
+        float: left;
+        margin-top: 0px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .dashboardheading {
+        width: 100%;
+        float: left;
+        background: #ffff;
+        height: 102vh;
+    }
+
+
+}
+@media only screen and (max-width:320px){
+
+
+    .dashlink ul li a {
+       
+        font-size: 11px;
+    }
+    .dashheading h1 {
+        font-size: 22px;
+        position: relative;
+    }
+}
+
+/* *********************login /ragistration***************************** */
+
+@media only screen and (max-width:500px){
+    .loginform {
+        width: 338px;
+    }
+    .logi p {
+      
+        font-size: 12px;
+    }
+    
+
+
+  
+        .loginform p {
+            /* text-align: center; */
+            padding: 7px;
+            line-height: 29px;
+        }
+    .email1 {
+        width: 100%;
+        float: left;
+        padding: 10px 0px 0px 30px;
+        margin-top: -1px;
+    }
+
+    .loginform1 {
+        width: 400px;
+        height: 500px;
+        box-shadow: 0px 3px 7px 0px black;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginform11 {
+        width: 400px;
+        height: 520px;
+        box-shadow: 0px 3px 7px 0px black;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .loginform111 {
+        width: 300px;
+        height: 520px;
+        box-shadow: 0px 3px 7px 0px black;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:490px){
+
+    .email {
+        width: 100%;
+        float: left;
+        padding: 13px;
+        margin-top: 50px;
+    }
+    .password {
+        width: 100%;
+        float: left;
+        padding: 0px 12px;
+    }
+    .forget a {
+        display: block;
+        padding: 10px;
+        text-align: end;
+        width: 99%;
+        color: #007bff;
+        font-size: 13px;
+        font-weight: bold;
+        /* margin-top: 29px; */
+        text-decoration: none;
+    }
+
+    .logi {
+        width: 100%;
+        float: left;
+        padding: 11px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:400px){
+    .loginform {
+        width: 271px;
+    }
+    .logi {
+        width: 100%;
+        float: left;
+        padding: 10px;
+    }
+    .loginform {
+        height: 398px;
+    }
+        .forget a {
+           
+            font-size: 12px;
+           
+        }
+
+        .logi a {
+            display: block;
+            padding: 6px;
+            width: 100%;
+            background: #007bff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 3px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+        }
+        .loginform1 {
+            width: 347px;
+            height: 500px;
+            box-shadow: 0px 3px 7px 0px black;
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .regiterr1 p {
+            color: #acacac;
+            padding: 6px;
+            margin-top: -9px;
+            text-align: center;
+            line-height: 24px;
+        }
+        .loginform11 {
+            width: 300px;
+            height: 478px;
+        }
+
+
+
+
+
+}
+@media only screen and (max-width:350px){
+
+    .loginform1 {
+        width: 300px;
+        height: 453px;
+    }
+    .loginform1 p {
+      
+            text-align: center;
+            padding: 4px;
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+        }}
+
+        p {
+            margin-bottom: 0px;
+        }
+
+
+
+
+
+
+
+
+
+

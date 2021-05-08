@@ -1,0 +1,430 @@
+.Register1{
+    width:100%;
+    float: left;
+}
+.Register1 p{
+    color: #000;
+    font-size: 14px;
+}
+
+.loginform1 p{
+    text-align: center;
+    padding: 25px;
+}
+.freshers11{
+    width:100%;
+    float: left;
+}
+.fresher111{
+    width:49%;
+    float: left;
+    text-align: center;
+}
+.fresher111 a {
+    width: 90%;
+    display: block;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin: 17px;
+}
+.more1{
+    width: 49%;
+    float: left;
+}
+.more1 a {
+    width: 100%;
+    display: block;
+    padding: 5px;
+    color: #acacac;
+    border-right: 2px solid #c1c1c1;
+    text-align: center;
+}
+.more11{
+    width: 49%;
+    float: left;
+}
+.more11 a {
+    width: 100%;
+    display: block;
+    padding: 5px;
+    color: #acacac;
+   
+    text-align: center;
+}
+
+.regiterr1{
+    width:100%;
+    float: left;
+}
+.regiterr1 p{
+   color: #acacac;
+   padding: 10px;
+   margin-top: 20px;
+}
+.nex1{
+    width:100%;
+    float: left;
+}
+.nex1 a{
+    width: 100%;
+    text-align: center;
+    display: block;
+
+}
+.icon{
+    width: 100%;
+    float: left;
+    /* padding: 10px; */
+    text-align: center;
+}
+.icon ul{
+    list-style: none;
+}
+.icon ul li{
+    display: inline-block;
+}
+.icon ul li a{
+    display: block;
+    padding: 20px;
+}
+.email11 {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+    margin-top: 10px;
+}
+
+.email111 p {
+    color: #000;
+    margin-bottom: 5px;
+    text-align: start;
+    padding: 0px;
+}
+.email111 input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.email1n {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+    margin-top: 10px;
+}
+
+.email1n p {
+    color: #000;
+    margin-bottom: 5px;
+    text-align: start;
+    padding: 0px;
+}
+.email1n input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.email111 {
+    width: 100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+    margin-top: 10px;
+}
+
+.email111 p {
+    color: #000;
+    margin-bottom: 5px;
+    text-align: start;
+    padding: 0px;
+}
+.email111 input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.password11{
+    width: 100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+    margin-top: 10px;
+}
+.password11 p{
+    color: #000;
+    margin-bottom: 5px;
+    text-align: start;
+    padding: 0px;
+
+}
+.password11 input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.password1n{
+    width: 100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+    margin-top: 10px;
+}
+.password1n p{
+    color: #000;
+    margin-bottom: 5px;
+    text-align: start;
+    padding: 0px;
+
+}
+.password1n input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.loginname11{
+    width:100%;
+    float: left;
+    padding: 10px 0px 0px 30px;
+}
+.loname11 {
+    width: 39%;
+    float: left;
+    margin-top: 10px;
+}
+.loname11 p{
+    color: #000;
+    margin-bottom: 2px;
+    text-align: start;
+    padding: 2px;
+  
+}
+.loname11 input{
+    width: 92%;
+    float: left;
+    padding: 5px;
+}
+
+.loname1111{
+    width:20%;
+    float: left;
+    margin-top: 10px;
+}
+.loname1111 select {
+    width: 89%;
+    float: left;
+    padding: 6px;
+}
+.loname1111 p{
+    color: #000;
+    margin-bottom: 2px;
+    text-align: start;
+    padding: 2px;
+  
+}
+.loname1111 input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+.loname111n{
+    width:79%;
+    float: left;
+    margin-top: 10px;
+}
+.loname111n p{
+    color: #000;
+    margin-bottom: 2px;
+    text-align: start;
+    padding: 2px;
+  
+}
+.loname111n input{
+    width: 95%;
+    float: left;
+    padding: 5px;
+}
+
+.loginbackground1{
+    width:100%;
+    float: left;
+    background: #fff;
+    height:100vh;
+}
+
+.loginform1 {
+    width: 500px;
+    height: 500px;
+    box-shadow: 0px 3px 7px 0px black;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginform11 {
+    width: 500px;
+    height: 520px;
+    box-shadow: 0px 3px 7px 0px black;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loginform111 {
+    width: 500px;
+    height: 520px;
+    box-shadow: 0px 3px 7px 0px black;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.email1{
+    width:100%;
+    float: left;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.email1 p{
+    color: #000;
+    margin-bottom: 2px;
+
+}
+.email1 input{
+    width:100%;
+    float: left;
+    padding: 5px;
+}
+.password1{
+    width:100%;
+    float: left;
+    padding: 0px 40px;
+}
+.password p{
+    color: #000;
+    margin-bottom: 2px;
+
+}
+.password1 input{
+    width:100%;
+    float: left;
+    padding: 5px;
+}
+.loginname1{
+    width:100%;
+    float: left;
+    margin-top: 40px;
+}
+.loname1{
+    width: 40%;
+    float: left;
+    padding: 0px 40px;
+}
+.loname1 p{
+    color: #000;
+    margin-bottom: 2px;
+}
+.forget1{
+    width:100%;
+    float: left;
+}
+.forget1 a {
+    display: block;
+    padding: 10px;
+    text-align: end;
+    width: 85%;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    /* margin-top: 29px; */
+    text-decoration: none;
+}
+
+
+.logi1{
+    width:100%;
+    float: left;
+    padding: 35px;
+}
+.logi1 p{
+    color: #007bff;
+    /* margin-bottom: 2px; */
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.logi1 a {
+    display: block;
+    padding: 10px;
+    width:100%;
+    background: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 29px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+.save1{
+    width:100%;
+    float: left;
+}
+.forget11{
+    width:48%;
+    float: left;
+}
+.forget11 a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width:100%;
+    color: #007bff;
+    font-size: 14px;
+  margin-top: 20px;
+    text-decoration: none;
+   
+}
+.logi11{
+    width:100%;
+    float: left;
+    padding: 35px;
+}
+.logi11 p{
+    color: #007bff;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.logi11 a {
+    display: block;
+    padding: 10px;
+    width:100%;
+    background: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 29px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
