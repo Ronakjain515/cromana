@@ -2,9 +2,13 @@
 {% load static %}
 <html lang="en">
 <head>
-    <title>CROMANA</title>
+    <title>Cromana</title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel = "icon" href ="#" type = "image/x-icon">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/register.css' %}" />
     <link rel="stylesheet" href="{% static 'css/media.css' %}" />
@@ -16,442 +20,363 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.flexisel.js"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
 
 </head>
 <body>
     <!-- started topheader -->
-<div class="topheader">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="socialicon">
-                    <ul>
-                        <li><a href="#"><i class='fab fa-facebook-f' style='font-size:14px;color:#ffd102'></i></a></li>
-                                    <li><a href="#"><i class='fab fa-twitter' style='font-size:14px;color:#ffd102'></i></a></li>
-                                       
-                                    <li><a href="#"><i class='fab fa-linkedin-in' style='font-size:14px;color:#ffd102'></i>
-                                    </a></li>
-                                    <li><a href="#"><i class='fab fa-instagram' style='font-size:14px;color:#ffd102'></i>
-                                    </a></li>
-                                </li>
-                                <li><a href="#"><i class="fab fa-whatsapp" style='font-size:14px;color:#ffd102'></i>
-
-                                </a></li>
-                    </ul>
+    <div class="topheader">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="socialicon">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-facebook-f' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-twitter' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>   
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-linkedin-in' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-instagram' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-whatsapp" style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-                <div class="col-sm-1" style=" padding-right: 3px;
-                padding-left: 0px;">
-                    <!-- <div class="resume">
-                        <a href="uploderesume.html">Build My Resume</a>
-                    </div> -->
-                </div>
-                <div class="col-sm-1" style=" padding-right: 3px;
-                padding-left: 0px;">
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;"></div>
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
                     <div class="login">
                         <a href="login.html">Login</a>
                     </div>
                 </div>
-                <div class="col-sm-1" style=" padding-right: 3px;
-                padding-left: 0px;">
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
                     <div class="Registred">
                         <a href="registered.html">Registred Now</a>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
- </div>
     <!-- END topheader -->
-        <!-- STRATED MENUBAR -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo">
-                            <img src="images/logo1.png">
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="menu  wow fadeInDown animated">
-                            <ul>
-                                <li><a href="index.html">HOME</a></li>
-                                <li><a href="jobs.html">JOBS</a></li>
-                                <li><a href="company.html">COMPANIES</a></li>
-                                <li><a href="uploderesume.html">BUILD RESUME</a></li>
-                                <li>
-                                    <a href="#">MY PROFILE</a>
-                                   <ul>
-                                       <li><a href="uplode.html">Edit My Profile</a></li>
-                                       <li><a href="applied.html">Applied job</a></li>
-                                       <li><a href="sava.html">Save jobs</a></li>
-                                       <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                       <li><a href="setting.html">Setting</a></li>
-                                       <li><a href="#">Log out</a></li>
-                                   </ul>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        
+    <!-- STRATED MENUBAR -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="logo">
+                    <img src="{% static 'images/logo1.png' %}">
                 </div>
-            </div>  <!-- <li>
-                                        <a href="company.html">MY PROFILE</a>
-                                       <ul>
-                                           <li><a href="uplode.html">Edit My Profile</a></li>
-                                           <li><a href="#">Creat ajob post</a></li>
-                                           <li><a href="#">short listed canditate</a></li>
-                                           <li><a href="#">Your old post status</a></li>
-                                           <li><a href="#">Setting</a></li>
-                                           <li><a href="#">Log out</a></li>
-                                       </ul>
-
-                                    </li> -->
-<!-- STARTED BANNER -->
-                <div class="banner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="heading">
-                                    <h2>OUR AMAZING SERVICE WILL HELP YOU</h2>
-                                    <div id="demo" class="carousel slide" data-ride="carousel">
-                                        <ul class="carousel-indicators">
-                                          <!-- <li data-target="#demo" data-slide-to="0" class="active"></li>
-                                          <li data-target="#demo" data-slide-to="1"></li> -->
-
-                                        </ul>
-                                        <div class="carousel-inner">
-                                          <div class="carousel-item active">
-
-                                            <div class="carousel-caption">
-                                             </div>
-                                             <div class="box">
-                                                <!-- <h2>OUR AMAZING SERVICE WILL HELP YOU</h2> -->
-                                                <h4>FOR A EMPLOYEE</h4>
-                                                <ul>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>
-
-                                                        PROVIDE A JOBS</li>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>CAREER ADVICE  & DEVELOPMENT</li>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>BUILD RESUME / CV </li>
-                                                </ul>
-
-                                             </div>
-
-                                            </div>
-
-                                            <div class="carousel-item">
-                                              <div class="carousel-caption">
-                                              </div>
-                                              <div class="box">
-                                                <!-- <h2>OUR AMAZING SERVICE WILL HELP YOU</h2> -->
-                                                <h4>FOR A FOR A EMPLOYER</h4>
-                                                <ul>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>
-
-                                                        PROVIDE HR SOLUTION</li>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>CONTRACT STAFFING SERVIVES</li>
-                                                    <li><span class="point">
-                                                        <img src="images/point.png">
-                                                    </span>ASSIST IN POLICY INTERGATION</li>
-                                                </ul>
-
-                                             </div>
-                                              </div>
-
-                                          </div>
-
-                                          <div class="now">
-                                            <a href="#" data-toggle="modal" data-target="#all1">Registred Now</a>
-                                        </div>
-                                        <div class="modal fade" id="all1">
-                                            <div class="modal-dialog modal-lg">
-                                              <div class="modal-content">
-                                              
-                                                <!-- Modal Header -->
-                                                <div class="modal-header">
-                                                  <h4 class="modal-title">Registered Now</h4>
-                                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                </div>
-                                                
-                                                <!-- Modal body -->
-                                                <div class="modal-body">
-                                                    <div class="loginbackground1">
-                                                       
-                                                   
-            <div class="loginform11">
-                
-                <div class="email111">
-                    <p>Email</p>
-                    <input type="text" placeholder="Enter your mailID">
-                   </div>
-                   <div class="password11">
-                    <p>Password</p>
-                    <input type="password" placeholder="Enter your password">
-                   </div>
-                    <div class="loginname11">
-                        <div class="loname1111">
-                            <p>Country</p>
-                            <select>
-                                 <option value="" >+91</option>
-                                 <option value="">+11</option>
-                                 <option value="">+22</option>
-                                 <option value="">44</option>
-                                   <option value="">44</option> 
-                                    <option value="">655</option>
-
-                            </select>
-                        </div>
-                        <div class="loname111n">
-                            <p>Mobile Number</p>
-                            <input type="number" placeholder="Enter your number">
-                        </div>
-                   </div> 
-                   <div class="loginname11">
-                    <div class="loname1111">
-                        <p>Gender</p>
-                        <select>
-                             <option value="" >Male</option>
-                             <option value="">Female</option>
-                             <option value="">Other</option>
-                            
-
-                        </select>
-                    </div>
-                    <div class="loname11">
-                        <p> NAME</p>
-                        <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="loname11">
-                        <p>LAST NAME</p>
-                        <input type="text" placeholder="Last Name">
-                    </div>
-                    <div class="logi1">
-                        <p style="padding: 0px;">By registering, you agree to our Terms and Conditions.</p>
-                        <a href="#">Register</a>
-                       
-                       </div>
-               </div> 
-
-
-
-
-
-
-
-
-
-
-
-                 
+            </div>
+            <div class="col-sm-8">
+                <div class="menu  wow fadeInDown animated">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="jobs.html">JOBS</a></li>
+                        <li><a href="company.html">COMPANIES</a></li>
+                        <li><a href="uploderesume.html">BUILD RESUME</a></li>
+                        <li>
+                            <a href="#">MY PROFILE</a>
+                            <ul>
+                                <li><a href="uplode.html">Edit My Profile</a></li>
+                                <li><a href="applied.html">Applied job</a></li>
+                                <li><a href="sava.html">Save jobs</a></li>
+                                <li><a href="Recruiter.html">Recruiters massage</a></li>
+                                <li><a href="setting.html">Setting</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    
+    </div>
+    <!-- end of STRATED MENUBAR -->
+
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="heading">
+                        <h2 style="font-size: 25px;">OUR AMAZING SERVICE WILL HELP YOU</h2>
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+                            <ul class="carousel-indicators"></ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption"></div>
+                                    <div class="box">
+                                        <h4 style="font-size: 22px">FOR A EMPLOYEE</h4>
+                                        <ul style="font-size: 15px">
+                                            <li>
+                                                <span class="point">
+                                                    <img src="{% static 'images/point.png' %}">
+                                                </span>
+                                                PROVIDE A JOBS
+                                            </li>
+                                            <li>
+                                                <span class="point">
+                                                    <img src="{% static 'images/point.png' %}">
+                                                </span>
+                                                CAREER ADVICE  & DEVELOPMENT
+                                            </li>
+                                            <li>
+                                                <span class="point">
+                                                    <img src="{% static 'images/point.png' %}">
+                                                </span>
+                                                BUILD RESUME / CV 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="carousel-caption"></div>
+                                        <div class="box">
+                                            <h4 style="font-size: 22px">FOR A FOR A EMPLOYER</h4>
+                                            <ul style="font-size: 15px">
+                                                <li>   
+                                                    <span class="point">
+                                                        <img src="{% static 'images/point.png' %}">
+                                                    </span>
+                                                    PROVIDE HR SOLUTION
+                                                </li>
+                                                <li>
+                                                    <span class="point">
+                                                        <img src="{% static 'images/point.png' %}">
+                                                    </span>
+                                                    CONTRACT STAFFING SERVIVES
+                                                </li>
+                                                <li>
+                                                    <span class="point">
+                                                        <img src="{% static 'images/point.png' %}">
+                                                    </span>
+                                                    ASSIST IN POLICY INTERGATION
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="now" style="margin-bottom: 5px">
+                                    <a href="#" data-toggle="modal" data-target="#all1">Registred Now</a>
+                                </div>
+                                <div class="modal fade" id="all1">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Registered Now</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                                <div class="loginbackground1">
+                                                    <div class="loginform11">
+                                                        <div class="email111">
+                                                            <p>Email</p>
+                                                            <input type="text" placeholder="Enter your mailID">
+                                                        </div>
+                                                        <div class="password11">
+                                                            <p>Password</p>
+                                                            <input type="password" placeholder="Enter your password">
+                                                        </div>
+                                                            <div class="loginname11">
+                                                                <div class="loname1111">
+                                                                    <p>Country</p>
+                                                                    <select>
+                                                                        <option value="" >+91</option>
+                                                                        <option value="">+11</option>
+                                                                        <option value="">+22</option>
+                                                                        <option value="">44</option>
+                                                                        <option value="">44</option> 
+                                                                        <option value="">655</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="loname111n">
+                                                                    <p>Mobile Number</p>
+                                                                    <input type="number" placeholder="Enter your number">
+                                                                </div>
+                                                            </div> 
+                                                            <div class="loginname11">
+                                                                <div class="loname1111">
+                                                                    <p>Gender</p>
+                                                                    <select>
+                                                                        <option value="" >Male</option>
+                                                                        <option value="">Female</option>
+                                                                        <option value="">Other</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="loname11">
+                                                                    <p> NAME</p>
+                                                                    <input type="text" placeholder="Last Name">
+                                                                </div>
+                                                                <div class="loname11">
+                                                                    <p>LAST NAME</p>
+                                                                    <input type="text" placeholder="Last Name">
+                                                                </div>
+                                                                <div class="logi1">
+                                                                    <p style="padding: 0px;">By registering, you agree to our Terms and Conditions.</p>
+                                                                    <a href="#">Register</a>
+                                                                </div>
+                                                            </div>  
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                </div>
-                                                
                                                 <!-- Modal footer -->
                                                 <div class="modal-footer">
-                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                 </div>
-                                                
-                                              </div>
                                             </div>
-                                          </div>
                                         </div>
-                                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                                          <span class="carousel-control-prev-icon"></span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#demo" data-slide="next">
-                                          <span class="carousel-control-next-icon"></span>
-                                        </a>
-
+                                    </div>
                                 </div>
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- end banner -->
-                <!-- started tab -->
-        <div class="tabbanner">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="tab">
-                        <ul>
-                            <li><a href="#about">ABOUT</a></li>
-                            <li><a href="#Categories"> CATEGORIES   </a></li>
-                            <li><a href="#client"> OUR VISION & MISSION </a></li>
-                            <li><a href="#service">SERVICE   </a></li>
-                            <li><a href="#textimonials">TESTIMONIAL  </a></li>
-
-
-                            <li><a href="#comp"> OUR CLIENT</a></li>
-
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- END TAB            -->
+    </div>
+    <!-- end banner -->
 
-        <div class="container">
-
-            <!-- Button to Open the Modal -->
-
-
-
-
-            <!-- The Modal -->
-            <div class="modal fade" id="myModal">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">CROMANA ABOUT</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                   <p style="    font-size: 14px;
-                   line-height: 25px;
-                   padding: 10px;">We partner with our clients to expand their business potential by providing solutions through an integrated suite of services leading to executive search and selection, middle management hiring, project-based hiring and recruitment process outsourcing. With our long time knowledge expertise in the domain, we have been able to deliver solutions to all types of global and local business industry specific demands. At Cromana, we have the ability to align the diverse and complex HR needs of our customers by providing reliable and strategic staffing solutions. Realizing the importance of aligning talent strategy with business strategy, we offer workforce solutions that drive businesses forward. Our ability in fast delivery has earned us the reputation of being a reliable and efficient global executive search firm. With a legacy of over 4 years in the Indian market, Cromna Placement is one of the leading players in the Indian recruitment ecosystem today. Chroma Placement offers a full range of solutions in various areas including temporary and permanent 
-
-</p>
-                  </div>
-
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-
+    <!-- started tab -->
+    <div class="tabbanner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="tab">
+                    <ul>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#Categories"> CATEGORIES   </a></li>
+                        <li><a href="#client"> OUR VISION & MISSION </a></li>
+                        <li><a href="#service">SERVICE   </a></li>
+                        <li><a href="#textimonials">TESTIMONIAL</a></li>
+                        <li><a href="#comp"> OUR CLIENT</a></li>
+                    </ul>
                 </div>
-              </div>
             </div>
+        </div>
+    </div>
+    <!-- END TAB -->
 
-          </div>
-
-            <div class="aboutheading">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <div class="about  wow fadeInLeft animated">
-                                <img src="images/aboutpic.png">
-                            </div>
-                        </div>
-                        <div class="col-sm-7">
-                            <div class="abouttext  wow fadeInRight animated" id="about">
-                               <h2>ABOUT</h2>
-                               <span class="tp"><p>Cromana has established itself as a well-known name in the HR field by providing a wide
-                                   range of recruitment and selection services to various companies.
-                                   Our team of experts is dedicated to leveraging the business potential
-                                    of our clients by offering strategic HR services. Moreover, our global
-                                     presence in various Gulf countries, the market gives us a benchmark to
-                                      stand with one of the leading HR firms.
-                                      <span><button type="button" class="btn btn-primary11" data-toggle="modal" data-target="#myModal">Read More</button>
-
-                                      </span></p>
-                                    </span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                <span class="tp2">   <p>We partner with our clients to expand their business potential by providing solutions through an integrated suite of services leading to executive search and selection, middle management hiring, project-based hiring and recruitment process outsourcing. With our long time knowledge expertise in the domain, we have been able to deliver solutions to all types of global and local business industry specific demands. At Cromana, we have the ability to align the diverse and complex HR needs of our customers by providing reliable and strategic staffing solutions. Realizing the importance of aligning talent strategy with business strategy, we offer workforce solutions that drive businesses forward. Our ability in fast delivery has earned us the reputation of being a reliable and efficient global executive search firm. With a legacy of over 4 years in the Indian market, Cromna Placement is one of the leading players in the Indian recruitment ecosystem today. Chroma Placement offers a full range of solutions in various areas including temporary and permanent 
-
-                                </p>
-                         </span>
-
-                            </div>
-                        </div>
+    <!-- About us -->
+    <div class="aboutheading">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="about  wow fadeInLeft animated">
+                        <img src="{% static 'images/aboutpic.png' %}">
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="abouttext  wow fadeInRight animated" id="about">
+                        <h2>ABOUT</h2>
+                        <span class="tp2">
+                            <p style="text-align: justify">
+                                We partner with our clients to expand their business potential 
+                                by providing solutions through an integrated suite of services 
+                                leading to executive search and selection, middle management hiring, 
+                                project-based hiring and recruitment process outsourcing. With 
+                                our long time knowledge expertise in the domain, we have been 
+                                able to deliver solutions to all types of global and local business 
+                                industry specific demands. At Cromana, we have the ability to 
+                                align the diverse and complex HR needs of our customers by providing 
+                                reliable and strategic staffing solutions. Realizing the importance 
+                                of aligning talent strategy with business strategy, we offer 
+                                workforce solutions that drive businesses forward. Our ability 
+                                in fast delivery has earned us the reputation of being a reliable 
+                                and efficient global executive search firm. With a legacy of over 
+                                4 years in the Indian market, Cromna Placement is one of the leading 
+                                players in the Indian recruitment ecosystem today. Chroma Placement 
+                                offers a full range of solutions in various areas including temporary 
+                                and permanent 
+                            </p>
+                        </span>
                     </div>
                 </div>
             </div>
-        <div class="Categoriesheading" id="Categories">
-            <div class="container">
-                <h2>CATEGORIES</h2>
+        </div>
+    </div>
+    <!-- end About us -->
+    
+    <!-- Catagory section -->
+    <div class="Categoriesheading" id="Categories">
+        <div class="container">
+            <h2>CATEGORIES</h2>
                 <div class="row">
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="yellow"></div>
                         <div class="box1 wow fadeInLeft animated">
-                            <img src="images/heart.png">
+                            <img src="{% static 'images/heart.png' %}">
                             <h3>Healthcare</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1 wow fadeInDown animated">
-                            <img src="images/account.png">
+                            <img src="{% static 'images/account.png' %}">
                             <h3>Accounting & Finance</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1 wow fadeInDown animated">
-                            <img src="images/it.png">
+                            <img src="{% static 'images/it.png' %}">
                             <h3>IT Contractor</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1 wow fadeInRight animated">
-                            <img src="images/automobile.png">
+                            <img src="{% static 'images/automobile.png' %}">
                             <h3>Motoring & Automotive</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1 wow fadeInLeft animated">
-                            <img src="images/constration.png">
+                            <img src="{% static 'images/constration.png' %}">
                             <h3>Contruction & facilities</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1 wow fadeInUp animated">
-                            <img src="images/ho.png">
+                            <img src="{% static 'images/ho.png' %}">
                             <h3>Estate Agency</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1  wow fadeInUp animated">
-                            <img src="images/hotel.png">
+                            <img src="{% static 'images/hotel.png' %}">
                             <h3>Restaurant & Food Service</h3>
                             <p>368 open positions</p>
                         </div>
                     </div>
                     <div class="col-sm-3" style="width: 48%;">
                         <div class="box1  wow fadeInRight animated">
-                            <img src="images/sale.png">
+                            <img src="{% static 'images/sale.png' %}">
                             <h3>Sales & marketing</h3>
                             <p>368 open positions</p>
                         </div>
@@ -459,317 +384,209 @@
                 </div>
                 <div class="all">
                     <a href="#" data-toggle="modal" data-target="#all">BROWSE ALL CATEGORIES</a>
-                   </div>
-
-
-
-
-                    
-
-  <!-- The Modal -->
-  <div class="modal fade" id="all">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">All Categories</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-        <div class="container">
-
-            <!-- Button to Open the Modal -->
-
-
-
-
-            <!-- The Modal -->
-            <div class="modal fade" id="myModal1">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">CROMANA OUR VISION & MISSION</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                   <p style="    font-size: 14px;
-                   line-height: 25px;
-                   padding: 10px;"> And we are committed to meeting and exceeding the expectations in providing excellent service, unexpected quality and outstanding value to our   clients and partners. Our Vision is to become one of the leading human resources consulting firm operating globally by maintaining our uncompromising principles and create value for all our stakeholders.
-All individuals are accountable for the highest standards of ethical behavior. We deliver recruitment services with honesty, transparency, equality and consistency
-Innovation opens a window for creativity and high performance. We embrace change and always look to improve what we do and how we
-Our consultants understand the vital role of Human Resources in the development and eventual success of any organization. Building upon this insight, we partner organizations by devising effective and time bound solutions.
-</p>
-                  </div>
-
-                  <!-- Modal footer -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-
                 </div>
-              </div>
-            </div>
-
-          </div>
-
-
-        <div class="ourvisionheading" id="client">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-7">
-                        <div class="ourvision wow fadeInLeft animated">
-                           <h2>OUR VISION & MISSION</h2>
-                           <span class="tp"><p>
-                            We are a professional, enthusiastic and innovative team, dedicated to providing professional
-                             HR Consulting Services and evolving Recruitment Solutions that help our customers become
-                              more productive and profitable.
-
-                            Our Mission to develop long-term and strategic partnerships with our clients,
-                             and help them to transform today’s challenges into tomorrow’s successes.
-                                <span><button type="button" class="btn btn-primary11" data-toggle="modal" data-target="#myModal1">Read More</button>
-
-
-
-                                </span>
-
-                            </p>
-                          </span>
-
-
-
-
-
-
-                         <span class="tp2"> <p>And we are committed to meeting and exceeding the expectations in providing excellent service, unexpected quality and outstanding value to our   clients and partners. Our Vision is to become one of the leading human resources consulting firm operating globally by maintaining our uncompromising principles and create value for all our stakeholders.
-                            All individuals are accountable for the highest standards of ethical behavior. We deliver recruitment services with honesty, transparency, equality and consistency
-                            Innovation opens a window for creativity and high performance. We embrace change and always look to improve what we do and how we
-                            Our consultants understand the vital role of Human Resources in the development and eventual success of any organization. Building upon this insight, we partner organizations by devising effective and time bound solutions.
-                            
-                            
-
-                            </p></span>
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="ourvision wow fadeInRight animated">
-                            <img src="images/visionpic.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END VISION & MISSION -->
-            <div class="service" id="service">
-                <div class="container">
-                    <div class="serviceheading wow fadeInLeft animated">
-                        <h2>SERVICES</h2>
-                        <p>Over the past few years, HR outsourcing has become a dependable way for organizations to reduce operating costs, streamline internal processes, and focus on core business operations. With almost 5 years of HR services outsourcing experience, cromana Consultants have in place the necessary processes, HR consultants, knowledge, technology, and best practices to support you in all aspects of human resources and employment administration. We provide quick and painless hiring services to companies of all sizes in multiple domains, resulting in immediate improvement in productivity, and hassle-free induction of new employees. Cromana provides the whole range of solutions related to recruitment, staffing, and HR needs of a company’s We manage critical HR processes, thus bringing significant operational excellence and seamless integrated delivery. We partner with client organizations to fully assist them in the transformation of their HR model to bring about maximum.
-
-
-                            </p>
-                    </div>
-                </div>
-            </div>
-<!-- END SERVICES -->
-<!-- STARTED TESTIMONIAL -->
-            <div class="testimonial" id="textimonials">
-                <h2>TESTIMONIAL</h2>
-            <div class="container">
-                <div class="row">
-
-
-
-                   <div id="demo" class="carousel slide" data-ride="carousel">
-                    <!-- <ul class="carousel-indicators">
-                      <li data-target="#demo" data-slide-to="0" class="active"></li>
-                      <li data-target="#demo" data-slide-to="1"></li>
-                      <li data-target="#demo" data-slide-to="2"></li>
-                    </ul> -->
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="tespic">
-                            <img src="images/testimonialpic2.png">
-
-                            <div class="testimonialname">
-                            <ul>
-                                <li><a href="#">ANITA SINGH</a></li>
-                              <li><a href="#">Director of Company</a></li>
-
-                            </ul>
-
+                <!-- The Modal -->
+                <div class="modal fade" id="all">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">All Categories</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                             </div>
-
-                            <p>My experience in working with Cromana Placement was very much a positive one. Their professionalism was refreshing and I would welcome the opportunity to work with them again. They excel in sourcing and head-hunting. They also value the customer's relationship with their clients, and that is reflected in the professionalism of their interactions. The bottom line is that they make sourcing and head-hunting easier and help in getting to the right candidates faster. Thank you for making the sourcing process a very pleasant experience.
-                           </p>
-
-                           </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="tespic">
-                            <img src="images/woman.png">
-
-                            <div class="testimonialname">
-                                <ul>
-                                    <li><a href="#">ANITA SINGH</a></li>
-                                    <li><a href="#">CEO COMPANY</a></li>
-
-                                </ul>
-
-                                </div>
-
-                            <p>My experience in working with Cromana Placement was very much a positive one.
-                                Their professionalism was refreshing and I would welcome the opportunity to
-                                 work with them again. They excel in sourcing and head-hunting.  They also
-                                  value the customer's relationship with their clients, and that is reflected
-                                   in the professionalism of their interactions. The bottom line is that they
-                                    make sourcing and head-hunting easier and help in getting to the right
-                                     candidates faster. Thank you for making the sourcing process a very
-                                     pleasant experience.
-                           </p>
-
-                           </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="tespic">
-
-
-                            <img src="images/testimonialpic2.png">
-                            <div class="testimonialname">
-                                <ul>
-                                    <li><a href="#">ANITA SINGH</a></li>
-                                    <li><a href="#">CEO COMPANY</a></li>
-
-                                </ul>
-
-                                </div>
-
-
-
-                            <p>My experience in working with Cromana Placement was very much a positive one.
-                                Their professionalism was refreshing and I would welcome the opportunity to
-                                 work with them again. They excel in sourcing and head-hunting.  They also
-                                  value the customer's relationship with their clients, and that is reflected
-                                   in the professionalism of their interactions. The bottom line is that they
-                                    make sourcing and head-hunting easier and help in getting to the right
-                                     candidates faster. Thank you for making the sourcing process a very
-                                     pleasant experience.
-                           </p>
-
-                           </div>
-                      </div>
-                    </div>
-                 
-                  </div>
-
-
-
-
-
-
-
-
-                      </div>
-
-
-                      </div>
-                   </div>
-
-
-   
+                            <!-- Modal body -->
+                            <div class="modal-body"></div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
- <!-- END CLIENT PACKAGE            -->
-<!-- STARTED OUR CLIEN -->
-            <div class="companybanne" id="comp">
-                <h2>OUR CLIENT</h2>
-                <div class="container-fluid">
-                    <div class="row">
+        </div>
+    </div>
+    <!-- end Catagory section -->
 
-                        <div class="company">
-
-                            <ul id="flexiselDemo3">
-                                <li><img src="images/company1.png" /></li>
-                                <li><img src="images/company2.png" /></li>
-                                <li><img src="images/company3.png" /></li>
-                                <li><img src="images/company4.png" /></li>
-                                <li><img src="images/company1.png" /></li>
-                                <li><img src="images/company2.png" /></li>
-                                <li><img src="images/company3.png" /></li>
-                                <li><img src="images/company4.png" /></li>
-                            </ul>
-                        </div>
+    <!-- Our Vision -->
+    <div class="ourvisionheading" id="client">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="ourvision wow fadeInLeft animated">
+                        <h2>OUR VISION & MISSION</h2>
+                        <span class="tp2">
+                            <p style="text-align: justify">
+                                And we are committed to meeting and exceeding 
+                                the expectations in providing excellent service, 
+                                unexpected quality and outstanding value to our 
+                                clients and partners. Our Vision is to become one 
+                                of the leading human resources consulting firm 
+                                operating globally by maintaining our uncompromising 
+                                principles and create value for all our stakeholders.
+                                All individuals are accountable for the highest 
+                                standards of ethical behavior. We deliver recruitment 
+                                services with honesty, transparency, equality and 
+                                consistency Innovation opens a window for creativity 
+                                and high performance. We embrace change and always 
+                                look to improve what we do and how we Our consultants 
+                                understand the vital role of Human Resources in the 
+                                development and eventual success of any organization. 
+                                Building upon this insight, we partner organizations 
+                                by devising effective and time bound solutions.
+                            </p>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="ourvision wow fadeInRight animated">
+                        <img src="{% static 'images/visionpic.png' %}">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-<!-- END OUR CLIENT -->
-<!-- FOOTER STARTED -->
+    <!-- END VISION & MISSION -->
 
+    <!-- SERVICES -->
+    <div class="service" id="service">
+        <div class="container">
+            <div class="serviceheading wow fadeInLeft animated">
+                <h2>SERVICES</h2>
+                <p style="text-align: justify; text-align-last: center;">
+                    Over the past few years, HR outsourcing has become a dependable way for 
+                    organizations to reduce operating costs, streamline internal processes, 
+                    and focus on core business operations. With almost 5 years of HR services 
+                    outsourcing experience, cromana Consultants have in place the necessary 
+                    processes, HR consultants, knowledge, technology, and best practices to 
+                    support you in all aspects of human resources and employment administration.
+                    We provide quick and painless hiring services to companies of all sizes in 
+                    multiple domains, resulting in immediate improvement in productivity, and 
+                    hassle-free induction of new employees. Cromana provides the whole range 
+                    of solutions related to recruitment, staffing, and HR needs of a company’s
+                    We manage critical HR processes, thus bringing significant operational 
+                    excellence and seamless integrated delivery. We partner with client 
+                    organizations to fully assist them in the transformation of their HR 
+                    model to bring about maximum.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- END SERVICES -->
+
+    <!-- STARTED TESTIMONIAL -->
+    <div class="testimonial" id="textimonials">
+        <h2>TESTIMONIAL</h2>
+            <div class="container">
+                <div class="row">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="tespic">
+                                    <img src="{% static 'images/testimonialpic2.png' %}">
+                                    <div class="testimonialname">
+                                        <ul>
+                                            <li><a onMouseOver="this.style.color='#FFF'">ANITA SINGH</a></li>
+                                            <li><a onMouseOver="this.style.color='#FFF'">Director of Company</a></li>
+                                        </ul>
+                                    </div>
+                                    <p style="text-align: justify; text-align-last: center;">
+                                        My experience in working with Cromana Placement was very 
+                                        much a positive one. Their professionalism was refreshing 
+                                        and I would welcome the opportunity to work with them 
+                                        again. They excel in sourcing and head-hunting. They 
+                                        also value the customer's relationship with their clients, 
+                                        and that is reflected in the professionalism of their 
+                                        interactions. The bottom line is that they make sourcing 
+                                        and head-hunting easier and help in getting to the right 
+                                        candidates faster. Thank you for making the sourcing process 
+                                        a very pleasant experience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="tespic">
+                                    <img src="{% static 'images/woman.png' %}">
+                                    <div class="testimonialname">
+                                        <ul>
+                                            <li><a onMouseOver="this.style.color='#FFF'">ANITA SINGH</a></li>
+                                            <li><a onMouseOver="this.style.color='#FFF'">CEO COMPANY</a></li>
+                                        </ul>
+                                    </div>
+                                    <p style="text-align: justify; text-align-last: center;">
+                                        My experience in working with Cromana Placement was 
+                                        very much a positive one. Their professionalism was 
+                                        refreshing and I would welcome the opportunity to work
+                                        with them again. They excel in sourcing and 
+                                        head-hunting.  They also value the customer's 
+                                        relationship with their clients, and that is reflected
+                                        in the professionalism of their interactions. The 
+                                        bottom line is that they make sourcing and head-hunting 
+                                        easier and help in getting to the right candidates faster. 
+                                        Thank you for making the sourcing process a very pleasant experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END TESTIMONIAL -->
+
+    <!-- STARTED OUR CLIEN -->
+    <div class="companybanne" id="comp">
+        <h2>OUR CLIENT</h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="company">
+                    <ul id="flexiselDemo3">
+                        <li><img src="{% static 'images/company1.png' %}" /></li>
+                        <li><img src="{% static 'images/company2.png' %}" /></li>
+                        <li><img src="{% static 'images/company3.png' %}" /></li>
+                        <li><img src="{% static 'images/company4.png' %}" /></li>
+                        <li><img src="{% static 'images/company1.png' %}" /></li>
+                        <li><img src="{% static 'images/company2.png' %}" /></li>
+                        <li><img src="{% static 'images/company3.png' %}" /></li>
+                        <li><img src="{% static 'images/company4.png' %}" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OUR CLIENT -->
+
+    <!-- FOOTER STARTED -->
     <div class="fotter">
         <div class="container">
+        <img src="{% static 'images/logo2.png' %}" style="width: 250px; margin-top: 20px;">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="quick">
                         <div class="logo1">
-                            <img src="images/logo2.png">
-                            <p style="color:#fff ;color: #fff;
-                            line-height: 36px;">Cromana has established itself as a well-known name in the HR field by providing a wide
-                                range of recruitment and selection services to various companies. </p>
+                            <p style="color:#fff ;color: #fff; line-height: 25px; text-align: justify; margin-top: 7%">
+                                Cromana has established itself as a well-known name in the HR 
+                                field by providing a wide range of recruitment and selection 
+                                services to various companies. 
+                            </p>
                         </div>
-
-                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3"  style="padding-left: 5%; padding-top: 8px">
                     <div class="quick">
-                        <h4>Quick Links</h4>
+                        <h4>QUICK LINKS</h4>
                         <ul>
                             <li><a href="index.html">HOME</a></li>
                             <li><a href="jobs.html">JOBS</a></li>
                             <li><a href="uploderesume.html">Build Resume</a></li>
                             <li><a href="company.html">COMPANIES</a></li>
-
-
                         </ul>
                     </div>
-
                 </div>
-
-                <div class="col-sm-3">
+                <div class="col-sm-3" style="">
                     <div class="quick">
                         <h4>TERNS & CONDITION</h4>
-
                         <ul>
                             <li><a href="security.html">SECURITY & FRAUD</a></li>
                             <li><a href="policy.html">PRIVACY POLICY</a></li>
@@ -778,38 +595,29 @@ Our consultants understand the vital role of Human Resources in the development 
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3" style="">
                     <div class="quick">
-                        <h4>CONTRACT US</h4>
-                      <div class="addressfotter">
-                          <ul>
-                              <li><a href="#"><img src="images/mobile.png"></a></li>
-                              <li><a href="#"><img src="images/email.png"></a></li>
-                              <li><a href="#"><img src="images/location.png"></a></li>
-                          </ul>
+                        <h4>CONTACT US</h4>
+                        <div class="row" style="width: 100%; ">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/mobile.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">(+91)9877654321</div>
                         </div>
-                      <div class="addressfotter1">
-                        <ul>
-                            <li><a href="#">
-
-
-
-                    (+91)9877654321
-                            </a></li>
-                            <li><a href="#">WWW@gamil.com</a></li>
-                            <li><a href="#">Ram Nagar 220 f<br>Gwalior(M.P.)</a></li>
-                        </ul>
-                      </div>
-                    </div>
+                        <div class="row" style="width: 100%; margin-top: 10px;">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/email.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">WWW@gamil.com</div>
+                        </div>
+                        <div class="row" style="width: 100%; margin-top: 10px;">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/location.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">Ram Nagar 220 f<br>Gwalior(M.P.)</div>
+                        </div>
                 </div>
             </div>
         </div>
-   </div>
-   <hr>
-  
+    </div>
+    <hr>
   <!-- END FOTTER -->
-   <script>
 
+   <script>
     $(window).load(function() {
 
         $("#flexiselDemo3").flexisel({
@@ -821,9 +629,6 @@ Our consultants understand the vital role of Human Resources in the development 
                 pauseOnHover: true
             }
         });
-
-
-
     });
     </script>
 
@@ -831,16 +636,13 @@ Our consultants understand the vital role of Human Resources in the development 
         new WOW().init();
     </script>
 
-
-
-     <script src="js/jquery.meanmenu.js"></script>
-     <script>
+    <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+    <script>
         jQuery(document).ready(function(){
             jQuery('.row .menu').meanmenu();
 
     });
     </script>
-
 
 </body>
 </html>
