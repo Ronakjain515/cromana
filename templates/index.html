@@ -481,52 +481,26 @@
                 <div class="row">
                     <div id="demo" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="tespic">
-                                    <img src="{% static 'images/testimonialpic2.png' %}">
-                                    <div class="testimonialname">
-                                        <ul>
-                                            <li><a onMouseOver="this.style.color='#FFF'">ANITA SINGH</a></li>
-                                            <li><a onMouseOver="this.style.color='#FFF'">Director of Company</a></li>
-                                        </ul>
+                            {% for testimonial in testimonials %}
+                                {% if forloop.counter == 1 %}
+                                    <div class="carousel-item active">
+                                {% else %}
+                                    <div class="carousel-item">
+                                {% endif %}
+                                    <div class="tespic">
+                                        <img src="/media/{{ testimonial.image }}">
+                                        <div class="testimonialname">
+                                            <ul>
+                                                <li><a onMouseOver="this.style.color='#FFF'">{{ testimonial.name }}</a></li>
+                                                <li><a onMouseOver="this.style.color='#FFF'">{{ testimonial.designition }}</a></li>
+                                            </ul>
+                                        </div>
+                                        <p style="text-align: justify; text-align-last: center;">
+                                            {{ testimonial.comment }}
+                                        </p>
                                     </div>
-                                    <p style="text-align: justify; text-align-last: center;">
-                                        My experience in working with Cromana Placement was very 
-                                        much a positive one. Their professionalism was refreshing 
-                                        and I would welcome the opportunity to work with them 
-                                        again. They excel in sourcing and head-hunting. They 
-                                        also value the customer's relationship with their clients, 
-                                        and that is reflected in the professionalism of their 
-                                        interactions. The bottom line is that they make sourcing 
-                                        and head-hunting easier and help in getting to the right 
-                                        candidates faster. Thank you for making the sourcing process 
-                                        a very pleasant experience.
-                                    </p>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="tespic">
-                                    <img src="{% static 'images/woman.png' %}">
-                                    <div class="testimonialname">
-                                        <ul>
-                                            <li><a onMouseOver="this.style.color='#FFF'">ANITA SINGH</a></li>
-                                            <li><a onMouseOver="this.style.color='#FFF'">CEO COMPANY</a></li>
-                                        </ul>
-                                    </div>
-                                    <p style="text-align: justify; text-align-last: center;">
-                                        My experience in working with Cromana Placement was 
-                                        very much a positive one. Their professionalism was 
-                                        refreshing and I would welcome the opportunity to work
-                                        with them again. They excel in sourcing and 
-                                        head-hunting.  They also value the customer's 
-                                        relationship with their clients, and that is reflected
-                                        in the professionalism of their interactions. The 
-                                        bottom line is that they make sourcing and head-hunting 
-                                        easier and help in getting to the right candidates faster. 
-                                        Thank you for making the sourcing process a very pleasant experience.
-                                    </p>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -542,14 +516,9 @@
             <div class="row">
                 <div class="company">
                     <ul id="flexiselDemo3">
-                        <li><img src="{% static 'images/company1.png' %}" /></li>
-                        <li><img src="{% static 'images/company2.png' %}" /></li>
-                        <li><img src="{% static 'images/company3.png' %}" /></li>
-                        <li><img src="{% static 'images/company4.png' %}" /></li>
-                        <li><img src="{% static 'images/company1.png' %}" /></li>
-                        <li><img src="{% static 'images/company2.png' %}" /></li>
-                        <li><img src="{% static 'images/company3.png' %}" /></li>
-                        <li><img src="{% static 'images/company4.png' %}" /></li>
+                        {% for client in clients %}
+                            <li><img src="/media/{{ client.image }}" /></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

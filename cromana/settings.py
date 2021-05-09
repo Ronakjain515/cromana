@@ -32,6 +32,7 @@ IS_LOCAL = os.getenv("IS_LOCAL")
 
 ALLOWED_HOSTS = ["*"]
 
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     
     'common',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -127,11 +129,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 if IS_LOCAL:
     STATICFILES_DIRS = [ BASE_DIR / "static" ]
+    MEDIA_ROOT = BASE_DIR / "media"
 else:
     STATIC_ROOT = '/home/ronakcromana/cromana/static'
+    MEDIA_ROOT = '/home/ronakcromana/cromana/media'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

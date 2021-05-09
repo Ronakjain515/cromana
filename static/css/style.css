@@ -531,7 +531,9 @@ html {
     float:left;
     height:450px;
 
-    background: url(../images/testimonialbanner.png)no-repeat;
+    background: rgb(221,221,221);
+    background: linear-gradient(173deg, rgb(180, 180, 180) 0%, rgb(97, 97, 97) 37%, rgb(39, 39, 39) 100%);
+
 }
 .testimonial h2{
     color: #fff;
@@ -765,7 +767,10 @@ html {
 .companybanne{
     width:100%;
     float: left;
-    margin-top: 60px;
+    padding-top: 60px;
+    background-color: #c0c0c0;
+    background-image: linear-gradient(120deg, #c0c0c0 0%, #8f8f8f 100%);
+    background-repeat: no-repeat;
 }
 .companybanne h2{
     font-size: 42px;
