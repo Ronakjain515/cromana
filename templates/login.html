@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Cromana</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel = "icon" href ="#" type = "image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+</head>
+
+<body>
+
+<!-- started topheader -->
+    <div class="topheader">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="socialicon">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-facebook-f' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-twitter' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>   
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-linkedin-in' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='fab fa-instagram' style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-whatsapp" style='font-size:14px;color:#ffd102'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;"></div>
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
+                    <div class="login">
+                        <a href="{% url 'login' %}">Login</a>
+                    </div>
+                </div>
+                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
+                    <div class="Registred">
+                        <a href="registered.html">Registred Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END topheader -->
+        
+    <!-- STRATED MENUBAR -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="logo">
+                    <img src="{% static 'images/logo1.png' %}">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="menu  wow fadeInDown animated">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="jobs.html">JOBS</a></li>
+                        <li><a href="company.html">COMPANIES</a></li>
+                        <li><a href="uploderesume.html">BUILD RESUME</a></li>
+                        <li>
+                            <a href="#">MY PROFILE</a>
+                            <ul>
+                                <li><a href="uplode.html">Edit My Profile</a></li>
+                                <li><a href="applied.html">Applied job</a></li>
+                                <li><a href="sava.html">Save jobs</a></li>
+                                <li><a href="Recruiter.html">Recruiters massage</a></li>
+                                <li><a href="setting.html">Setting</a></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of STRATED MENUBAR -->
+
+    <!-- Login Start -->
+    <div style="background: url({% static 'images/banner4.png' %})no-repeat; padding: 30px 0px; background-position: 20% 0%;">
+        <div style="min-width: 280px; max-width: 500px;
+                    height: 500px; box-shadow: 0px 3px 7px 0px black;
+                    border-radius: 5px; margin: auto;">
+            <h1 style="color: white; text-align: center; padding-top: 10px">LOGIN</h1>
+            <form style="color: white; margin: 10% 5%" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="InputEmail">Email address</label>
+                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <small id="emailHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword">Password</label>
+                    <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password" required>
+                    <small id="passwordHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label" for="exampleCheck1">
+                        <a href="#" style="color: #FFFFFF; text-decoration: none;">Forget your Password?</a>
+                    </label>
+                </div>
+                <div style="text-align: center">
+                    <small class="text-danger" style="font-size: 15px">{{ error }}</small>
+                    <br>
+                    <button type="submit" id="loginButton" disabled class="btn btn-primary" style="background-color: #ffd102; color: black; border: none;">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Login End -->
+
+    <!-- FOOTER STARTED -->
+    <div class="fotter">
+        <div class="container">
+        <img src="{% static 'images/logo2.png' %}" style="width: 250px; margin-top: 20px;">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="quick">
+                        <div class="logo1">
+                            <p style="color:#fff ;color: #fff; line-height: 25px; text-align: justify; margin-top: 7%">
+                                Cromana has established itself as a well-known name in the HR 
+                                field by providing a wide range of recruitment and selection 
+                                services to various companies. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"  style="padding-left: 5%; padding-top: 8px">
+                    <div class="quick">
+                        <h4>QUICK LINKS</h4>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="jobs.html">JOBS</a></li>
+                            <li><a href="uploderesume.html">Build Resume</a></li>
+                            <li><a href="company.html">COMPANIES</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="">
+                    <div class="quick">
+                        <h4>TERNS & CONDITION</h4>
+                        <ul>
+                            <li><a href="security.html">SECURITY & FRAUD</a></li>
+                            <li><a href="policy.html">PRIVACY POLICY</a></li>
+                            <li><a href="ad.html">ADVERTISE WITH US</a></li>
+                            <li><a href="complaint.html">WRITE US</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3" style="">
+                    <div class="quick">
+                        <h4>CONTACT US</h4>
+                        <div class="row" style="width: 100%; ">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/mobile.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">(+91)9877654321</div>
+                        </div>
+                        <div class="row" style="width: 100%; margin-top: 10px;">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/email.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">WWW@gamil.com</div>
+                        </div>
+                        <div class="row" style="width: 100%; margin-top: 10px;">
+                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/location.png' %}" height="28px"></div>
+                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">Ram Nagar 220 f<br>Gwalior(M.P.)</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+  <!-- END FOTTER -->
+
+</body>
+
+    <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script>
+        jQuery(document).ready(function(){
+            jQuery('.row .menu').meanmenu();
+
+    });
+    </script>
+
+</html>
