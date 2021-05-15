@@ -1036,26 +1036,6 @@ html {
     margin-top: 10px;
 }
 
-input[type="radio"]
-{
-    position: relative;
-    width: 34px;
-    height: 32px;
-    -webkit-appearance: none;
-    background: #fff;
-    outline: none;
-    border-radius: 20px;
-    transition: .1s;
-    box-shadow: inset 0px 0px 8px rgba(10, 10, 10, 0.84);
-    top: 3px;
-    border: 6px solid #000;
-}
-input:checked[type="radio"]
-{
-    background: #fff;
-    border: 10px solid #0033ff;
-    
-}
 .btn:hover{
     background-color: white;
 }

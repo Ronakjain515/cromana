@@ -44,3 +44,21 @@ class LoginView(View):
         else:
             self.context["error"] = serializer.errors
         return render(request, "login.html", context=self.context)
+
+
+class RegisterChooseView(View):
+
+    def get(self, request):
+        return render(request, "register/choose.html")
+
+
+class RegisterJobSeekerView(View):
+
+    def get(self, request):
+        return render(request, "register/jobseeker.html")
+
+
+class RegisterCompanyView(View):
+
+    def get(self, request):
+        return render(request, "register/company.html")
