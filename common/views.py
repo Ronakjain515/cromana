@@ -8,6 +8,10 @@ from .models import (
 )
 from users.models import CustomUser
 from .serializer import LoginSerializer
+from users.serializer import (
+    RegisterCustomJobSeekerSerializer,
+    RegisterJobSeekerSerializer,
+)
 
 
 class HomeView(View):
@@ -27,8 +31,11 @@ class HomeView(View):
 class LoginView(View):
     context = {}
 
-    def get(self, request):
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        return super(LoginView, self).dispatch(request, *args, **kwargs)
 
+    def get(self, request):
         return render(request, "login.html")
     
     def post(self, request):
@@ -53,9 +60,32 @@ class RegisterChooseView(View):
 
 
 class RegisterJobSeekerView(View):
+    context = {}
+
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        return super(RegisterJobSeekerView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
         return render(request, "register/jobseeker.html")
+
+    def post(self, request):
+        custom_user_serializer = RegisterCustomJobSeekerSerializer(data=request.POST)
+
+        if custom_user_serializer.is_valid():
+            data = request.POST.copy()
+            data["profilepic"] = request.FILES.get("profilepic")
+            user_serializer = RegisterJobSeekerSerializer(data=data)
+
+            if user_serializer.is_valid():
+                custom_user_serializer.save()
+                user_serializer.save(user=custom_user_serializer.instance)
+                self.context["success"] = "You have Successfully Registered with us."
+            else:
+                self.context["error"] = user_serializer.errors
+        else:
+            self.context["error"] = custom_user_serializer.errors
+        return render(request, "register/jobseeker.html", context=self.context)
 
 
 class RegisterCompanyView(View):
