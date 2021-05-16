@@ -82,22 +82,6 @@
     });
 </script>
     <script>
-        $(document).ready(function(){
-        // Prepare the preview for profile picture
-            $("#wizard-picture").change(function(){
-                readURL(this);
-            });
-        });
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
         {% if success %}
             alert('{{ success }}');
             document.location.href = "{% url 'login' %}";
@@ -200,9 +184,10 @@
                 <div class="picture-container">
                     <div class="picture">
                         <img src="{% static 'images/logo_placeholder.jpg' %}" class="picture-src" id="wizardPicturePreview" title="">
-                        <input type="file" name="image" id="wizard-picture">
+                        <input type="file" name="image" id="logo" required>
                     </div>
                     <h6 class="">Choose Logo</h6>
+                    <small id="logoHelp" class="text-danger" style="font-size: 15px"></small>
                 </div>
                 <div class="form-group">
                     <label for="InputCompanyName">Company Name</label>
@@ -230,6 +215,11 @@
                         <input type="tel" name="secondmobileno" class="form-control InputMobileClass" id="InputSecMobile" aria-describedby="secMobileHelp" required>
                         <small id="secMobileHelp" class="text-danger" style="font-size: 15px"></small>
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputAddress">Company Address</label>
+                    <input type="text" name="address" class="form-control" id="InputAddress" aria-describedby="addressHelp" placeholder="Enter Company Address" required>
+                    <small id="addressHelp" class="text-danger" style="font-size: 15px"></small>
                 </div>
                 <div class="form-group">
                     <label for="InputPassword">Password</label>
@@ -341,7 +331,7 @@
 
 
     <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
-    <script src="{% static 'js/register-jobseeker.js' %}"></script>
+    <script src="{% static 'js/register-company.js' %}"></script>
     <script src="https://www.jqueryscript.net/demo/jQuery-International-Telephone-Input-With-Flags-Dial-Codes/build/js/intlTelInput.js"></script>
     <script>
         jQuery(document).ready(function(){

@@ -6,11 +6,11 @@ from .models import (
     TestimonialModel,
     OurClientModel,
 )
-from users.models import CustomUser
 from .serializer import LoginSerializer
 from users.serializer import (
     RegisterCustomJobSeekerSerializer,
     RegisterJobSeekerSerializer,
+    RegisterCompanySerializer,
 )
 
 
@@ -45,7 +45,10 @@ class LoginView(View):
             user = authenticate(email=serializer.validated_data["email"], 
                                             password=serializer.validated_data["password"])
             if user:
-                return redirect("home")
+                if user.status == "PENDING":
+                    self.context["error"] = "Your Account is not Conformed by Admin."
+                else:
+                    return redirect("home")
             else:
                 self.context["error"] = "Invalid Credentials.."
         else:
@@ -89,8 +92,29 @@ class RegisterJobSeekerView(View):
 
 
 class RegisterCompanyView(View):
+    context = {}
+
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        return super(RegisterCompanyView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
         return render(request, "register/company.html")
 
-#     Gaurav
+    def post(self, request):
+        custom_user_serializer = RegisterCustomJobSeekerSerializer(data=request.POST)
+
+        if custom_user_serializer.is_valid():
+            data = request.POST.copy()
+            data["image"] = request.FILES.get("image")
+            user_serializer = RegisterCompanySerializer(data=data)
+
+            if user_serializer.is_valid():
+                custom_user_serializer.save(status="PENDING")
+                user_serializer.save(user=custom_user_serializer.instance)
+                self.context["success"] = "You have Successfully Registered with us."
+            else:
+                self.context["error"] = user_serializer.errors
+        else:
+            self.context["error"] = custom_user_serializer.errors
+        return render(request, "register/company.html", context=self.context)

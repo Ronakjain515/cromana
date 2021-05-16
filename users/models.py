@@ -76,4 +76,4 @@ class CompanyModel(models.Model):
     lastname        = models.CharField(max_length=30, null=True, blank=False)
 
     def __str__(self):
-        return self.firstname + " " + self.lastname
+        return self.name

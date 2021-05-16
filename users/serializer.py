@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
-from .models import CustomUser, JobSeekerModel
+from .models import (
+    CustomUser, 
+    JobSeekerModel,
+    CompanyModel,
+)
 
 
 class RegisterCustomJobSeekerSerializer(serializers.ModelSerializer):
@@ -22,3 +26,13 @@ class RegisterJobSeekerSerializer(serializers.ModelSerializer):
     class Meta:
         model = JobSeekerModel
         fields = ["profilepic", "firstname", "lastname", "mobileno", "gender"]
+
+
+class RegisterCompanySerializer(serializers.ModelSerializer):
+    """
+    Serializer for Company Register
+    """
+    class Meta:
+        model = CompanyModel
+        fields = ["image", "name", "registrationno", "address", "mobileno", 
+                    "secondmobileno", "gender", "firstname", "lastname"]
