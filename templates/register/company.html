@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
     <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/telephone.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -21,6 +22,87 @@
     <script src="{% static 'js/jquery.flexisel.js' %}"></script>
 </head>
 
+<style>
+    /*Profile Pic Start*/
+    .picture-container{
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+    }
+    .picture{
+        width: 150px;
+        height: 106px;
+        background-color: #999999;
+        border: 4px solid #CCCCCC;
+        color: #FFFFFF;
+        border-radius: 10%;
+        margin: 0px auto;
+        overflow: hidden;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+    }
+    .picture:hover{
+        border-color: #2ca8ff;
+    }
+    .picture input[type="file"] {
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0 !important;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .picture-src{
+        width: 100%;
+        
+    }
+    /*Profile Pic End*/
+
+</style>
+<script>
+    $(function() {
+        $(".InputMobileClass").intlTelInput({
+            allowDropdown:true,
+            autoHideDialCode:true,
+            autoPlaceholder: false,
+            dropdownContainer:null,
+            formatOnDisplay:true,
+            geoIpLookup:null,
+            defaultCountry: "auto",
+            ipinfoToken: "yolo",
+            nationalMode: true,
+            numberType: "MOBILE",
+            preferredCountries: ['in'],
+            preventInvalidNumbers: true,
+            utilsScript: "lib/libphonenumber/build/utils.js"
+        });
+    });
+</script>
+    <script>
+        $(document).ready(function(){
+        // Prepare the preview for profile picture
+            $("#wizard-picture").change(function(){
+                readURL(this);
+            });
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        {% if success %}
+            alert('{{ success }}');
+            document.location.href = "{% url 'login' %}";
+        {% endif %}
+    </script>
 <body>
 
 <!-- started topheader -->
@@ -107,38 +189,93 @@
     </div>
     <!-- end of STRATED MENUBAR -->
 
-    <!-- Login Start -->
-    <div style="background: url({% static 'images/banner4.png' %})no-repeat; padding: 30px 0px; background-position: 20% 0%;">
+    <!-- Register Start -->
+    <div style="background: url({% static 'images/banner4.png' %})repeat; padding: 30px 0px; background-position: 20% 0%;">
         <div style="min-width: 280px; max-width: 500px;
-                    height: 500px; box-shadow: 0px 3px 7px 0px black;
+                    box-shadow: 0px 3px 7px 0px black;
                     border-radius: 5px; margin: auto;">
-            <h1 style="color: white; text-align: center; padding-top: 10px">Register</h1>
-            <form style="color: white; margin: 10% 5%" method="POST">
+            <h1 style="color: white; text-align: center; padding-top: 10px">Company</h1>
+            <form style="color: white; margin: 10% 5%; padding-bottom: 10%" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
+                <div class="picture-container">
+                    <div class="picture">
+                        <img src="{% static 'images/logo_placeholder.jpg' %}" class="picture-src" id="wizardPicturePreview" title="">
+                        <input type="file" name="image" id="wizard-picture">
+                    </div>
+                    <h6 class="">Choose Logo</h6>
+                </div>
+                <div class="form-group">
+                    <label for="InputCompanyName">Company Name</label>
+                    <input type="text" name="name" class="form-control" id="InputCompanyName" aria-describedby="companyNameHelp" placeholder="Enter Company Name" required>
+                    <small id="companyNameHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
+                <div class="form-group">
+                    <label for="InputCompanyRegisNo">Company Registration Number</label>
+                    <input type="text" name="registrationno" class="form-control" id="InputCompanyRegisNo" aria-describedby="companyRegisNoHelp" placeholder="Enter Registration Number" required>
+                    <small id="companyRegisNoHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
                 <div class="form-group">
                     <label for="InputEmail">Email address</label>
-                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
+                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter Email" required>
                     <small id="emailHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
+                <div class="form-row">
+                    <div class="col-md form-group">
+                        <label for="InputMobile">Mobile No</label>
+                        <input type="tel" name="mobileno" class="form-control InputMobileClass" id="InputMobile" aria-describedby="mobileHelp" required>
+                        <small id="mobileHelp" class="text-danger" style="font-size: 15px"></small>
+                    </div>
+                    <div class="col-md form-group">
+                        <label for="InputSecMobile">Optional Mobile No</label>
+                        <input type="tel" name="secondmobileno" class="form-control InputMobileClass" id="InputSecMobile" aria-describedby="secMobileHelp" required>
+                        <small id="secMobileHelp" class="text-danger" style="font-size: 15px"></small>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="InputPassword">Password</label>
                     <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password" required>
                     <small id="passwordHelp" class="text-danger" style="font-size: 15px"></small>
                 </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label" for="exampleCheck1">
-                        <a href="#" style="color: #FFFFFF; text-decoration: none;">Forget your Password?</a>
-                    </label>
+                <div class="form-group">
+                    <label for="InputConformPassword"> Conform Password</label>
+                    <input type="password" class="form-control" id="InputConformPassword" placeholder="Conform Password" required>
+                    <small id="conformPasswordHelp" class="text-danger" style="font-size: 15px"></small>
+                </div>
+                <hr style="background-color: white">
+                <label style="margin-bottom: 8%">Company's Representative Details</label>
+                <div class="form-row">
+                    <div class="col-md form-group">
+                        <label for="InputFirstName">First Name</label>
+                        <input type="text" name="firstname" class="form-control" id="InputFirstName" aria-describedby="firstHelp" placeholder="Enter First Name" required>
+                        <small id="firstHelp" class="text-danger" style="font-size: 15px"></small>
+                    </div>
+                    <div class="col-md form-group">
+                        <label for="InputLastName">Last Name</label>
+                        <input type="text" name="lastname" class="form-control" id="InputLastName" aria-describedby="lastHelp" placeholder="Enter Last Name" required>
+                        <small id="lastHelp" class="text-danger" style="font-size: 15px"></small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputGender">Gender</label>
+                        <select name="gender" id="InputGender" class="form-control" aria-describedby="genderHelp" required>
+                            <option value="" selected>Choose Gender</option>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                            <option value="OTHERS">Other</option>
+                        </select>
+                    <small id="genderHelp" class="text-danger" style="font-size: 15px"></small>
                 </div>
                 <div style="text-align: center">
-                    <small class="text-danger" style="font-size: 15px">{{ error }}</small>
+                    {% for key,value in error.items %}
+                        <small class="text-danger" style="font-size: 15px">{{ key }} : {{ value.0 }}</small>
+                    {% endfor %}
                     <br>
-                    <button type="submit" id="loginButton" disabled class="btn btn-primary" style="background-color: #ffd102; color: black; border: none;">Login</button>
+                    <button type="submit" id="registerButton" disabled class="btn btn-primary" style="background-color: #ffd102; color: black; border: none;">Register</button>
                 </div>
             </form>
         </div>
     </div>
-    <!-- Login End -->
+    <!-- Register End -->
 
     <!-- FOOTER STARTED -->
     <div class="fotter">
@@ -202,8 +339,10 @@
 
 </body>
 
+
     <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
-    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/register-jobseeker.js' %}"></script>
+    <script src="https://www.jqueryscript.net/demo/jQuery-International-Telephone-Input-With-Flags-Dial-Codes/build/js/intlTelInput.js"></script>
     <script>
         jQuery(document).ready(function(){
             jQuery('.row .menu').meanmenu();

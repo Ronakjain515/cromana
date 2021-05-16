@@ -59,3 +59,21 @@ class JobSeekerModel(models.Model):
     def __str__(self):
         return self.firstname + " " + self.lastname
 
+
+class CompanyModel(models.Model):
+    """
+    Company user model
+    """
+    user            = models.ForeignKey(CustomUser, related_name="company", null=False, blank=False, on_delete=models.CASCADE)
+    image           = models.ImageField(upload_to="company_logo", null=True, blank=True)
+    name            = models.CharField(max_length=50, null=True, blank=False)
+    registrationno  = models.CharField(max_length=50, null=True, blank=False)
+    address         = models.CharField(max_length=200, null=True, blank=False)
+    mobileno        = models.CharField(max_length=15, null=True, blank=False)
+    secondmobileno  = models.CharField(max_length=15, null=True, blank=True)
+    gender          = models.CharField(max_length=10, choices=Gender_Choices)
+    firstname       = models.CharField(max_length=30, null=True, blank=False)
+    lastname        = models.CharField(max_length=30, null=True, blank=False)
+
+    def __str__(self):
+        return self.firstname + " " + self.lastname
