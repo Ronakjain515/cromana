@@ -92,3 +92,5 @@ class RegisterCompanyView(View):
 
     def get(self, request):
         return render(request, "register/company.html")
+
+#     Gaurav
