@@ -24,11 +24,16 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         ('PENDING', 'Pending'),
         ('DELETED', 'Deleted')
     )
+    User_Role = (
+        ("COMPANY", "Company"),
+        ("JOBSEEKER", "JobSeeker"),
+    )
 
     email = models.EmailField(_('email address'), unique=True,
                               error_messages={
                                   'unique': 'This email address is already associated with another account.'})
     status = models.CharField(max_length=10, choices=Status_Choice)
+    role = models.CharField(max_length=15, choices=User_Role)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)

@@ -10,20 +10,23 @@
     <link rel = "icon" href ="#" type = "image/x-icon">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" />
     <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+
 </head>
-
 <body>
-
-<!-- started topheader -->
+    <!-- started topheader -->
     <div class="topheader">
         <div class="container-fluid">
             <div class="row">
@@ -132,40 +135,8 @@
     </div>
     <!-- end of STRATED MENUBAR -->
 
-    <!-- Login Start -->
-    <div style="background: url({% static 'images/banner4.png' %})no-repeat; padding: 30px 0px; background-position: 20% 0%;">
-        <div style="min-width: 280px; max-width: 500px;
-                    height: 500px; box-shadow: 0px 3px 7px 0px black;
-                    border-radius: 5px; margin: auto;">
-            <h1 style="color: white; text-align: center; padding-top: 10px">Login</h1>
-            <form style="color: white; margin: 10% 5%" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="InputEmail">Email address</label>
-                    <input type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" required>
-                    <small id="emailHelp" class="text-danger" style="font-size: 15px"></small>
-                </div>
-                <div class="form-group">
-                    <label for="InputPassword">Password</label>
-                    <input type="password" name="password" class="form-control" id="InputPassword" placeholder="Password" required>
-                    <small id="passwordHelp" class="text-danger" style="font-size: 15px"></small>
-                </div>
-                <div class="form-group form-check">
-                    <label class="form-check-label" for="exampleCheck1">
-                        <a href="#" style="color: #FFFFFF; text-decoration: none;">Forget your Password?</a>
-                    </label>
-                </div>
-                <div style="text-align: center">
-                    <small class="text-danger" style="font-size: 15px">{{ error }}</small>
-                    <br>
-                    <button type="submit" id="loginButton" disabled class="btn btn-primary" style="background-color: #ffd102; color: black; border: none;">Login</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Login End -->
 
-    <!-- FOOTER STARTED -->
+        <!-- FOOTER STARTED -->
     <div class="fotter">
         <div class="container">
         <img src="{% static 'images/logo2.png' %}" style="width: 250px; margin-top: 20px;">
@@ -225,10 +196,26 @@
     <hr>
   <!-- END FOTTER -->
 
-</body>
+   <script>
+    $(window).load(function() {
+
+        $("#flexiselDemo3").flexisel({
+            visibleItems: 4,
+            itemsToScroll: 1,
+            autoPlay: {
+                enable: true,
+                interval: 1500,
+                pauseOnHover: true
+            }
+        });
+    });
+    </script>
+
+    <script>
+        new WOW().init();
+    </script>
 
     <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
-    <script src="{% static 'js/login.js' %}"></script>
     <script>
         jQuery(document).ready(function(){
             jQuery('.row .menu').meanmenu();
@@ -236,4 +223,5 @@
     });
     </script>
 
+</body>
 </html>

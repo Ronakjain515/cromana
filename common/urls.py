@@ -5,6 +5,7 @@ from .views import (
     RegisterChooseView,
     RegisterJobSeekerView,
     RegisterCompanyView,
+    LogoutView,
 )
 
 
@@ -14,4 +15,5 @@ urlpatterns = [
     path('register/choose', RegisterChooseView.as_view(), name="register-choose"),
     path('register/jobseeker', RegisterJobSeekerView.as_view(), name="register-jobseeker"),
     path('register/company', RegisterCompanyView.as_view(), name="register-company"),
+    path('logout', LogoutView.as_view(), name="logout"),
 ]

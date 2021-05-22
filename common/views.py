@@ -1,6 +1,6 @@
 from django.views import View
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 from .models import (
     TestimonialModel,
@@ -17,8 +17,16 @@ from users.serializer import (
 class HomeView(View):
     context = {}
 
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        self.context["is_authenticated"] = False
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
+        return super(HomeView, self).dispatch(request, *args, **kwargs)
+
     def get(self, request):
-        
+
         # Testimonial data
         self.context["testimonials"] = TestimonialModel.objects.all()
 
@@ -33,10 +41,14 @@ class LoginView(View):
 
     def dispatch(self, request, *args, **kwargs):
         self.context = {}
+        self.context["is_authenticated"] = False
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
         return super(LoginView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
-        return render(request, "login.html")
+        return render(request, "login.html", context=self.context)
     
     def post(self, request):
         serializer = LoginSerializer(data=request.POST)
@@ -45,10 +57,12 @@ class LoginView(View):
             user = authenticate(email=serializer.validated_data["email"], 
                                             password=serializer.validated_data["password"])
             if user:
-                if user.status == "PENDING":
-                    self.context["error"] = "Your Account is not Conformed by Admin."
-                else:
+                if user.status != "PENDING":
+                    login(request, user)
                     return redirect("home")
+                    
+                else:
+                    self.context["error"] = "Your Account is not Conformed by Admin."
             else:
                 self.context["error"] = "Invalid Credentials.."
         else:
@@ -57,9 +71,18 @@ class LoginView(View):
 
 
 class RegisterChooseView(View):
+    context = {}
+
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        self.context["is_authenticated"] = False
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
+        return super(RegisterChooseView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
-        return render(request, "register/choose.html")
+        return render(request, "register/choose.html", context=self.context)
 
 
 class RegisterJobSeekerView(View):
@@ -67,10 +90,14 @@ class RegisterJobSeekerView(View):
 
     def dispatch(self, request, *args, **kwargs):
         self.context = {}
+        self.context["is_authenticated"] = False
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
         return super(RegisterJobSeekerView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
-        return render(request, "register/jobseeker.html")
+        return render(request, "register/jobseeker.html", context=self.context)
 
     def post(self, request):
         custom_user_serializer = RegisterCustomJobSeekerSerializer(data=request.POST)
@@ -81,7 +108,7 @@ class RegisterJobSeekerView(View):
             user_serializer = RegisterJobSeekerSerializer(data=data)
 
             if user_serializer.is_valid():
-                custom_user_serializer.save()
+                custom_user_serializer.save(role="JOBSEEKER")
                 user_serializer.save(user=custom_user_serializer.instance)
                 self.context["success"] = "You have Successfully Registered with us."
             else:
@@ -96,10 +123,14 @@ class RegisterCompanyView(View):
 
     def dispatch(self, request, *args, **kwargs):
         self.context = {}
+        self.context["is_authenticated"] = False
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
         return super(RegisterCompanyView, self).dispatch(request, *args, **kwargs)
 
     def get(self, request):
-        return render(request, "register/company.html")
+        return render(request, "register/company.html", context=self.context)
 
     def post(self, request):
         custom_user_serializer = RegisterCustomJobSeekerSerializer(data=request.POST)
@@ -110,7 +141,7 @@ class RegisterCompanyView(View):
             user_serializer = RegisterCompanySerializer(data=data)
 
             if user_serializer.is_valid():
-                custom_user_serializer.save(status="PENDING")
+                custom_user_serializer.save(status="PENDING", role="COMPANY")
                 user_serializer.save(user=custom_user_serializer.instance)
                 self.context["success"] = "You have Successfully Registered with us."
             else:
@@ -118,3 +149,11 @@ class RegisterCompanyView(View):
         else:
             self.context["error"] = custom_user_serializer.errors
         return render(request, "register/company.html", context=self.context)
+
+
+class LogoutView(View):
+
+    def get(self, request):
+        if request.user.is_authenticated:
+            logout(request)
+        return redirect("home")

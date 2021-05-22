@@ -9,7 +9,7 @@ class CustomUserManager(BaseUserManager):
     Class for creating custom manager for managing custom user.
     """
 
-    def create_user(self, email=None, password=None, status="ACTIVE", **extra_fields):
+    def create_user(self, email=None, password=None, status="ACTIVE", role=None, **extra_fields):
         """
         Function for creating user w.r.t custom user.
         """
@@ -17,6 +17,7 @@ class CustomUserManager(BaseUserManager):
             email=self.normalize_email(email)
         )
         user.status = status
+        user.role = role
         user.is_superuser = False
         user.is_active = True
         user.is_staff = False

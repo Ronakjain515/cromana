@@ -62,16 +62,25 @@
                     </div>
                 </div>
                 <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;"></div>
-                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
-                    <div class="login">
-                        <a href="{% url 'login' %}">Login</a>
+                {% if is_authenticated %}
+                    <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;"></div>
+                    <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
+                        <div class="login">
+                            <a href="{% url 'logout' %}">Logout</a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
-                    <div class="Registred">
-                        <a href="{% url 'register-choose' %}">Registred Now</a>
+                {% else %}
+                    <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
+                        <div class="login">
+                            <a href="{% url 'login' %}">Login</a>
+                        </div>
                     </div>
-                </div>
+                    <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
+                        <div class="Registred">
+                            <a href="{% url 'register-choose' %}">Registred Now</a>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -88,21 +97,37 @@
             <div class="col-sm-8">
                 <div class="menu  wow fadeInDown animated">
                     <ul>
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="{% url 'home' %}">HOME</a></li>
                         <li><a href="jobs.html">JOBS</a></li>
                         <li><a href="company.html">COMPANIES</a></li>
                         <li><a href="uploderesume.html">BUILD RESUME</a></li>
-                        <li>
-                            <a href="#">MY PROFILE</a>
-                            <ul>
-                                <li><a href="uplode.html">Edit My Profile</a></li>
-                                <li><a href="applied.html">Applied job</a></li>
-                                <li><a href="sava.html">Save jobs</a></li>
-                                <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                <li><a href="setting.html">Setting</a></li>
-                                <li><a href="#">Log out</a></li>
-                            </ul>
-                        </li>
+                        {% if is_authenticated %}
+                            {% if role == "JOBSEEKER" %}
+                                <li>
+                                    <a href="#">MY PROFILE</a>
+                                    <ul>
+                                        <li><a href="uplode.html">Edit My Profile</a></li>
+                                        <li><a href="applied.html">Applied job</a></li>
+                                        <li><a href="sava.html">Save jobs</a></li>
+                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
+                                        <li><a href="setting.html">Setting</a></li>
+                                        <li><a href="#">Log out</a></li>
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="#">MY PROFILE</a>
+                                    <ul>
+                                        <li><a href="uplode.html">Edit My Profile</a></li>
+                                        <li><a href="applied.html">Applied job</a></li>
+                                        <li><a href="sava.html">Save jobs</a></li>
+                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
+                                        <li><a href="setting.html">Setting</a></li>
+                                        <li><a href="#">Log out</a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
