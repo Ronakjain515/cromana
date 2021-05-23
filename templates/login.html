@@ -22,107 +22,11 @@
 </head>
 
 <body>
-
-<!-- started topheader -->
-    <div class="topheader">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-9">
-                    <div class="socialicon">
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <i class='fab fa-facebook-f' style='font-size:14px;color:#ffd102'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='fab fa-twitter' style='font-size:14px;color:#ffd102'></i>
-                                </a>
-                            </li>   
-                            <li>
-                                <a href="#">
-                                    <i class='fab fa-linkedin-in' style='font-size:14px;color:#ffd102'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class='fab fa-instagram' style='font-size:14px;color:#ffd102'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-whatsapp" style='font-size:14px;color:#ffd102'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;"></div>
-                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
-                    <div class="login">
-                        <a href="{% url 'login' %}">Login</a>
-                    </div>
-                </div>
-                <div class="col-sm-1" style="padding-right: 3px; padding-left: 0px;">
-                    <div class="Registred">
-                        <a href="{% url 'register-choose' %}">Registred Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END topheader -->
-        
-    <!-- STRATED MENUBAR -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="logo">
-                    <img src="{% static 'images/logo1.png' %}">
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="menu  wow fadeInDown animated">
-                    <ul>
-                        <li><a href="{% url 'home' %}">HOME</a></li>
-                        <li><a href="jobs.html">JOBS</a></li>
-                        <li><a href="company.html">COMPANIES</a></li>
-                        <li><a href="uploderesume.html">BUILD RESUME</a></li>
-                        {% if is_authenticated %}
-                            {% if role == "JOBSEEKER" %}
-                                <li>
-                                    <a href="#">MY PROFILE</a>
-                                    <ul>
-                                        <li><a href="uplode.html">Edit My Profile</a></li>
-                                        <li><a href="applied.html">Applied job</a></li>
-                                        <li><a href="sava.html">Save jobs</a></li>
-                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                        <li><a href="setting.html">Setting</a></li>
-                                        <li><a href="#">Log out</a></li>
-                                    </ul>
-                                </li>
-                            {% else %}
-                                <li>
-                                    <a href="#">MY PROFILE</a>
-                                    <ul>
-                                        <li><a href="uplode.html">Edit My Profile</a></li>
-                                        <li><a href="applied.html">Applied job</a></li>
-                                        <li><a href="sava.html">Save jobs</a></li>
-                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                        <li><a href="setting.html">Setting</a></li>
-                                        <li><a href="#">Log out</a></li>
-                                    </ul>
-                                </li>
-                            {% endif %}
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end of STRATED MENUBAR -->
-
+    
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+    
     <!-- Login Start -->
     <div style="background: url({% static 'images/banner4.png' %})no-repeat; padding: 30px 0px; background-position: 20% 0%;">
         <div style="min-width: 280px; max-width: 500px;
@@ -155,66 +59,10 @@
         </div>
     </div>
     <!-- Login End -->
-
+    
     <!-- FOOTER STARTED -->
-    <div class="fotter">
-        <div class="container">
-        <img src="{% static 'images/logo2.png' %}" style="width: 250px; margin-top: 20px;">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="quick">
-                        <div class="logo1">
-                            <p style="color:#fff ;color: #fff; line-height: 25px; text-align: justify; margin-top: 7%">
-                                Cromana has established itself as a well-known name in the HR 
-                                field by providing a wide range of recruitment and selection 
-                                services to various companies. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3"  style="padding-left: 5%; padding-top: 8px">
-                    <div class="quick">
-                        <h4>QUICK LINKS</h4>
-                        <ul>
-                            <li><a href="index.html">HOME</a></li>
-                            <li><a href="jobs.html">JOBS</a></li>
-                            <li><a href="uploderesume.html">Build Resume</a></li>
-                            <li><a href="company.html">COMPANIES</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="">
-                    <div class="quick">
-                        <h4>TERNS & CONDITION</h4>
-                        <ul>
-                            <li><a href="security.html">SECURITY & FRAUD</a></li>
-                            <li><a href="policy.html">PRIVACY POLICY</a></li>
-                            <li><a href="ad.html">ADVERTISE WITH US</a></li>
-                            <li><a href="complaint.html">WRITE US</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3" style="">
-                    <div class="quick">
-                        <h4>CONTACT US</h4>
-                        <div class="row" style="width: 100%; ">
-                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/mobile.png' %}" height="28px"></div>
-                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">(+91)9877654321</div>
-                        </div>
-                        <div class="row" style="width: 100%; margin-top: 10px;">
-                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/email.png' %}" height="28px"></div>
-                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">WWW@gamil.com</div>
-                        </div>
-                        <div class="row" style="width: 100%; margin-top: 10px;">
-                            <div class="col-3" style="height: 30px; margin: 0px; "><img src="{% static 'images/location.png' %}" height="28px"></div>
-                            <div class="col" style="color: white; margin-top: 2px; padding: 0px; font-size: 15px">Ram Nagar 220 f<br>Gwalior(M.P.)</div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-  <!-- END FOTTER -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
 
 </body>
 
