@@ -5,5 +5,5 @@ from .views import (
 
 
 urlpatterns = [
-    path("my-details", CompanyDetailsView.as_view(), name="company-my-details"),
+    path("company-details", CompanyDetailsView.as_view(), name="company-company-details"),
 ]

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
     <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
     <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/telephone.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -25,12 +26,177 @@
     <script src="{% static 'js/jquery.flexisel.js' %}"></script>
 
 </head>
+
+<style>
+    /*Profile Pic Start*/
+    .picture-container{
+        position: relative;
+        cursor: pointer;
+        text-align: center;
+    }
+    .picture{
+        width: 150px;
+        height: 106px;
+        background-color: #999999;
+        border: 4px solid #CCCCCC;
+        color: #FFFFFF;
+        border-radius: 10%;
+        margin: 0px auto;
+        overflow: hidden;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+    }
+    .picture:hover{
+        border-color: #2ca8ff;
+    }
+    .picture input[type="file"] {
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0 !important;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .picture-src{
+        width: 100%;
+        
+    }
+    /*Profile Pic End*/
+
+</style>
+<script>
+    $(function() {
+        $(".InputMobileClass").intlTelInput({
+            allowDropdown:true,
+            autoHideDialCode:true,
+            autoPlaceholder: false,
+            dropdownContainer:null,
+            formatOnDisplay:true,
+            geoIpLookup:null,
+            defaultCountry: "auto",
+            ipinfoToken: "yolo",
+            nationalMode: true,
+            numberType: "MOBILE",
+            preferredCountries: ['in'],
+            preventInvalidNumbers: true,
+            utilsScript: "lib/libphonenumber/build/utils.js"
+        });
+        $("#InputGender").val("{{ company.gender }}");
+    });
+</script>
 <body>
     <!-- Navbar Started -->
     {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
     <!-- Navbar Ended -->
 
-    
+    <!-- Section Started -->
+    <div style="background-color: #F5F5F5">
+        <div class="row" style="min-height: 88vh; margin: 0px">
+            <div class="col-sm-3" style="background-color: #D1D1D1">
+                <div style="padding: 10%; text-align: center;">
+                    <img src="/media/{{ company.image }}" style="width: 70%; max-height: 180px">
+                </div>
+                <hr style="height: 1px; background: black;">
+                <div style="text-align: center">
+                    <button type="submit" id="loginButton" onclick="window.location.href='{% url 'company-company-details' %}'" class="btn btn-primary" style="width: 80%; margin: 2%; background-color: #ffd102; color: black; border: 1px solid black;">
+                        Company Details
+                    </button>
+                    <button type="submit" id="loginButton" class="btn btn-primary" style="width: 80%; margin: 2%; background-color: #ffd102; color: black; border: 1px solid black;">
+                        Create New Job
+                    </button>
+                </div>
+            </div>
+            <div class="col" style="height: 88vh; overflow-y: auto;">
+                <h2 style="margin: 3%; text-align:center">Company Details</h2>
+                <form method="POST" enctype="multipart/form-data" style="margin-top: 5%">
+                    {% csrf_token %}
+                    <div class="picture-container">
+                        <div class="picture">
+                            <img src="/media/{{ company.image }}" class="picture-src" id="wizardPicturePreview" title="">
+                            <input type="file" name="image" id="logo">
+                        </div>
+                        <h6 class="">Choose Logo</h6>
+                        <small id="logoHelp" class="text-danger" style="font-size: 15px"></small>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        <div class="col-sm" style="padding: 0% 8%">
+                            <div class="form-group">
+                                <label for="InputCompanyName">Company Name</label>
+                                <input type="text" name="name" class="form-control valid" id="InputCompanyName" aria-describedby="companyNameHelp" value="{{ company.name }}" placeholder="Enter Company Name" required>
+                                <small id="companyNameHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputEmail">Email address</label>
+                                <input type="email" name="email" class="form-control valid" id="InputEmail" aria-describedby="emailHelp" value="{{ email }}" placeholder="Enter Email" disabled required>
+                                <small id="emailHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputMobile">Mobile No</label>
+                                <input type="tel" name="mobileno" class="form-control valid InputMobileClass" id="InputMobile" value="{{ company.mobileno }}" aria-describedby="mobileHelp" required>
+                                <small id="mobileHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                        </div>
+                        <div class="col-sm"  style="padding: 0% 8%">
+                            <div class="form-group">
+                                <label for="InputCompanyRegisNo">Company Registration Number</label>
+                                <input type="text" name="registrationno" class="valid form-control" id="InputCompanyRegisNo" value="{{ company.registrationno }}" aria-describedby="companyRegisNoHelp" placeholder="Enter Registration Number" required>
+                                <small id="companyRegisNoHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputAddress">Company Address</label>
+                                <input type="text" name="address" class="valid form-control" id="InputAddress" value="{{ company.address }}" aria-describedby="addressHelp" placeholder="Enter Company Address" required>
+                                <small id="addressHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="InputSecMobile">Optional Mobile No</label>
+                                <input type="tel" name="secondmobileno" class="valid form-control InputMobileClass" id="InputSecMobile" value="{{ company.secondmobileno }}" aria-describedby="secMobileHelp" required>
+                                <small id="secMobileHelp" class="text-danger" style="font-size: 15px"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="background-color: white">
+                    <label style="margin-bottom: 3%; margin-left: 4%">Company's Representative Details</label>
+                    <div class="row">
+                        <div class="col-sm form-group" style="padding: 0% 8%">
+                            <label for="InputFirstName">First Name</label>
+                            <input type="text" name="firstname" class="valid form-control" id="InputFirstName" value="{{ company.firstname }}" aria-describedby="firstHelp" placeholder="Enter First Name" required>
+                            <small id="firstHelp" class="text-danger" style="font-size: 15px"></small>
+                        </div>
+                        <div class="col-sm form-group" style="padding: 0% 8%">
+                            <label for="InputLastName">Last Name</label>
+                            <input type="text" name="lastname" class="valid form-control" id="InputLastName" value="{{ company.lastname }}" aria-describedby="lastHelp" placeholder="Enter Last Name" required>
+                            <small id="lastHelp" class="text-danger" style="font-size: 15px"></small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm form-group" style="padding: 0% 8%">
+                            <label for="InputGender">Gender</label>
+                                <select name="gender" id="InputGender" value="MALE" class="valid form-control" aria-describedby="genderHelp" required>
+                                    <option value="" selected>Choose Gender</option>
+                                    <option value="MALE">Male</option>
+                                    <option value="FEMALE">Female</option>
+                                    <option value="OTHERS">Other</option>
+                                </select>
+                            <small id="genderHelp" class="text-danger" style="font-size: 15px"></small>
+                        </div>
+                        <div class="col" style="padding: 0% 8%"></div>
+                    </div>
+                    <div style="text-align: center">
+                        {% for key,value in error.items %}
+                            <small class="text-danger" style="font-size: 15px">{{ key }} : {{ value.0 }}</small>
+                        {% endfor %}
+                        <br>
+                        <button type="submit" id="registerButton" class="btn btn-primary" style="background-color: #ffd102; color: black; border: none; margin-bottom: 5%">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Senction Ended -->
+
     <!-- FOOTER STARTED -->
     {% include "components/footer.html" %}
     <!-- END FOOTER -->
@@ -55,6 +221,8 @@
     </script>
 
     <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+    <script src="{% static 'js/update-company-profile.js' %}"></script>
+    <script src="https://www.jqueryscript.net/demo/jQuery-International-Telephone-Input-With-Flags-Dial-Codes/build/js/intlTelInput.js"></script>
     <script>
         jQuery(document).ready(function(){
             jQuery('.row .menu').meanmenu();
