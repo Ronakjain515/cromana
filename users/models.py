@@ -79,6 +79,8 @@ class CompanyModel(models.Model):
     gender          = models.CharField(max_length=10, choices=Gender_Choices)
     firstname       = models.CharField(max_length=30, null=True, blank=False)
     lastname        = models.CharField(max_length=30, null=True, blank=False)
+    website_url     = models.URLField(null=True, blank=True)
+    about           = models.CharField(max_length=1000, null=True, blank=False)
 
     def __str__(self):
         return self.name

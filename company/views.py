@@ -37,3 +37,25 @@ class CompanyDetailsView(View):
         self.context["company"] = company
         self.context["email"] = request.user.email
         return render(request, "company/companydetails.html", context=self.context)
+
+
+class CreateNewJobView(View):
+    context = {}
+
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        if not (request.user.is_authenticated and request.user.role == "COMPANY"):
+            return redirect("home")
+        self.context["is_authenticated"] = True
+        self.context["role"] = request.user.role
+        return super(CreateNewJobView, self).dispatch(request, *args, **kwargs)
+    
+    def get(self, request):
+        company = CompanyModel.objects.get(user=request.user)
+        self.context["company"] = company
+        return render(request, "company/createnewjob.html", context=self.context)
+    
+    def post(self, request):
+
+        return render(request, "company/createnewjob.html", context=self.context)
+

@@ -35,4 +35,5 @@ class RegisterCompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = CompanyModel
         fields = ["image", "name", "registrationno", "address", "mobileno", 
-                    "secondmobileno", "gender", "firstname", "lastname"]
+                    "secondmobileno", "gender", "firstname", "lastname", 
+                    "about", "website_url"]

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'common',
     'users',
     'company',
+    'jobs',
 ]
 
 MIDDLEWARE = [
