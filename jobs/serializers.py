@@ -41,6 +41,10 @@ class JobWeeklyOffSerializer(serializers.ModelSerializer):
 class GetJobListSerializer(serializers.ModelSerializer):
     role_responsibility = serializers.SerializerMethodField("get_role_responsibility")
     experience = serializers.SerializerMethodField("get_experience")
+    skills = serializers.SerializerMethodField("get_skills")
+
+    def get_skills(self, instance):
+        return JobSkillModel.objects.filter(job=instance)
 
     def get_role_responsibility(self, instance):
         return html2text.html2text(instance.role_responsibility)[:100]
@@ -50,4 +54,4 @@ class GetJobListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = JobModel
-        fields = ["id", "title", "role_responsibility", "experience", "package"]
+        fields = ["id", "title", "role_responsibility", "experience", "package", "skills"]

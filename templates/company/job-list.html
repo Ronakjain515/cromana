@@ -69,22 +69,15 @@
 </style>
 <script>
     $(function() {
-        $(".InputMobileClass").intlTelInput({
-            allowDropdown:true,
-            autoHideDialCode:true,
-            autoPlaceholder: false,
-            dropdownContainer:null,
-            formatOnDisplay:true,
-            geoIpLookup:null,
-            defaultCountry: "auto",
-            ipinfoToken: "yolo",
-            nationalMode: true,
-            numberType: "MOBILE",
-            preferredCountries: ['in'],
-            preventInvalidNumbers: true,
-            utilsScript: "lib/libphonenumber/build/utils.js"
-        });
-        $("#InputGender").val("{{ company.gender }}");
+        {% if filter == "ALL" %}
+            $("#filter").prop('selectedIndex', 0);
+        {% elif filter == "DRAFT" %}
+            $("#filter").prop('selectedIndex', 2);
+        {% elif filter == "PUBLISHED" %}
+            $("#filter").prop('selectedIndex', 1);
+        {% elif filter == "DONE_HIRING" %}
+            $("#filter").prop('selectedIndex', 3);
+        {% endif %}
     });
 </script>
 <body>
@@ -114,11 +107,57 @@
             </div>
             <div class="col" style="height: 88vh; overflow-y: auto;">
                 <h2 style="margin: 3%; text-align:center">All Jobs</h2>
+                <div class="form-group" style="margin-left: 7%">
+                    <label for="filter">Filter Jobs</label>
+                    <select class="form-control" id="filter" onchange="javascript:location.href = this.value;" style="width: 200px;">
+                        <option value="{% url 'company-job-list' %}?filter=ALL">All</option>
+                        <option value="{% url 'company-job-list' %}?filter=PUBLISHED">Published</option>
+                        <option value="{% url 'company-job-list' %}?filter=DRAFT">Draft</option>
+                        <option value="{% url 'company-job-list' %}?filter=DONE_HIRING">Done Hiring</option>
+                    </select>
+                </div>
                 <div>
                     {% for job in jobs %}
-                    {% include "components/job-post.html" with job=job %}
+                    {% include "components/job-post-admin.html" with job=job %}
                     {% endfor %}
                 </div>
+                
+                {% if hasobjects %}
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            {% if paginator.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{% url 'company-job-list' %}?page={{ paginator.previous_page_number }}">
+                                        Previous
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                            {% endif %}
+                            
+                            <li class="page-item">
+                                <a class="page-link" href="{% url 'company-job-list' %}?page={{ paginator.number }}">
+                                    {{ paginator.number }}
+                                </a>
+                            </li>
+                            {% if paginator.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{% url 'company-job-list' %}?page={{ paginator.next_page_number }}">
+                                        Next
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Next</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                {% else %}
+                    <h4 style="text-align: center; margin-top: 100px">No Jobs</h4>
+                {% endif %}
             </div>
         </div>
     </div>

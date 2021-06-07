@@ -1,5 +1,6 @@
 from django.views import View
 from django.shortcuts import redirect, render
+from django.core.paginator import Paginator
 
 from users.models import CompanyModel
 from users.serializer import RegisterCompanySerializer
@@ -18,10 +19,6 @@ from jobs.serializers import (
 )
 from jobs.models import (
     JobModel,
-    JobWeeklyOffModel,
-    JobSkillModel,
-    JobLinguisticLanguageModel,
-    JobLocationModel
 )
 
 
@@ -171,9 +168,20 @@ class JobListView(View):
         return super(JobListView, self).dispatch(request, *args, **kwargs)
     
     def get(self, request):
+        page_no = request.GET.get("page", 1)
+        filter = request.GET.get("filter", "ALL")
         company = CompanyModel.objects.get(user=request.user)
         self.context["company"] = company
-        jobs = JobModel.objects.filter(company=company)
-        job_serializer = GetJobListSerializer(jobs, many=True)
+        if filter == "ALL":
+            jobs = JobModel.objects.filter(company=company).order_by("-id")
+        else:
+            jobs = JobModel.objects.filter(company=company, status=filter).order_by("-id")
+        paginator = Paginator(jobs, 5)
+        page = paginator.page(page_no)
+        self.context["paginator"] = page
+        if page.object_list:
+            self.context["hasobjects"] = True
+        job_serializer = GetJobListSerializer(page, many=True)
+        self.context["filter"] = filter
         self.context["jobs"] = job_serializer.data
         return render(request, "company/job-list.html", context=self.context)

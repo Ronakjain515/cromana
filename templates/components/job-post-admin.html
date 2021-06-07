@@ -23,14 +23,17 @@
             </div>
             <div class="col-sm"></div>
         </div>
-        <div class="row" style="margin: 20px 10px">
-            <div class="col-sm">
-                <div style="background-color: #DCDCDC; display: inline; padding: 8px 10px; margin: 5px; border-radius: 15px">C language</div>
-                <div style="background-color: #DCDCDC; display: inline; padding: 8px 10px; margin: 5px; border-radius: 15px">C language</div>
+        <div class="row" style="margin: 20px 10px; margin-bottom: 0px">
+            <div class="col-sm" style="padding: 10px;">
+            {% for skill in job.skills %}
+                <div style="background-color: #DCDCDC; display: inline; padding: 8px 10px; margin: 5px; border-radius: 15px">
+                    {{ skill.skill }}
+                </div>
+            {% endfor %}
             </div>
-            <div class="col-sm" style="text-align: right; margin-top: 5%">
-                <a href="#" class="btn btn-outline-primary" style="border-color: black; color: black">Save job</a>
-                <a href="#" class="btn btn-primary" style="background-color: #ffd102; color: black">Apply</a>
+            <div class="col-sm" style="text-align: right; padding: 5px;">
+                <button disabled class="btn btn-outline-primary" style="border-color: black; color: black">View Details</button>
+                <button disabled class="btn btn-primary" style="background-color: #ffd102; color: black">Apply</button>
             </div>
         </div>
     </div>
