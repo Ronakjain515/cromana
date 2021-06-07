@@ -1,0 +1,37 @@
+{% load static %}
+<div class="card" style="max-width: 800px; margin: 10px auto">
+    <div class="card-body">
+        <h5 class="card-title">{{ job.title }}</h5>
+        
+        <div class="card-text" style="height: 45px; overflow:hidden;">
+            {{ job.role_responsibility|safe }}....
+        </div>
+        
+        <div class="row" style="margin: 1%; text-align: center">
+            <div class="col">
+                <img src="{% static 'images/wallet.png' %}" style="width: 20px">
+                <h6 style="margin-top: 5px">{{ job.package }} LPA</h6>
+            </div>
+            <div class="col">
+                <img src="{% static 'images/jobbag.png' %}" style="width: 20px">
+                <h6 style="margin-top: 5px">{{ job.experience }} year</h6>
+
+            </div>
+            <div class="col">
+                <img src="{% static 'images/marker.png' %}" style="width: 20px">
+                <h6 style="margin-top: 5px">Gwalior</h6>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row" style="margin: 20px 10px">
+            <div class="col-sm">
+                <div style="background-color: #DCDCDC; display: inline; padding: 8px 10px; margin: 5px; border-radius: 15px">C language</div>
+                <div style="background-color: #DCDCDC; display: inline; padding: 8px 10px; margin: 5px; border-radius: 15px">C language</div>
+            </div>
+            <div class="col-sm" style="text-align: right; margin-top: 5%">
+                <a href="#" class="btn btn-outline-primary" style="border-color: black; color: black">Save job</a>
+                <a href="#" class="btn btn-primary" style="background-color: #ffd102; color: black">Apply</a>
+            </div>
+        </div>
+    </div>
+</div>
