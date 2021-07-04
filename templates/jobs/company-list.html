@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+   
+    <title>company</title>
+</head>
+<style>
+    #company-list{
+            min-height: 400px;
+    }
+    @media only screen and (max-width:500px){
+        #company-list{
+            min-height: auto;
+        }
+    }
+</style>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+    
+    <!-- STRATED BANNER -->
+    <div class="bannercompany">
+        <div class="container ">
+            <div class="row">
+                <div class="cmh">
+                    <h2>SEARCH COMPANY</h2>
+                </div>          
+                <div class="searchcompany">
+                    <input type="text" value="{{ search }}" id="searchcompany" placeholder="Search" class="companybox">
+                    <button class="comp11" onclick="search()">Search Companies</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <!-- END BANNER -->
+    <div class="container">
+        <div class="row">
+            <div class="companyheading">
+                <h2>Jobs By Companies</h2>
+                <div class="ckeckcompany1">
+                    <div class="searchaz">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-2" style="padding-right: 0px; padding-left: 1px;">
+                                    <div class="top">
+                                        <a href="{% url 'company-list' %}">All</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8" style="padding-right: 0px; padding-left: 4px;">
+                                    <div class="alfa">
+                                        <ul>
+                                            <li><a href="{% url 'company-list' %}?letter=a">A</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=b">B</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=c">C</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=d">D</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=e">E</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=f">F</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=g">G</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=h">H</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=i">I</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=j">J</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=k">K</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=l">L</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=m">M</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=n">N</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=o">O</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=p">P</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=q">Q</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=r">R</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=s">S</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=t">T</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=u">U</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=v">V</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=w">W</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=x">X</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=y">Y</a></li>
+                                            <li><a href="{% url 'company-list' %}?letter=z">Z</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2" style="padding-right: 0px; padding-left: 4px;">
+                                    <div class="numberic">
+                                        <a href="{% url 'company-list' %}?number=true">0-9</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="company-list" style="text-align: center;">
+                        {% for company in companies %}
+                            <div class="col-sm-3" style="margin-top: 10px; margin-bottom: 10px">
+                                <a href="javascript:call('{{ company.name }}');">{{ company.name }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>     
+    
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+
+
+             
+   <script>
+    new WOW().init();
+</script>
+<script src="js/jquery.meanmenu.js"></script>
+<script>
+   jQuery(document).ready(function(){
+       jQuery('.row .menu').meanmenu();
+   
+});
+</script>     
+<script>
+    function call(name){
+        com = name.replace(" ", "-");
+        window.location.href = "{% url 'job-list' %}?company=" + com;
+    }
+    function search(){
+        val = $("#searchcompany").val();
+        window.location.href = "{% url 'company-list' %}?search=" + val;
+    }
+</script>
+     
+</body>
+</html>

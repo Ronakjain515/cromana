@@ -71,20 +71,18 @@
                 <div class="menu  wow fadeInDown animated">
                     <ul>
                         <li><a href="{% url 'home' %}">HOME</a></li>
-                        <li><a href="jobs.html">JOBS</a></li>
-                        <li><a href="company.html">COMPANIES</a></li>
+                        <li><a href="{% url 'job-list' %}">JOBS</a></li>
+                        <li><a href="{% url 'company-list' %}">COMPANIES</a></li>
                         <li><a href="uploderesume.html">BUILD RESUME</a></li>
                         {% if is_authenticated %}
                             {% if role == "JOBSEEKER" %}
                                 <li>
                                     <a href="#">MY PROFILE</a>
                                     <ul>
-                                        <li><a href="uplode.html">Edit My Profile</a></li>
-                                        <li><a href="applied.html">Applied job</a></li>
-                                        <li><a href="sava.html">Save jobs</a></li>
-                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                        <li><a href="setting.html">Setting</a></li>
-                                        <li><a href="#">Log out</a></li>
+                                        <li><a href="{% url 'jobseeker-details' %}">My Profile</a></li>
+                                        <li><a href="{% url 'applied-jobs' %}">Applied jobs</a></li>
+                                        <li><a href="{% url 'saved-jobs' %}">Saved jobs</a></li>
+                                        <li><a href="{% url 'logout' %}">Log out</a></li>
                                     </ul>
                                 </li>
                             {% else %}
@@ -92,11 +90,9 @@
                                     <a href="#">MY PROFILE</a>
                                     <ul>
                                         <li><a href="{% url 'company-company-details' %}">Company Profile</a></li>
-                                        <li><a href="applied.html">Applied job</a></li>
-                                        <li><a href="sava.html">Save jobs</a></li>
-                                        <li><a href="Recruiter.html">Recruiters massage</a></li>
-                                        <li><a href="setting.html">Setting</a></li>
-                                        <li><a href="#">Log out</a></li>
+                                        <li><a href="{% url 'create-new-job' %}">Create New Job</a></li>
+                                        <li><a href="{% url 'company-job-list' %}">All Created Job</a></li>
+                                        <li><a href="{% url 'logout' %}">Log out</a></li>
                                     </ul>
                                 </li>
                             {% endif %}

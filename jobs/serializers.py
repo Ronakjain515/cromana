@@ -6,7 +6,9 @@ from .models import (
     JobLocationModel,
     JobLinguisticLanguageModel,
     JobSkillModel,
-    JobWeeklyOffModel
+    JobWeeklyOffModel,
+    AppliedJobs,
+    SavedJobs,
 )
 
 
@@ -42,6 +44,18 @@ class GetJobListSerializer(serializers.ModelSerializer):
     role_responsibility = serializers.SerializerMethodField("get_role_responsibility")
     experience = serializers.SerializerMethodField("get_experience")
     skills = serializers.SerializerMethodField("get_skills")
+    company_name = serializers.CharField(source="company.name")
+    location = serializers.SerializerMethodField("get_location")
+    created_at = serializers.SerializerMethodField("get_created_at")
+
+    def get_created_at(self, instance):
+        return instance.created_at
+
+    def get_location(self, instance):
+        location = JobLocationModel.objects.filter(job=instance).first()
+        if location:
+            return location.location
+        return "Not Provide"
 
     def get_skills(self, instance):
         return JobSkillModel.objects.filter(job=instance)
@@ -54,4 +68,16 @@ class GetJobListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = JobModel
-        fields = ["id", "title", "role_responsibility", "experience", "package", "skills"]
+        fields = ["id", "title", "role_responsibility", "no_of_opening", "experience", "shift_timing", "created_at", "package", "location", "skills", "company_name"]
+
+
+class ApplyJobSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AppliedJobs
+        fields = "__all__"
+
+
+class SavedJobSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SavedJobs
+        fields = "__all__"

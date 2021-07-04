@@ -67,19 +67,6 @@
     /*Profile Pic End*/
 
 </style>
-<script>
-    $(function() {
-        {% if filter == "ALL" %}
-            $("#filter").prop('selectedIndex', 0);
-        {% elif filter == "DRAFT" %}
-            $("#filter").prop('selectedIndex', 2);
-        {% elif filter == "PUBLISHED" %}
-            $("#filter").prop('selectedIndex', 1);
-        {% elif filter == "DONE_HIRING" %}
-            $("#filter").prop('selectedIndex', 3);
-        {% endif %}
-    });
-</script>
 <body>
     <!-- Navbar Started -->
     {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
@@ -90,32 +77,23 @@
         <div class="row" style="min-height: 88vh; margin: 0px">
             <div class="col-sm-3" style="background-color: #212529; padding: 0px;">
                 <div style="padding: 10% 15%; text-align: center;">
-                    <img src="/media/{{ company.image }}" style="width: 70%; max-height: 180px">
+                    <img src="/media/{{ user.profilepic }}" style="width: 70%; max-height: 180px">
                 </div>
                 <hr style="height: 1px; background: #ffd102; width: 90%; margin: 5% auto">
                 <div style="text-align: center">
-                    <button type="submit" id="detailsButton" onclick="window.location.href='{% url 'company-company-details' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black; text-align: left">
-                        <span style="margin-left: 8%">Company Details</span>
+                    <button type="submit" id="detailsButton" onclick="window.location.href='{% url 'jobseeker-details' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black; text-align: left">
+                        <span style="margin-left: 8%">My Profile</span>
                     </button>
-                    <button type="submit" id="newJobButton" onclick="window.location.href='{% url 'create-new-job' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black;text-align: left">
-                        <span style="margin-left: 8%">Create New Job</span>
+                    <button type="submit" id="newJobButton" onclick="window.location.href='{% url 'applied-jobs' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black;text-align: left">
+                        <span style="margin-left: 8%">Applied Jobs</span>
                     </button>
-                    <button type="submit" id="jobListButton" onclick="window.location.href='{% url 'company-job-list' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black;text-align: left">
-                        <span style="margin-left: 8%">All Created Job</span>
+                    <button type="submit" id="jobListButton" onclick="window.location.href='{% url 'saved-jobs' %}'" class="btn btn-outline-warning" style="width: 100%; margin: 2% 0%; border: 2px solid black;text-align: left">
+                        <span style="margin-left: 8%">Saved Jobs</span>
                     </button>
                 </div>
             </div>
             <div class="col" style="height: 88vh; overflow-y: auto;">
-                <h2 style="margin: 3%; text-align:center">All Jobs</h2>
-                <div class="form-group" style="margin-left: 7%">
-                    <label for="filter">Filter Jobs</label>
-                    <select class="form-control" id="filter" onchange="javascript:location.href = this.value;" style="width: 200px;">
-                        <option value="{% url 'company-job-list' %}?filter=ALL">All</option>
-                        <option value="{% url 'company-job-list' %}?filter=PUBLISHED">Published</option>
-                        <option value="{% url 'company-job-list' %}?filter=DRAFT">Draft</option>
-                        <option value="{% url 'company-job-list' %}?filter=DONE_HIRING">Done Hiring</option>
-                    </select>
-                </div>
+                <h2 style="margin: 3%; text-align:center">All Applied Jobs</h2>
                 <div >
                     {% for job in jobs %}
                     {% include "components/job-post-admin.html" with job=job %}

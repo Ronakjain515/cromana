@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/media.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/slider.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/animate.min.css'} %"/>
+    <link rel="stylesheet" href="{% static 'css/animate.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/multiselect-dropdown.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,9 +21,71 @@
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
     <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>jobs</title>
 </head>
-
+<script>
+    $(function() {
+        {% if exp == "any" %}
+            $("#Experience").prop('selectedIndex', 0);
+        {% elif exp == "0" %}
+            $("#Experience").prop('selectedIndex', 1);
+        {% elif exp == "1" %}
+            $("#Experience").prop('selectedIndex', 2);
+        {% elif exp == "2" %}
+            $("#Experience").prop('selectedIndex', 3);
+        {% elif exp == "3" %}
+            $("#Experience").prop('selectedIndex', 4);
+        {% elif exp == "5" %}
+            $("#Experience").prop('selectedIndex', 5);
+        {% elif exp == "10" %}
+            $("#Experience").prop('selectedIndex', 6);
+        {% endif %}
+    });
+</script>
+<script>
+    $(function() {
+        {% if salary == "any" %}
+            $("#Salary").prop('selectedIndex', 0);
+        {% elif salary == "1" %}
+            $("#Salary").prop('selectedIndex', 1);
+        {% elif salary == "2" %}
+            $("#Salary").prop('selectedIndex', 2);
+        {% elif salary == "3" %}
+            $("#Salary").prop('selectedIndex', 3);
+        {% elif salary == "5" %}
+            $("#Salary").prop('selectedIndex', 4);
+        {% elif salary == "10" %}
+            $("#Salary").prop('selectedIndex', 5);
+        {% endif %}
+    });
+</script>
+<script>
+  $( function() {
+    var availableTags = [
+        {% for location in locations %}
+            "{{ location.location }}",
+        {% endfor %}
+    ];
+    $( "#searchLocation" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+  <script>
+  $( function() {
+    var availableTags = [
+        {% for company in companies %}
+            "{{ company.name }}",
+        {% endfor %}
+    ];
+    $( "#searchCompany" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
 <body>
 
 <!-- Navbar Started -->
@@ -38,12 +101,12 @@
             <div class="row">
                 <div class="col-sm-10">
                     <div class="profiletext1">
-                        <input type="text" placeholder="Search">
+                        <input type="text" value="{{ search }}" id="search" placeholder="Search">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="fitterbtn">
-                        <button>Search</button>
+                        <button onclick="search_job('{% url 'job-list' %}')">Search</button>
                     </div>
                 </div>
             </div>
@@ -61,186 +124,60 @@
                         <div class="filter">
                             <ul>
                                 <li>ALL FILTER</li>
-                                <li><img src="{% static 'images/filter.png' %}"</li>
+                                <li><img src="{% static 'images/filter.png' %}"></li>
+                                <button class="btn btn-primary" onclick="filter('{% url 'job-list' %}', {{ paginator.number }})" style="padding: 5px 20px; background-color: #ffd102; color: black;">Filter</button>
                             </ul>
-                            <button class="accordion">fresher</button>
+                            <button class="accordion">Experience</button>
                             <div class="panel">
                                 <div class="fresherselect">
-                                    <select class="op">
-                                        <option>0 - 1 year</option>
-                                        <option>0 - 1 year</option>
-                                        <option>0 - 1 year</option>
-                                        <option>0 - 1 year</option>
-                                        <option>0 - 1 year</option>
+                                    <select class="op" id="Experience">
+                                        <option value="any">Any</option>
+                                        <option value="0">Fresher</option>
+                                        <option value="1">1+ year</option>
+                                        <option value="2">2+ year</option>
+                                        <option value="3">3+ year</option>
+                                        <option value="5">5+ year</option>
+                                        <option value="10">10+ year</option>
                                     </select>
 
                                 </div>
                             </div>
                             <button class="accordion">Location</button>
                             <div class="panel">
-                                <div class="fresherselect">
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Gwalior</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Delhi</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Bhopal</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Indore</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Delhi</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Delhi</p>
+                                <div class="fresherselect" style="height: 55px; padding-top: 5px;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="{{ location }}" id="searchLocation" placeholder="search location">
                                     </div>
                                 </div>
                             </div>
                             <button class="accordion">Salary</button>
                             <div class="panel">
                                 <div class="fresherselect">
-                                    <select class="op">
-                                        <option>0 - 1 lakhs</option>
-                                        <option>1 - 2 lakhs</option>
-                                        <option>3 - 4 lakhs</option>
-                                        <option>gwalior</option>
-                                        <option>gwalior</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button class="accordion">Experience</button>
-                            <div class="panel">
-                                <div class="fresherselect">
-                                    <select class="op">
-                                        <option> 0- 1 year</option>
-                                        <option>1- 2 year</option>
-                                        <option>2- 3year</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button class="accordion">Experience</button>
-                            <div class="panel">
-                                <div class="fresherselect">
-                                    <select class="op">
-                                        <option> 0- 1 year</option>
-                                        <option>1- 2 year</option>
-                                        <option>2- 3year</option>
+                                    <select class="op" id="Salary">
+                                        <option value="any">Any</option>
+                                        <option value="1">1+ LPA</option>
+                                        <option value="2">2+ LPA</option>
+                                        <option value="3">3+ LPA</option>
+                                        <option value="5">5+ LPA</option>
+                                        <option value="10">10+ LPA</option>
                                     </select>
                                 </div>
                             </div>
                             <button class="accordion">Job Type</button>
                             <div class="panel">
                                 <div class="fresherselect">
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 14px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style=" cursor: pointer;font-size: 13px;
-                                                    margin-top: 5px;
-                                                ">All Job</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 0px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Premium Engg</p>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="parttime" {% if parttime %}checked{% endif %}>
+                                        <label class="form-check-label" for="parttime">Part Time jobs only</label>
                                     </div>
                                 </div>
                             </div>
                             <button class="accordion">Posted by</button>
                             <div class="panel">
-                                <div class="fresherselect">
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
+                                <div class="fresherselect" style="height: 55px; padding-top: 5px;">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="{{ company }}" id="searchCompany" placeholder="search Company">
                                     </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Company Jobs(254)</p>
-                                    </div>
-                                    <div class="typ" style="width:20%;
-                                                float: left;
-                                                margin-top: 4px;
-                                            ">
-                                        <input type="checkbox">
-                                    </div>
-                                    <div class="typ">
-                                        <p style="font-size: 13px; cursor: pointer;padding: 0px;
-                                                    margin-top: 5px;
-                                                ">Company Jobs(254)</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="accordion">Education</button>
-                            <div class="panel">
-                                <div class="fresherselect">
-                                    <select class="op">
-                                        <option> Post Graduation (180</option>
-                                        <option>1- 2 year</option>
-                                        <option>2- 3year</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -249,67 +186,48 @@
 
                     <!-- STARTED JOB SECTION -->
                     <div class="col-sm-8">
-                        <div class="profilebanner1">
-                            <div class="jobfill1">
-                                <a href="#" style="color: #007bff;font-size: 16px;">Excellent Opportunity For Gradute
-                                    Fresher/Back Office/Night Shifts</a>
-                            </div>
-                            <div class="jobfill1">
-                                <a href="#">COFORGE LIMITED</a>
-                            </div>
-                            <div class="jobicon">
-                                <div class="jobpic1">
-                                    <img src="{% static 'images/jobbag.png' %}">
-                                </div>
-                                <div class="jobtext111">
-                                    <h6>0-2 YEAR</h6>
-                                </div>
-                                <div class="jobpic">
-                                    <img src="{% static 'images/marker.png' %}">
-                                </div>
-                                <div class="jobtext111">
-                                    <h6>Noida Ncr</h6>
-                                </div>
-                                <div class="jobpic">
-                                    <img src="{% static 'images/Time.png' %}">
-                                </div>
-                                <div class="jobtext111">
-                                    <h6>Shift</h6>
-                                </div>
-                            </div>
-                            <div class="jobicon">
-                                <div class="jobpic1">
-                                    <img src="{% static 'images/staff.png' %}">
-                                </div>
-                                <div class="jobtext11">
-                                    <h6>Customer Service,Problem Solving,Production Planning, Opertions</h6>
-                                </div>
-                            </div>
-                            <div class="jobicon">
-                                <div class="jobpic">
-                                    <img src="{% static 'images/notepad.png' %}">
-                                </div>
-                                <div class="jobtext11">
-                                    <h6>Intersted candidates- good in spoken English con mail their resume at
-                                        anika.munjal@gmail.com</h6>
-                                </div>
-                            </div>
-                            <div class="jobicon">
-                                <div class="jobpic">
-                                    <img src="{% static 'images/wallet.png' %}">
-                                </div>
-                                <div class="jobtext1">
-                                    <h6>1203400 -234567799 pa</h6>
-                                </div>
-                                <span class="send" id="Similar">
-                                    <a href="joddetail.html" style="font-size: 14px;">View Details</a>
-                                </span>
-                                <span style="font-weight: 700;"><a href="joddetail.html">Apply</a></span>
-                            </div>
-                        </div>
+                        {% for job in jobs %}
+                            {% include "components/job-post.html" with job=job %}
+                        {% endfor %}
+                    
+                        {% if hasobjects %}
+                            <nav style="text-align: center">
+                                <ul class="pagination justify-content-center">
+                                    {% if paginator.has_previous %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript: filter('{% url 'job-list' %}', {{ paginator.previous_page_number }})">
+                                                Previous
+                                            </a>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        </li>
+                                    {% endif %}
+                                    
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript: filter('{% url 'job-list' %}', {{ paginator.number }})">
+                                            {{ paginator.number }}
+                                        </a>
+                                    </li>
+                                    {% if paginator.has_next %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="javascript: filter('{% url 'job-list' %}', {{ paginator.next_page_number }})">
+                                                Next
+                                            </a>
+                                        </li>
+                                    {% else %}
+                                        <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1">Next</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </nav>
+                        {% else %}
+                            <h4 style="text-align: center; margin-top: 100px">No Jobs</h4>
+                        {% endif %}
                     </div>
                     <!-- end of STARTED JOB SECTION -->
-
                 </div>
             </div>
         </div>
@@ -338,13 +256,34 @@
                       });
                     }
 </script>
-
-<script src="js/jquery.meanmenu.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+<script src="{% static 'js/BsMultiSelect.bs4.min.js' %}"></script>
+<script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+<script src="{% static 'js/filter-jobs.js' %}"></script>
+<script src="{% static 'js/job-apply.js' %}"></script>
 <script>
    jQuery(document).ready(function(){
        jQuery('.row .menu').meanmenu();
 });
 
+</script>
+<script>
+    function pagination(page){
+        url = window.location.href;
+        if (url.includes("page")){
+            url = url.replace("page=", "page=" + page);
+            console.log("sss");
+        }
+        else if (url.substr(url.length - 9) === "jobs-list"){
+            url = url + "?page=" + page;
+            console.log("ss");
+        }
+        else{
+            url = url + "&page=" + page;
+            console.log("s");
+        }
+        window.location.href = url;
+    }
 </script>
 </body>
 </html>

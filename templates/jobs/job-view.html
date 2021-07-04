@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+    <title>jobsdetail</title>
+  
+</head>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+    
+    <div class="applybg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="jobfilly" id="" style="margin-top: 1%;">      
+                        <a href="#">{{ job.title }}</a>
+                        <div class="jobfill1">
+                            <a>{{ job.company_name }}</a>
+                        </div>
+                        <div class="jobicon">
+                            <div class="jobpic">
+                                <img src="{% static 'images/jobbag.png' %}">
+                            </div> 
+                            <div class="jobtext">
+                                <h6>{{ job.experience }} year</h6>
+                            </div>
+                            <div class="jobpic">
+                                <img src="{% static 'images/marker.png' %}">
+                            </div> 
+                            <div class="jobtext">
+                                <h6>{{ job.location }}</h6>
+                            </div>
+                            <div class="jobpic">
+                                <img src="{% static 'images/Time.png' %}">
+                            </div> 
+                            <div class="jobtext">
+                                <h6>Shift: {{ job.shift_timing }}</h6>
+                            </div>
+                        </div>
+                        <div class="jobicon">
+                            <div class="jobpic">
+                                <img src="{% static 'images/staff.png' %}">
+                            </div> 
+                            <div class="jobtext1">
+                                <h6>
+                                    {% for skill in job.skills %}
+                                        {{ skill.skill }},
+                                    {% endfor %}
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="jobicon">
+                            <div class="jobpic">
+                                <img src="{% static 'images/notepad.png' %}">
+                            </div> 
+                            <div class="jobtext1">
+                                <h6>{{ job.role_responsibility|safe }}....</h6>
+                            </div>
+                        </div>
+                        <div class="jobicon">
+                            <div class="jobpic">
+                                <img src="{% static 'images/wallet.png' %}">
+                            </div>  
+                            <div class="jobtext1">
+                                <h6>{{ job.package }} LPA</h6>
+                            </div>
+                        </div>
+                        <div class="appl">
+                            <div class="sa">
+                                <a id="saved_button_{{ job.id }}" href="javascript: job_saved({{ job.id }}, '{% url 'save-job' %}')">Save</a>
+                            </div>
+                            <div class="sa1">
+                                <a id="apply_button_{{ job.id }}" href="javascript: job_apply({{ job.id }}, '{% url 'save-job' %}')">Apply</a>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <ul>
+                                <li>
+                                    <a>Posted: {{ job.created_at }}</a>
+                                </li>
+                                <li>
+                                    <a href="#">Openings: {{ job.no_of_opening }}</a>
+                                </li>
+                                <span class="send" >            
+                                    <a href="#Similar" style="font-size:14px;">Similar Jobs</a>  
+                                </span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="jobfilly">
+                        <div class="high">
+                            <h5>Job Highlights</h5>
+                            <div class="high1">
+                                <div class="rol1">
+                                    <ul type="disc">
+                                        <li>Job Location :</li>
+                                        <li> Job Title:</li>
+                                        <li>Number Of Positions:</li>
+                                        <li> Gender :</li>
+                                        <li>Years of Experience :</li>
+                                        <li>Work Hours Start From:</li>
+                                        <li>Required Linguistic Capability:</li>
+                                        <li>Pay Out:</li>
+                                        <li>Weekly Off :</li>
+                                        <li>Part time :</li>
+                                    </ul>
+                                </div>
+                                <div class="roln">
+                                    <ul>
+                                        <li>
+                                            {% for location in locations %}
+                                                {{ location.location }}, 
+                                            {% endfor %}
+                                        </li>
+                                        <li>{{ job.title }}</li>
+                                        <li>{{ job.no_of_opening }}</li>
+                                        <li>
+                                            {% if details.gender == "MALE" %}
+                                                Only For Males
+                                            {% elif details.gender == "FEMALE" %}
+                                                Only For Female
+                                            {% elif details.gender == "BOTH" %}
+                                                All Preferred
+                                            {% endif %}
+                                        </li>
+                                        <li>{{ job.experience }} year</li>
+                                        <li>{{ job.shift_timing }}</li>
+                                        <li>
+                                            {% for laguage in laguages %}
+                                                {{ laguage.laguage }}, 
+                                            {% endfor %}
+                                        </li>
+                                        <li>{{ job.package }} LPA</li>
+                                        <li>
+                                            {% for week in weeks %}
+                                                {{ week.day }}, 
+                                            {% endfor %}
+                                        </li>
+                                        <li>
+                                            {% if details.part_time %}
+                                                Yes.
+                                            {% else %}
+                                                No.
+                                            {% endif %}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="description">
+                                <h4> Job description</h4>
+                                <div class="description1">
+                                    <h5>Roles and Responsibilities</h5>
+                                    <p>{{ details.role_responsibility|safe }}</p>
+                                </div>
+                                <div class="description1">
+                                    <h5>Required Skills :</h5>
+                                    <p>{{ details.requirements|safe }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="jobfilly" id="" style="margin-top: 1%;padding: 0px;">
+                        <div class="description">
+                            <h4>About Comapny</h4>
+                            <p>{{ details.company.about }}</p>
+                            <div class="rol" style="margin-top: 5px;">
+                                <p>Company Info</p>
+                                <div class="roledu">
+                                    <ul>
+                                        <li>Website</li>
+                                        <li>Address</li>
+                                    </ul>
+                                </div>
+                                <div class="roledu1">
+                                    <ul>
+                                        <li><a href="{{ details.company.website_url }}">{{ details.company.website_url }}</a></li>
+                                        <li><a>{{ details.company.address }}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="description">
+                            <h4>Beware of imposters!</h4>
+                            <p>Our Team does not promise a job or an interview in exchange of money. Fraudsters may ask you to pay in the pretext of registration fee, Refundable 
+                                <span>
+                                    <a href="#">Read More</a>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="hed" id="Similar">
+                        <h2>Similar Jobs</h2>
+                    </div>
+                    <div class="jobfilly">
+                        {% for simi in similar %}
+                        <div class="End">
+                            <h2><a href="{% url 'job-view' simi.id %}">{{ simi.title }}</a></h2>
+                            <ul>
+                                <li><a href="#">{{ simi.company_name }}</a></li>
+                                <li><a href="#">{{ simi.location }}</a></li>
+                                <li><a href="#">
+                                            {% for skill in simi.skills %}
+                                                {{ skill.skill }},
+                                            {% endfor %}
+                                </a></li>
+                            </ul>
+                            <span class="End1">
+                                <a href="#">{{ simi.created_at }}</a>
+                            </span>
+                            <hr>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+</body>
+
+        <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+        <script src="{% static 'js/job-apply.js' %}"></script>
+        <script>
+           jQuery(document).ready(function(){
+               jQuery('.row .menu').meanmenu();
+           
+        });
+        </script>
+
+            </html>
+            

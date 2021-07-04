@@ -1,11 +1,16 @@
 from django.db import models
 from django.utils import timezone
-from users.models import CompanyModel
+
+from users.models import ( 
+    CompanyModel,
+    CustomUser,
+)
 from common.models import (
     LocationModel,
     SkillsModel,
     LinguisticLanguageModel
 )
+
 
 class JobModel(models.Model):
     """
@@ -30,7 +35,7 @@ class JobModel(models.Model):
     requirements        = models.CharField(max_length=2000, null=True, blank=False)
     experience          = models.CharField(max_length=30, null=True, blank=False)
     shift_timing        = models.CharField(max_length=30, null=True, blank=False)
-    package             = models.CharField(max_length=40, null=True, blank=False)
+    package             = models.IntegerField(null=True, blank=False)
     apply_last_date     = models.DateField(null=True, blank=False)
     part_time           = models.BooleanField(null=False, blank=False)
     no_of_opening       = models.IntegerField(null=True, blank=False)
@@ -72,3 +77,12 @@ class JobWeeklyOffModel(models.Model):
     job     = models.ForeignKey(JobModel, on_delete=models.CASCADE)
     day = models.CharField(max_length=15, null=True, blank=False, choices=Week_Choice)
 
+
+class AppliedJobs(models.Model):
+    job = models.ForeignKey(JobModel, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+
+
+class SavedJobs(models.Model):
+    job = models.ForeignKey(JobModel, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
