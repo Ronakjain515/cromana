@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+   
+    <title>company</title>
+</head>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+    
+    <!-- main section -->
+    <div style="min-height: 100vh; background-color: #E8E8E8">
+        <div class="row" style="width: 100%; padding-top: 50px;">
+            <div class="col-sm-4" style="text-align: center">
+                <img src="/media/{{ company.image }}" style="height: 200px; width: 300px">
+            </div>
+            <div class="col-sm">
+                <div style="margin-bottom: 50px">
+                    <h2>{{ company.name }}</h2>
+                    <h6>{{ company.address }}</h6>
+                    <h5>{{ company.about }}</h5>
+                </div>
+                <div>
+                    {% for job in jobs %}
+                        {% include "components/job-post.html" with job=job %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>     
+    <!-- end main section -->
+    
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+
+
+             
+   <script>
+    new WOW().init();
+</script>
+<script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+<script src="{% static 'js/job-apply.js' %}"></script>
+<script>
+   jQuery(document).ready(function(){
+       jQuery('.row .menu').meanmenu();
+   
+});
+</script>
+     
+</body>
+</html>

@@ -2341,6 +2341,7 @@ table{
 .fresherselect{
     width:100%;
     float: left;
+    margin-left:  20px;
 }
 .op:focus{
     outline: none;

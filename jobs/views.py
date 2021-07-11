@@ -60,9 +60,12 @@ class JobListView(View):
             except ValueError:
                 pass
             self.context["salary"] = request.GET.get("salary", "any")
-        if request.GET.get("parttime"):
-            jobs = jobs.filter(part_time=True)
-            self.context["parttime"] = request.GET.get("parttime", "true")
+        if request.GET.get("type", "any") != "any":
+            if request.GET.get("type") == "part":
+                jobs = jobs.filter(part_time=True)
+            if request.GET.get("type") == "full":
+                jobs = jobs.filter(part_time=False)
+            self.context["type"] = request.GET.get("type", "any")
         if request.GET.get("company", None):
             comp = CompanyModel.objects.values_list("id", flat=True).filter(name__icontains=request.GET.get("company").replace("-", " "))
             jobs = jobs.filter(company__in=comp)
@@ -93,8 +96,10 @@ class CompanyListView(View):
     def get(self, request):
         if request.GET.get("letter", None):
             self.context["companies"] = CompanyModel.objects.filter(name__startswith=request.GET.get("letter"))
+            self.context["letter"] = request.GET.get("letter")
         elif request.GET.get("number", None):
             self.context["companies"] = CompanyModel.objects.filter(name__regex=r'^\d')    
+            self.context["number"] = request.GET.get("number")
         elif request.GET.get("search", None):
             self.context["companies"] = CompanyModel.objects.filter(name__icontains=request.GET.get("search"))
             self.context["search"] = request.GET.get("search")

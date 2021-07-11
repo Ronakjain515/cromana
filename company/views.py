@@ -2,7 +2,7 @@ from django.views import View
 from django.shortcuts import redirect, render
 from django.core.paginator import Paginator
 
-from users.models import CompanyModel
+from users.models import CompanyModel, CustomUser
 from users.serializer import RegisterCompanySerializer
 from common.models import (
     LocationModel,
@@ -185,3 +185,23 @@ class JobListView(View):
         self.context["filter"] = filter
         self.context["jobs"] = job_serializer.data
         return render(request, "company/job-list.html", context=self.context)
+
+
+class CompanyPublicView(View):
+    context = {}
+
+    def dispatch(self, request, *args, **kwargs):
+        self.context = {}
+        if request.user.is_authenticated:
+            self.context["is_authenticated"] = True
+            self.context["role"] = request.user.role
+        return super(CompanyPublicView, self).dispatch(request, *args, **kwargs)
+    
+    def get(self, request, pk):
+        company = CompanyModel.objects.filter(id=pk).first()
+        jobs = JobModel.objects.filter(company=company.id)
+        jobs_serializer = GetJobListSerializer(jobs, many=True)
+        self.context["jobs"] = jobs_serializer.data
+        self.context["company"] = company
+
+        return render(request, "company/companypublicdetails.html", context=self.context)

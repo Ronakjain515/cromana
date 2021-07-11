@@ -1,5 +1,5 @@
 {% load static %}
-<div style="padding: 20px; border-radius: 8px; width: 90%; margin: 30px 10px; background-color: white; box-shadow: 0px 6px 5px #a3a3a3;">
+<div style="padding: 20px; border-radius: 8px; width: 100%; margin: 30px auto; background-color: white; box-shadow: 0px 6px 5px #a3a3a3;">
     <div>
         <a href="{% url 'job-view' job.id %}" style="text-decoration: none; font-size: 18px; color: #007bff">{{ job.title }}</a>
     </div>
@@ -7,11 +7,11 @@
         <a href="#" style="color: black; text-decoration: none;">{{ job.company_name }}</a>
     </div>
     <div class="row" style="margin-left: -5px; margin-top: 8px">
-        <div class="col-sm-3">
+        <div class="col-sm">
             <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/jobbag.png' %}">
             <h6>{{ job.experience }} year</h6>
         </div> 
-        <div class="col-sm-3">
+        <div class="col-sm">
             <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/marker.png' %}">
             <h6>{{ job.location }}</h6>
         </div>
@@ -19,10 +19,12 @@
             <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/Time.png' %}">
             <h6>Shift: {{ job.shift_timing }}</h6>
         </div>
+        <div class="col-sm">
+            <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/wallet.png' %}">
+            <h6><b>{{ job.package }} LPA</b></h6>
+        </div>
     </div>
     <div style="margin-left: 10px; margin-top: 8px;">
-        <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/wallet.png' %}">
-        <h6>{{ job.package }} LPA</h6>
         <img style="float: left; margin-right: 10px;" width="20px" src="{% static 'images/staff.png' %}">
         <h6>{% for skill in job.skills %}
                 {{ skill.skill }},

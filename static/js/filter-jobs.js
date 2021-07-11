@@ -19,9 +19,9 @@ function filter(url, pageno){
     }
     
     // part time
-    var part = $("#parttime").prop('checked')
-    if (part){
-        param += "&parttime=true";
+    var part = $("#parttime").val();
+    if (part != ""){
+        param += ("&type=" + part);
     }
 
     // Company
@@ -39,8 +39,16 @@ function filter(url, pageno){
 
 function search_job(url){
     _search = $("#search").val();
+    _location = $("#locationinput").val();
+    param = url;
     if (_search != "" && _search != " "){
-        window.location.href = url + "?search=" + _search;
+        param = "?search=" + _search + "&";
     }
+    else{
+        param += "?";
+    }
+    if (_location != "" && _location != " "){
+        param = param + "location=" + _location;
+    }
+    window.location.href= param;
 }
-

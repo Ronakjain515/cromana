@@ -63,6 +63,17 @@
     });
 </script>
 <script>
+    $(function() {
+        {% if type == "any" %}
+            $("#parttime").prop('selectedIndex', 0);
+        {% elif type == "part" %}
+            $("#parttime").prop('selectedIndex', 1);
+        {% elif type == "full" %}
+            $("#parttime").prop('selectedIndex', 2);
+        {% endif %}
+    });
+</script>
+<script>
   $( function() {
     var availableTags = [
         {% for location in locations %}
@@ -88,32 +99,36 @@
   </script>
 <body>
 
-<!-- Navbar Started -->
-{% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
-<!-- Navbar Ended -->
-
-<!-- STARTED MAIN SECTION -->
-<div class="profilejobbanner">
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
 
     <!-- STARTED SEARCH BAR -->
     <div class="bannerjob">
         <div class="container">
             <div class="row">
-                <div class="col-sm-10">
-                    <div class="profiletext1">
-                        <input type="text" value="{{ search }}" id="search" placeholder="Search">
+                <div class="col-sm-12">
+                    <div class="check">    
+                        <h2>Search a Suitable Jobs as Per Your Requirement </h2>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="fitterbtn">
-                        <button onclick="search_job('{% url 'job-list' %}')">Search</button>
+                <div class="container">
+                    <div class="row">               
+                        <div class="col-sm-5" style="padding-right: 0px; padding-left: 0px">
+                            <input type="text" id="search" value="{{ search }}" placeholder="Job Title, Skills, Designation"class="inputbox11">
+                        </div>
+                        <div class="col-sm-3" style="padding-right: 0px; padding-left: 0px">
+                            <input type="text" id="locationinput" value="{{ location }}" placeholder="Location" class="inputbox11">
+                        </div> 
+                        <div class="col-sm-2" style="padding-right: 0px; padding-left: 0px">
+                            <button class="jobbutton" onclick="search_job('{% url 'job-list' %}')">JOB SEARCH</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <!-- end of STARTED SEARCH BAR -->
-
     <div class="container">
         <div class="row">
             <div class="container">
@@ -125,7 +140,6 @@
                             <ul>
                                 <li>ALL FILTER</li>
                                 <li><img src="{% static 'images/filter.png' %}"></li>
-                                <button class="btn btn-primary" onclick="filter('{% url 'job-list' %}', {{ paginator.number }})" style="padding: 5px 20px; background-color: #ffd102; color: black;">Filter</button>
                             </ul>
                             <button class="accordion">Experience</button>
                             <div class="panel">
@@ -142,14 +156,14 @@
 
                                 </div>
                             </div>
-                            <button class="accordion">Location</button>
+                            <!--<button class="accordion">Location</button>
                             <div class="panel">
                                 <div class="fresherselect" style="height: 55px; padding-top: 5px;">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" value="{{ location }}" id="searchLocation" placeholder="search location">
+                                        <input type="text" class="form-control" value="{{ location }}" id="searchLocation" placeholder="search location" style="width: 300px">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <button class="accordion">Salary</button>
                             <div class="panel">
                                 <div class="fresherselect">
@@ -166,20 +180,22 @@
                             <button class="accordion">Job Type</button>
                             <div class="panel">
                                 <div class="fresherselect">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="parttime" {% if parttime %}checked{% endif %}>
-                                        <label class="form-check-label" for="parttime">Part Time jobs only</label>
-                                    </div>
+                                    <select class="op" id="parttime">
+                                        <option value="any">Any</option>
+                                        <option value="part">Part time jobs only</option>
+                                        <option value="full">Full time jobs only</option>
+                                    </select>
                                 </div>
                             </div>
                             <button class="accordion">Posted by</button>
                             <div class="panel">
                                 <div class="fresherselect" style="height: 55px; padding-top: 5px;">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" value="{{ company }}" id="searchCompany" placeholder="search Company">
+                                        <input type="text" class="form-control" value="{{ company }}" id="searchCompany" placeholder="search Company" style="width: 300px">
                                     </div>
                                 </div>
                             </div>
+                            <button class="btn btn-primary" onclick="filter('{% url 'job-list' %}', {{ paginator.number }})" style="padding: 5px 20px; background-color: #ffd102; color: black; float: right; margin-right: 10px; margin-bottom: 10px;">Filter</button>
                         </div>
                     </div>
                     <!-- end of STARTED FILTER SECTION -->
