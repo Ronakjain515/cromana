@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+    <title>build resume</title>
+</head>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+
+    <div class="borderdax"></div>
+        <div class="dex">
+            <p>Select Any One</p>
+            <button class="tablinks" onclick="openCity(event, 'Paris')" id="defaultOpen"><img src="{% static 'images/bag.png' %}">FRESHER</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')" ><img src="{% static 'images/office1.png' %}">PROFESSIONAL</button>
+            <button class="tablinks" onclick="openCity(event, 'London')" ><img src="{% static 'images/laour.png' %}">LABOUR</button>
+        </div>
+        <div class="ws">  
+            <div id="London" class="tabcontent" style="width: 100%;float: left;padding: 0px;">
+                <div class="selectthree">
+                    <div class="sel1">
+                        <h3>LABOUR</h3>
+                    </div>
+                    <div class="selectstep">
+                        <div class="dt">
+                            <a href="#">1</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">2</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">3</a>
+                        </div>
+                    </div>
+                    <div class="selectstep1">
+                        <div class="dt1">
+                            <a href="#">Select template</a>
+                        </div>
+                        
+                        <div class="dt1">
+                            <a href="#">Write your Information</a>
+                        </div>
+                        <div class="dt1">
+                            <a href="#">Downlode</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tem2">
+                    <div class="tre">
+                        <div class="black"><a href="bulidresume.html">SELECT</a></div>
+                        <img src="{% static 'images/template1.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a1.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a2.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a2.png' %}">
+                    </div>
+                </div>
+                <p>More Unique template</p>
+                <div class="tem2">
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a3.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a3.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a4.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a5.png' %}">
+                    </div>
+                </div> 
+            </div>
+            <div id="Paris" class="tabcontent" style="width:100%;padding: 0px;">
+                <div class="selectthree">
+                    <div class="sel1">
+                        <h3>FRESHER</h3>
+                    </div>
+                    <div class="selectstep">
+                        <div class="dt">
+                            <a href="#">1</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">2</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">3</a>
+                        </div>
+                    </div>
+                    <div class="selectstep1">
+                        <div class="dt1">
+                            <a href="#">Select template</a>
+                        </div>
+                        <div class="dt1">
+                            <a href="#">Write your Information</a>
+                        </div>
+                        <div class="dt1">
+                            <a href="#">Downlode</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tem2">
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a3.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a4.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a5.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a5.png' %}">
+                    </div>
+                </div> 
+            </div>
+            <div id="Tokyo" class="tabcontent" style="width:100%;padding: 0px;">
+                <div class="selectthree">
+                    <div class="sel1">
+                        <h3>PROFESSIONAL</h3>
+                    </div>
+                    <div class="selectstep">
+                        <div class="dt">
+                            <a href="#">1</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">2</a>
+                        </div>
+                        <div class="dt">
+                            <a href="#">3</a>
+                        </div>
+                    </div>
+                    <div class="selectstep1">
+                        <div class="dt1">
+                            <a href="#">Select template</a>
+                    </div>
+                    <div class="dt1">
+                        <a href="#">Write your Information</a>
+                    </div>
+                    <div class="dt1">
+                        <a href="#">Downlode</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tem2">
+                <div class="tre">
+                    <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                        <img src="{% static 'images/a2.png' %}">
+                    </div>
+                    <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                            <img src="{% static 'images/a4.png' %}">
+                        </div>
+                        <div class="tre">
+                        <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                            <img src="{% static 'images/a3.png' %}">
+                        </div>
+                        <div class="tre">
+                            <div class="black"><a href="{% url 'resume-builder' %}">SELECT</a></div>
+                            <img src="{% static 'images/a5.png' %}">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+           
+              
+           <script>
+            new WOW().init();
+        </script>
+  
+  <script src="js/jquery.meanmenu.js"></script>
+  <script>
+     jQuery(document).ready(function(){
+         jQuery('.row .menu').meanmenu();
+     
+ });
+ </script>   
+  <script>
+
+    $(window).load(function() {
+        
+        $("#flexiselDemo3").flexisel({
+            visibleItems: 4,
+            itemsToScroll: 1,         
+            autoPlay: {
+                enable: true,
+                interval: 1500,
+                pauseOnHover: true
+            }        
+        });
+        
+         
+        
+    });
+    </script> 
+   <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+       
+</body>
+</html>

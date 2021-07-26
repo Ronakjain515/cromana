@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/multiselect-dropdown.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+    <title>build resume</title>
+</head>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+
+    <div class="resumebanner">
+        <div class="container-fluid">
+            <div class="row" style="margin-right:0px">
+                <div class="selectstep" style="width:100%;">
+                    <div class="dt">
+                        <a href="#">1</a>
+                    </div>
+                    <div class="dt">
+                        <a href="#">2</a>
+                    </div>
+                    <div class="dt">
+                        <a href="#">3</a>
+                    </div>
+                </div>
+                <div class="selectstep1" style="width: 100%;">
+                    <div class="dt1" style="width: 33%;">
+                        <a href="#">Select template</a>
+                    </div>
+                    <div class="dt1" style="width: 33%;">
+                        <a href="#">Write your Information</a>
+                    </div>
+                    <div class="dt1" style="width: 33%">
+                        <a href="#">Downlode</a>
+                    </div>
+                </div>
+                <div class="y">
+                    <div class="inforesume">
+                        <div class="nameresume">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'London')" id="defaultOpen">
+                                            <img src="{% static 'images/pro1.png' %}">
+                                            Personal Info
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Paris')">
+                                            <img src="{% static 'images/resume11.png' %}">
+                                            Resume headline
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Tokyo')">
+                                            <img src="{% static 'images/skill1.png' %}">
+                                            key Skill
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Employers')">
+                                            <img src="{% static 'images/employ.png' %}">
+                                            Employer
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Education')">
+                                            <img src="{% static 'images/education.png' %}">
+                                            Education
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Certificate')">
+                                            <img src="{% static 'images/certificate.png' %}">
+                                            Certificate & Courses
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'it')">
+                                            <img src="{% static 'images/employ.png' %}">
+                                            It Skill / SOFTWARE
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'project')">
+                                            <img src="{% static 'images/project.png' %}">
+                                            Project
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'Accomplishment')">
+                                            <img src="{% static 'images/employ.png' %}">
+                                            Accomplishment
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'career')">
+                                            <img src="{% static 'images/goal.png' %}">
+                                            Desired career profile
+                                        </button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <button class="tablinks r" onclick="openCity(event, 'other')">
+                                            <img src="{% static 'images/employ.png' %}">
+                                            Other
+                                        </button>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="in1"> 
+                    <div id="London" class="tabcontent" style="border:none;width:100%;float: left;">
+                        <div class="resumeheading">
+                            <p style="color: #007bff;font-size: 17px;">Personal Information</p>
+                        <div class="resumename">
+                            <p> First Name</p>
+                            <input id="first-name-input" type="text" placeholder="Enter Name">
+                        </div>
+                        <div class="resumename">
+                            <p> Last Name</p>
+                            <input id="last-name-input" type="text" placeholder="Enter last Name">
+                        </div>
+                        <div class="resumename">
+                            <p>Date of Birth</p>
+                            <input id="birth-date-input" type="date" placeholder="Enter Name">
+                        </div>
+                        <div class="Married">
+                            <p>Marital Status</p>
+                            <select id="marital-status-input" class="w">
+                                <option value="">Select</option>
+                                <option>Unmarried</option>
+                                <option>Married</option>
+                            </select>
+                        </div>
+                        <div class="Married">
+                            <p>linguistic Capability</p>
+                            <div class="form-group">
+                                <select id="linguistic-input" name="linguistic" placeholder="Select upto 5 Languages" multiple>
+                                    {% for linguistic in linguistics %}
+                                        <option value="{{ linguistic.id }}">{{ linguistic.language }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="Married">
+                            <p>Passport number </p>
+                            <input id="passport-number-input" type="number" placeholder="Passpot Number"> 
+                        </div>
+                        <div class="Married">
+                            <p>Contact Number</p>
+                            <input id="contact-number-input" type="number" placeholder="Passpot Number"> 
+                        </div>
+                        <div class="Married">
+                            <p>Email ID</p>
+                            <input id="email-input" type="email" placeholder="Email ID"> 
+                        </div>
+                        <div class="savbt">
+                            <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Cancel</button>
+                            <button onclick="personalDetails()"> Save & Next</button>
+                        </div>
+                    </div>
+                </div>
+                              
+                <div id="Paris" class="tabcontent" style="padding: 0px;border:none;width:100%;float: left;">
+                    <div class="resumeheading">
+                        <p style="color: #007bff;font-size: 17px;">Resume headline</p>
+                        <textarea id="resume-headline-input" style="width: 100%"></textarea>
+                    </div>
+                    <div class="savbt">
+                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Cancel</button>
+                        <button>Save</button>
+                    </div>
+                </div>
+                              
+                <div id="Tokyo" class="tabcontent" style="border:none; width:100%; float: left;">
+                    <div class="resumeheading">
+                        <p style="color: #007bff;font-size: 17px;">Key Skill</p>
+                        <div class="form-group">
+                            <select id="key-skills-input" name="linguistic" placeholder="Select upto 20 Languages" multiple>
+                                {% for skill in skills %}
+                                    <option value="{{ skill.id }}">{{ skill.skill }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="savbt">
+                            <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                            <button>Save & Next</button>
+                        </div>
+                    </div>
+                </div>
+                              
+                <div id="Employers" class="tabcontent" style="border:none;width:100%;float: left;">
+                    <div class="resumeheading">
+                        <p style="color: #007bff;font-size: 17px;">Employers</p>
+                            <div class="eduact">
+                                <p>Designation<span style="color: red;margin-left: 2px;">*</span></p>
+                                <input type="text" placeholder="Type Your Designation" style="padding: 5px; width: 100%;">
+                            </div>
+                            <div class="eduac">
+                                <p>Organization Name<span style="color: red;margin-left: 2px;">*</span></p>
+                                <input type="text" placeholder="Type Organization name" style="padding: 5px; width: 100%;">
+                            </div>
+                            <div class="eduac">
+                                <p>Location<span style="color: red;margin-left: 2px;">*</span></p>
+                                <input type="text" placeholder="Type Location" style="padding: 5px; width: 100%;">
+                            </div>
+                            <div class="eduac">
+                                <p>Start year<span style="color: red;margin-left: 2px;">*</span></p>
+                                <input type="number" placeholder="Type Location" style="padding: 5px; width: 100%;">
+                            </div>
+                            <div class="eduac">
+                                <p>Start Month<span style="color: red;margin-left: 2px;">*</span></p>
+                                <input type="number" placeholder="Type Location" style="padding: 5px; width: 100%;">
+                            </div>
+                            <div class="savbt">
+                                <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                <button>Save & Next</button>
+                            </div>
+                        </div>
+                    </div>
+                              <div id="Education" class="tabcontent" style="border:none;width:100%;float: left;">
+                                <div class="resumeheading">
+                                    <p style="color: #007bff;font-size: 17px;">Education</p>
+                                    <div class="eduac">
+                                        <p>Education<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select>
+                                            <option>-select-</option>
+                                            <option>Pursuing</option>
+                                            <option>!</option>
+                                            <option>!</option>
+                            
+                            
+                            
+                                        </select>
+                                    </div>
+                                    <div class="eduac">
+                                        <p>Courses<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select>
+                                            <option>-select-</option>
+                                            <option>Web designing</option>
+                                            <option>c++</option>
+                                            <option>java</option>
+                            
+                            
+                            
+                                                                              </select>
+                                    </div>
+                            
+                            
+                                    <div class="eduac">
+                                        <p>Specialization<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select>
+                                            <option>-select-</option>
+                                            <option>Web designing</option>
+                                            <option>c++</option>
+                                            <option>java</option>
+                            
+                            
+                            
+                                                                      </select>
+                                    </div>
+                                    <div class="eduac">
+                                      <p>University/Institute<span style="color: red;margin-left: 2px;">*</span></p>
+                                          <span>
+                                              <input type="text" placeholder="University/Institute"style="padding: 5px;
+                                              width: 100%;
+                                          ">
+
+                                          </span>
+                                  </div>
+                                    <div class="eduac">
+                                        <p>Passing Out Year<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select>
+                                            <option>-select-</option>
+                                            <option>Web designing</option>
+                                            <option>c++</option>
+                                            <option>java</option>
+                            
+                            
+                            
+                                                                      </select>
+                                    </div>
+                                    <div class="eduac">
+                                      <p>Courses Type</p>
+                                      <div class="coursestype">
+                                          <div class="cour">
+                                              <div class="cour1">
+                                                  <input type="radio" name="w">
+                                              </div>
+                                              <div class="cour11">
+                                                  <p>Full Time</p>
+                                              </div>
+                                          </div>
+                                          <div class="cour">
+                                              <div class="cour1">
+                                                  <input type="radio" name="w">
+                                              </div>
+                                              <div class="cour11">
+                                                  <p>Part Time</p>
+                                              </div>
+                                          </div>
+                                          <div class="cour">
+                                              <div class="cour1">
+                                                  <input type="radio" name="w">
+                                              </div>
+                                              <div class="cour11">
+                                                  <p>Correspondence</p>
+                                              </div>
+                                          </div>
+                                      </div> 
+
+                                     
+                                  </div>
+                                    <div class="eduac">
+                                        <p>Grading System</p>
+                                        <select>
+                                            <option>-select-</option>
+                                            <option>Web designing</option>
+                                            <option>c++</option>
+                                            <option>java</option>
+                            
+                            
+                            
+                                                                                </select>
+                                    </div>
+                                 
+                                    <span>
+                                        <button class="employ">Add More </button>
+                                      </span>
+                                    <div class="savbt">
+                                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                        <button>Save & Next</button>
+                            
+                                    </div>
+                                  </div>
+                                 
+                              </div>
+                              <div id="Certificate" class="tabcontent" style="border:none;width:100%;float: left;">
+                                <div class="resumeheading">
+                                    <p style="color: #007bff;font-size: 17px;">Certificate</p>
+                                    <div class="certificatecourese">
+                                        <p>Certification Name<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="Enter Certification Name">
+                                      </div>
+                                      <div class="certificatecourese1">
+                                        <p>Certified By<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="Mention organization/institute name">
+                                      </div>
+                                      <div class="certificatecourese1">
+                                        <p>Year of Completion<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="year" style="width: 50%;">
+                                      </div>
+                            
+                                    
+                                      <div class="savbt">
+                                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                        <button>Save & Next</button>
+                            
+                                    </div>
+                                  </div>
+                               
+                              </div>
+
+                              <div id="it" class="tabcontent" style="border:none; width:100%;float: left;">
+                                <div class="resumeheading">
+                                    <p style="color: #007bff;font-size: 17px;"> IT Skill & Software</p>
+                                    <div class="eduackey1">
+                                        <p>Specify details about programming languages
+                                             (such as Java, Python, C/C++, Oracle, SQL etc), softwares (Microsoft Word, Excel, Tally etc) or any other software related knowledge.</p>
+                                       
+                                    </div>
+                                    <div class="certificatecourese">
+                                        <p>IT Skills<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="Please enter it skill">
+                                      </div>
+                            
+                                      
+                                      <div class="certificatecourese1" style="width:50%;float:left;">
+                                        <p>Version<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select style="width: 90%;padding: 5px;">
+                                            <option>2001</option>
+                                            <option>20201</option>
+                                            <option>202201</option>
+                                            </select>
+                                      </div>
+                                      <div class="certificatecourese1" style="width:50%;float:left;">
+                                        <p>Last Used<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <select style="width: 90%;padding: 5px;">
+                                            <option>2001</option>
+                                            <option>20201</option>
+                                            <option>202201</option>
+                                            </select>
+                                      </div>
+                                      <div class="certificatecourese">
+                                        <p>Experience<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="Experience">
+                                      </div>
+                                      
+                                      <div class="savbt">
+                                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                        <button>Save & Next</button>
+                            
+                                    </div>
+                                  </div>
+                               
+                              </div>
+                              <div id="project" class="tabcontent" style="border:none;width:100%;float: left;">
+                                <div class="resumeheading">
+                                    <p style="color: #007bff;font-size: 17px;">Project</p>
+                                    <div class="certificatecourese">
+                                        <p>Project Name<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <input type="text" placeholder="Project Name">
+                                      </div>
+                            
+                            
+                                      <div class="certificatecourese1">
+                                        <p>Project Detailse<span style="color: red;margin-left: 2px;">*</span></p>
+                                        <textarea type="text" placeholder="type" style="padding: 5px;
+                                                                    width:100%;
+                                                                "></textarea>
+                                      </div>
+                                      <div class="eduac"style="width: 50%;
+                                      float: left;">
+                                        <p>Project started<span style="color: red;margin-left: 2px;">*</span></p>
+                                       <select style="    width: 90%;
+                                       float: left;
+                                       margin: 10px;
+                                   ">
+                                        <option>1lac </option>
+                                        <option>1</option>
+                                        <option>19</option>
+                                       
+                            
+                                       </select>
+                                      </div>
+                                      <div class="eduac" style="width: 50%;
+                                      float: left;">
+                                        <p>Project End<span style="color: red;margin-left: 2px;">*</span></p>
+                                       <select style="    width: 90%;
+                                       float: left;
+                                       margin: 10px;
+                                   ">
+                                        <option>Thousand</option>
+                                        <option>1000</option>
+                                        <option>20000</option>
+                                        <option></option>
+                                        
+                                       </select>
+                                    </div>
+                            
+                                      <div class="savbt">
+                                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                        <button>Save & Next</button>
+                            
+                                    </div>
+                                  </div>
+                               
+                              </div>
+                              <div id="Accomplishment" class="tabcontent" style="border:none;width:100%;float: left;">
+                                <div class="resumeheading">
+                                    <p style="color: #007bff;font-size: 17px;">Accomplishment</p>
+                                    <div class="eduackey1">
+                                        <p>Work Samples.</p>
+                                       
+                                    </div>
+                                    <div class="certificatecourese">
+                                        <p>Social Profile<span</p>
+                                         <input type="text" placeholder="Project Name">
+                                      </div>
+                            
+                            
+                                      <div class="certificatecourese1">
+                                        <p>URL</p>
+                                       <input type="text" placeholder="Url">
+                                      </div>
+                                      <div class="eduac"style="width: 100%;
+                                      float: left;">
+                                        <p>Description</p>
+                                       <textarea style="    width: 100%;
+                                       float: left;
+                                      
+                                   ">
+                                        
+                                       
+                            
+                                       </textarea>
+                                      </div>
+                                      <div class="editedukey" style="width: 80%;">
+                                        <h2 style="font-size: 20px;">White Paper / Research Publication / Journal Entry</h2> 
+                                        
+                                    </div>
+                                   
+                                    
+                                    <div class="eduackey1">
+                                        <p>Add links to your projects (e.g. Github links, etc.).</p>
+                                       
+                                    </div>
+                                    <div class="certificatecourese">
+                                        <p> Title<span</p>
+                                         <input type="text" placeholder="Project Name">
+                                      </div>
+                            
+                            
+                                      <div class="certificatecourese1">
+                                        <p>URL</p>
+                                       <input type="text" placeholder="Url">
+                                      </div>
+                                      <div class="eduac"style="width: 47%;
+                                      float: left;">
+                                        <p>Published On Year</p>
+                                      <select style="width:90%;float:left;">
+                                          <option>1999</option>
+                                          <option>2000</option>
+                                          <option>2001</option>
+                                      </select>
+                                      </div>
+                                      <div class="eduac"style="width: 47%;
+                                      float: left;">
+                                      <p>Published On Month</p>
+                                         <select style="width:90%;float:left;">
+                                            <option>Jan</option>
+                                            <option>Feb</option>
+                                            <option>Mar</option>
+                                        </select>
+                                       
+                                      </div>
+                                      <div class="eduac">
+                                      <p>Description</p>
+                                        <textarea style="width:100%;"></textarea>
+                                       
+                                      </div>
+                                      <div class="editedukey">
+                                        <h2>Presentation</h2> 
+                                        
+                                    </div>
+                                   
+                                    
+                                    <div class="eduackey1">
+                                        <p>Add links to your Online presentations (e.g. Slideshare presentation links etc.).</p>
+                                       
+                                    </div>
+                                    <div class="certificatecourese">
+                                        <p>Presentation Title<span</p>
+                                         <input type="text" placeholder="Project Name">
+                                      </div>
+                            
+                            
+                                      <div class="certificatecourese1">
+                                        <p>URL</p>
+                                       <input type="text" placeholder="Url">
+                                      </div>
+                                     
+                                       
+                                     
+                                      <div class="eduac">
+                                      <p>Description</p>
+                                        <textarea style="width:100%;"></textarea>
+                                       
+                                      </div>
+                                      <div class="Editedukey">
+                                                        
+                                        <div class="editedukey">
+                                            <h2>Patent</h2> 
+                                            
+                                        </div>
+                                       
+                                        
+                                        <div class="eduackey1">
+                                            <p>Add details of patents you have filed.</p>
+                                           
+                                        </div>
+                                        <div class="certificatecourese">
+                                            <p>Patent Title<span</p>
+                                             <input type="text" placeholder="Project Name">
+                                          </div>
+                                
+                                
+                                          <div class="certificatecourese1">
+                                            <p>URL</p>
+                                           <input type="text" placeholder="Url">
+                                          </div>
+                                         
+                                           
+                                          </div>
+                                          <div class="eduac">
+                                            <p>Patent Office</p>
+                                            <input type="text" placeholder="Patent Office" style="width: 100%;">
+                                           
+                                          </div>
+                                          <div class="eduac">
+                                            <p>Status</p>
+                                            <div class="coursestype">
+                                                <div class="cour">
+                                                    <div class="cour1">
+                                                        <input type="radio" name="w">
+                                                    </div>
+                                                    <div class="cour11">
+                                                        <p>Patent issued</p>
+                                                    </div>
+                                                </div>
+                                                <div class="cour">
+                                                    <div class="cour1">
+                                                        <input type="radio" name="w">
+                                                    </div>
+                                                    <div class="cour11" style="width:72%;
+                                                    ">
+                                                        <p>Patent Pendding</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div> 
+                            
+                                           
+                                        </div>
+                                        <div class="certificatecourese1">
+                                            <p>Application Number</p>
+                                           <input type="text" placeholder="Application Number">
+                                          </div>
+                                          <div class="eduac"style="width: 47%;
+                                      float: left;">
+                                        <p>Issue  Year</p>
+                                      <select style="width:90%;float:left;">
+                                          <option>1999</option>
+                                          <option>2000</option>
+                                          <option>2001</option>
+                                      </select>
+                                      </div>
+                                      <div class="eduac"style="width: 47%;
+                                      float: left;">
+                                      <p>Issue  Month</p>
+                                         <select style="width:90%;float:left;">
+                                            <option>Jan</option>
+                                            <option>Feb</option>
+                                            <option>Mar</option>
+                                        </select>
+                                       
+                                      </div>
+                                          <div class="eduac">
+                                            <p>Description</p>
+                                              <textarea style="width:100%;"></textarea>
+                                             
+                                            </div>
+                                        
+                                   
+                            
+                                   
+                            
+                                    
+                                      <div class="savbt">
+                                        <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                        <button>Save & Next</button>
+                            
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="career" class="tabcontent" style="border:none;width:100%;float: left;">
+                                    <div class="resumeheading">
+                                        <p style="color: #007bff;font-size: 17px;">Desired Career Profile</p>
+                                        <div class="eduackey1">
+                                            <p>Add details of project</p>
+                                           
+                                        </div>
+                                        <div class="certificatecourese">
+                                            <p>Industry<span style="color: red;margin-left: 2px;">*</span></p>
+                                             <select style="width:90%;float:left;padding:10px;">
+                                                 <option>11</option>
+                                                 <option>11</option>
+                                                 <option>11</option>
+                                             </select>
+                                          </div>
+                                
+                                
+                                          <div class="certificatecourese1">
+                                            <p>Functional Area / Department
+                                                <select style="width:90%;float:left;padding:10px;">
+                                                    <option>11</option>
+                                                    <option>11</option>
+                                                    <option>11</option>
+                                                </select>
+                                          </div>
+                                          <div class="certificatecourese1">
+                                            <p>Role</p>
+                                                <select style="width:90%;float:left;padding:10px;">
+                                                    <option>11</option>
+                                                    <option>11</option>
+                                                    <option>11</option>
+                                                </select>
+                                          </div>
+                                         
+                                          <div class="certificatecourese1">
+                                            <p>Desired Job Type</p>
+                                                
+                                       
+                                
+                                          <span class="English" style="
+                                          width: 100%;
+                                          float: left;
+                                          display: flex;
+                                justify-content: flex-start;
+                                         
+                                      ">
+                                         <span class="eng1"> permanent</span>
+                                         <span class="eng"><input type="checkbox"></span>
+                                         <span class="eng1">contractual</span>
+                                         <span class="eng"><input type="checkbox"></span>
+                                        
+                                        
+                                      </span>
+                                
+                                    </div>
+                                    <div class="certificatecourese1">
+                                        <p>Desired Employment Type</p>
+                                            
+                                   
+                                
+                                      <span class="English" style="
+                                      width: 100%;
+                                      float: left;
+                                      display: flex;
+                                justify-content: flex-start;
+                                      
+                                  ">
+                                     <span class="eng1">Full Time</span>
+                                     <span class="eng"><input type="checkbox"></span>
+                                     <span class="eng1">Part Time</span>
+                                     <span class="eng"><input type="checkbox"></span>
+                                    
+                                    
+                                  </span>
+                                
+                                </div>
+                                <div class="eduac" style="width: 50%;
+                                float: left;">
+                                  <p>Expected Salary RS <span style="color: red;margin-left: 2px;">*</span></p>
+                                 <select style="    width: 77%;
+                                 float: left;
+                                 
+                                ">
+                                  <option>Jan</option>
+                                  <option>1000</option>
+                                  <option>20000</option>
+                                  <option></option>
+                                  
+                                 </select>
+                                </div>
+                                <div class="eduac" style="width: 50%;
+                                float: left;">
+                                <p>Expected Salary $<span style="color: red;margin-left: 2px;">*</span></p>
+                                <select style="    width: 77%;
+                                float: left;
+                                
+                                ">
+                                <option>Jan</option>
+                                <option>1000</option>
+                                <option>20000</option>
+                                <option></option>
+                                
+                                </select>
+                                </div>
+                                <div class="certificatecourese1">
+                                    <p>DPreferred Shift</p>
+                                        
+                                
+                                
+                                  <span class="English" style="
+                                  width: 100%;
+                                  float: left;
+                                  display: flex;
+                                justify-content: flex-start;
+                                  
+                                ">
+                                 <span class="eng1">Night</span>
+                                 <span class="eng"><input type="checkbox"></span>
+                                 <span class="eng1">Day</span>
+                                 <span class="eng"><input type="checkbox"></span>
+                                 <span class="eng1">flexible_shift</span>
+                                 <span class="eng"><input type="checkbox"></span>
+                                
+                                
+                                </span>
+                                
+                                </div>
+                                
+                                          <div class="eduac" style="width: 50%;
+                                          float: left;">
+                                            <p>Availability to Join Year<span style="color: red;margin-left: 2px;">*</span></p>
+                                           <select style="    width: 77%;
+                                           float: left;
+                                          
+                                       ">
+                                            <option>Jan</option>
+                                            <option>1000</option>
+                                            <option>20000</option>
+                                            <option></option>
+                                            
+                                           </select>
+                                        </div>
+                                        <div class="eduac" style="width: 50%;
+                                        float: left;">
+                                          <p>Availability to Join Month<span style="color: red;margin-left: 2px;">*</span></p>
+                                         <select style="    width: 77%;
+                                         float: left;
+                                         
+                                     ">
+                                          <option>Jan</option>
+                                          <option>1000</option>
+                                          <option>20000</option>
+                                          <option></option>
+                                          
+                                         </select>
+                                      </div>
+                                        <div class="certificatecourese1">
+                                            <p>Desired LocationRole</p>
+                                                <select style="width:90%;float:left;padding:10px;">
+                                                    <option>Delhi</option>
+                                                    <option>11</option>
+                                                    <option>11</option>
+                                                </select>
+                                          </div>
+                                          <div class="savbt">
+                                            <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                            <button>Save & Next</button>
+                                
+                                        </div> 
+                                        </div>
+                                
+                                          
+                                      </div>
+                                      <div id="other" class="tabcontent" style="border:none;width:100%;float: left;">
+                                        <div class="resumeheading">
+                                            <p style="color: #007bff;font-size: 17px;">Other</p>
+                                            <div class="eduackey1">
+                                                <div class="certificatecourese">
+                                                    <p>Passion</p>
+                                                     <input type="text" placeholder="Project Name">
+                                                  </div>
+                                                  <div class="certificatecourese">
+                                                    <p>Goal</p>
+                                                     <input type="text" placeholder="Project Name">
+                                                  </div>
+                                                  <div class="certificatecourese">
+                                                    <p>Strength</p>
+                                                     <input type="text" placeholder="Project Name">
+                                                  </div>
+                                                  <div class="certificatecourese">
+                                                    <p>Weekness</p>
+                                                     <input type="text" placeholder="Project Name">
+                                                  </div>
+                                              <div class="savbt">
+                                                <button style="background: none; border-radius: 3px;border: 1px solid #007bff;color: #007bff;">Back</button>
+                                                <button>Save & Next</button>
+                                    
+                                            </div>
+                                          </div>
+                                       
+                                      </div>
+                                  </div>
+                              </div>
+                           
+                        <!-- Template Preview -->
+                        {% include "components/resumes/resume1.html" %}
+                        <!-- Ends Template Preview -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+          
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+           
+           <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+                 
+           <script>
+            new WOW().init();
+        </script>
+  
+  <script src="{% static 'js/jquery.meanmenu.js' %}"></script>
+  <script src="{% static 'js/build-resume.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        var multipleCancelButton = new Choices('#linguistic-input', {
+            removeItemButton: true,
+            maxItemCount:5,
+            searchResultLimit:5,
+            renderChoiceLimit:5
+        });
+        var multipleskillCancelButton = new Choices('#key-skills-input', {
+            removeItemButton: true,
+            maxItemCount:20,
+            searchResultLimit:5,
+            renderChoiceLimit:20
+        });
+    });
+    </script>
+  <script>
+     jQuery(document).ready(function(){
+         jQuery('.row .menu').meanmenu();
+ });
+ </script>   
+  <script>
+
+    $(window).load(function() {
+        
+        $("#flexiselDemo3").flexisel({
+            visibleItems: 4,
+            itemsToScroll: 1,         
+            autoPlay: {
+                enable: true,
+                interval: 1500,
+                pauseOnHover: true
+            }        
+        });
+        
+         
+        
+    });
+    </script> 
+    
+</body>
+</html>

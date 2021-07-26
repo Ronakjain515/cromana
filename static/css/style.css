@@ -2941,8 +2941,6 @@ text-decoration: none;
 
 
 
-
-
 .applyveiw a{
     display: block;
     font-size: 12px;
@@ -3613,7 +3611,7 @@ margin-top: 50px
    
 }
 .in1 {
-    width: 49%;
+    width: 25%;
     float: left;
     text-align: start;
 }
@@ -5461,12 +5459,11 @@ pre {
     margin: 5px;
 }
 .resumetempalte {
-    width: 30%;
+    width: 53%;
     float: left;
     border-radius: 2px;
     margin: 4px;
-    background: #fff;
-    height: 211px; 
+    background-color: #fff;
 }
 .cv{
     width:90%;

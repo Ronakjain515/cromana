@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/slider.css' %}" />
+    <link  rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.flexisel.js' %}"></script>
+    <title>build resume</title>
+</head>
+<body>
+    <!-- Navbar Started -->
+    {% include "components/navbar.html" with is_authenticated=is_authenticated role=role %}
+    <!-- Navbar Ended -->
+                
+            
+              <div class="resumebanner" style="background: none;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resumeheading">
+                                <h1>Making Your Resume a Cromana</h1>
+                                <p>Create a unique and vivid resume in minutes.</p>
+                                <span class="r1"><a href="{% url 'choose-template' %}">Try Now</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resumepic1">
+                                <img src="{% static 'images/resume1.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="resumeheading">
+                                <h1>Build Resumes Effortlessly</h1>
+                                <p>Cromana Resume provides a variety of classic templates
+                                     and layouts. And generate a classy yet professional resume in no time.</p>
+                                <span class="r1"><a href="{% url 'choose-template' %}">Try Now</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                  
+
+                <div class="company1" style="margin-top: 30px;">
+                            
+                    <ul id="flexiselDemo3">
+                        <li><img src="{% static 'images/template1.png' %}" /></li>
+                        <li><img src="{% static 'images/a1.png' %}" /></li>
+                        <li><img src="{% static 'images/a2.png' %}" /></li>
+                        <li><img src="{% static 'images/a3.png' %}" /></li>
+                        <li><img src="{% static 'images/a4.png' %}" /></li>
+                        <li><img src="{% static 'images/a5.png' %}" /></li>
+                        <li><img src="{% static 'images/template1.png' %}" /></li>
+                        <li><img src="{% static 'images/a3.png' %}" /></li>                               
+                    </ul>  
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="downresume">
+                                <img src="{% static 'images/PRINT.png' %}">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="resumeheading" style="margin-top: 146px;">
+                                <h1>Making Your Resume a Cromana</h1>
+                                <p>Create a unique and vivid resume in minutes.</p>
+                                <span class="r1"><a href="{% url 'choose-template' %}">Try Now</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="love">
+                    <h1>Our Users Love Us!</h1>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feedback">
+                                <p>CromanaResume is a fantastic tool to build your CV. It is fast, easy to use and you can choose among different stunning design templates! Super!</p>
+                            </div>
+                            <div class="u1">
+                                <div class="p1">
+                                    <img src="{% static 'images/testimonialpic3.png' %}">
+                                </div>
+                                <div class="p2q">
+                                 <a href="#">Chiara de Caro</a>
+                                        <p>Team Lead · Online Marketing Manager</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feedback">
+                                <p>CromanaResume is a fantastic tool to build your CV. It is fast, easy to use and you can choose among different stunning design templates! Super!</p>
+                            </div>
+                            <div class="u1">
+                                <div class="p1">
+                                    <img src="{% static 'images/testimonialpic3.png' %}">
+                                </div>
+                                <div class="p2q">
+                                 <a href="#">Chiara de Caro</a>
+                                        <p>Team Lead · Online Marketing Manager</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="feedback">
+                                <p>CromanaResume is a fantastic tool to build your CV. It is fast, easy to use and you can choose among different stunning design templates! Super!</p>
+                            </div>
+                            <div class="u1">
+                                <div class="p1">
+                                    <img src="{% static 'images/testimonialpic3.png' %}">
+                                </div>
+                                <div class="p2q">
+                                 <a href="#">Chiara de Caro</a>
+                                        <p>Team Lead · Online Marketing Manager</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feedback">
+                                <p>CromanaResume is a fantastic tool to build your CV. It is fast, easy to use and you can choose among different stunning design templates! Super!</p>
+                            </div>
+                            <div class="u1">
+                                <div class="p1">
+                                    <img src="{% static 'images/testimonialpic3.png' %}">
+                                </div>
+                                <div class="p2q">
+                                 <a href="#">Chiara de Caro</a>
+                                        <p>Team Lead · Online Marketing Manager</p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            </div>
+    
+    <!-- FOOTER STARTED -->
+    {% include "components/footer.html" %}
+    <!-- END FOOTER -->
+
+
+           <script>
+            new WOW().init();
+        </script>
+  
+  <script src="js/jquery.meanmenu.js"></script>
+  <script>
+     jQuery(document).ready(function(){
+         jQuery('.row .menu').meanmenu();
+     
+ });
+ </script>   
+  <script>
+
+    $(window).load(function() {
+        
+        $("#flexiselDemo3").flexisel({
+            visibleItems: 4,
+            itemsToScroll: 1,         
+            autoPlay: {
+                enable: true,
+                interval: 1500,
+                pauseOnHover: true
+            }        
+        });
+        
+         
+        
+    });
+    </script> 
+</body>
+</html>

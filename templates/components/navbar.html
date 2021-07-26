@@ -73,7 +73,7 @@
                         <li><a href="{% url 'home' %}">HOME</a></li>
                         <li><a href="{% url 'job-list' %}">JOBS</a></li>
                         <li><a href="{% url 'company-list' %}">COMPANIES</a></li>
-                        <li><a href="uploderesume.html">BUILD RESUME</a></li>
+                        <li><a href="{% url 'build-resume' %}">BUILD RESUME</a></li>
                         {% if is_authenticated %}
                             {% if role == "JOBSEEKER" %}
                                 <li>
